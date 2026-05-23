@@ -46,18 +46,28 @@
 .hero .hero-heading,
 .hero h1,
 .hero .hero-heading * {
-  color: var(--hero-heading) !important;
+  color: #ffffff !important; /* force white heading in hero */
 }
 .hero .hero-subtext,
 .hero p,
 .hero .hero-subtext * {
-  color: var(--hero-subtext) !important;
+  color: #ffffff !important; /* force white subtext in hero */
 }
-.hero .btn-primary {
-  background: var(--hero-cta-bg) !important;
-  color: var(--hero-cta-text) !important;
-  box-shadow: var(--hero-cta-shadow) !important;
-  border: 1px solid color-mix(in srgb, var(--hero-cta-text) 8%, transparent);
+.btn-hero {
+  background: #ffffff !important; /* white button */
+  color: var(--accent) !important; /* navy button text */
+  box-shadow: 0 20px 50px -20px rgba(13, 43, 78, 0.45) !important;
+  border: 1px solid rgba(13, 43, 78, 0.06) !important; /* faint navy border fallback */
+  padding: 0.9rem 2.25rem !important;
+  border-radius: 0.5rem !important;
+  font-weight: 600 !important;
+}
+.hero .btn-primary,
+.hero .btn-hero {
+  background: #ffffff !important;
+  color: var(--accent) !important;
+  box-shadow: 0 20px 50px -20px rgba(13, 43, 78, 0.45) !important;
+  border: 1px solid rgba(13, 43, 78, 0.06) !important;
 }
 .hero .btn-primary:hover {
   transform: translateY(-1px);
