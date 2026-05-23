@@ -112,6 +112,11 @@ export function CreativeHome() {
                         <span className="text-[10px] font-mono text-[var(--muted)] uppercase tracking-widest">Colombo Instance / UTC +05:30</span>
                      </div>
 
+                     {/* decorative watermark behind the hero heading (aria-hidden) */}
+                     <span className="hero-watermark" aria-hidden>
+                        Engineering High-Integrity Intelligence Systems.
+                     </span>
+
                      <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.9] mb-8 text-[var(--foreground)] gradient-text">
                         Engineering <br />
                         High-Integrity <br />
