@@ -106,7 +106,7 @@ export function CreativeHome() {
                      <div className="flex items-center gap-3 mb-8">
                         <div className="flex items-center gap-1.5 px-3 py-1 rounded-full border border-[var(--border)] bg-[var(--surface-glass)] text-[10px] font-mono uppercase tracking-[0.2em] text-[var(--foreground)]">
                            <div className="w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,0.8)]" />
-                           Systems Specialist
+                           Software Engineer
                         </div>
                         <div className="h-px w-8 bg-[var(--border)]" />
                         <span className="text-[10px] font-mono text-[var(--muted)] uppercase tracking-widest">Colombo Instance / UTC +05:30</span>
@@ -127,7 +127,7 @@ export function CreativeHome() {
                            View Deployments
                         </a>
                         <a href="/resume.pdf" target="_blank" className="px-8 py-4 rounded-md font-bold text-sm border border-[var(--border)] text-[var(--foreground)] hover:bg-[var(--card-hover)] transition-all duration-300 flex items-center gap-2 group">
-                           Engineering Resume <ArrowUpRight size={18} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                           Resume <ArrowUpRight size={18} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                         </a>
                      </div>
                   </motion.div>
@@ -382,7 +382,7 @@ export function CreativeHome() {
                               </div>
                            </div>
                            <div className="md:text-right">
-                              <div className="text-xs font-mono text-[var(--muted)] uppercase tracking-wider mb-1">Honors</div>
+                              <div className="text-xs font-mono text-[var(--muted)] uppercase tracking-wider mb-1"></div>
                               <div className="text-sm font-bold text-white">Second Class Upper</div>
                            </div>
                         </div>
@@ -557,7 +557,7 @@ export function CreativeHome() {
                   <div>
                      <div className="text-[10px] font-mono text-[var(--muted)] uppercase tracking-widest mb-6">Social Nodes</div>
                      <ul className="space-y-3 text-sm">
-                        <li><a href="https://github.com/sheromi" className="text-[var(--muted)] hover:text-white transition-colors">GitHub Repository</a></li>
+                        <li><a href="https://github.com/SheromiParamanathan" className="text-[var(--muted)] hover:text-white transition-colors">GitHub Repository</a></li>
                         <li><a href="https://linkedin.com/in/sheromi" className="text-[var(--muted)] hover:text-white transition-colors">LinkedIn Profile</a></li>
                         <li><a href="mailto:sheromi19@gmail.com" className="text-[var(--muted)] hover:text-white transition-colors">Email</a></li>
                      </ul>
