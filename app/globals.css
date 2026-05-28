@@ -38,32 +38,6 @@
   --shadow-soft: 0 4px 24px -1px rgba(0, 0, 0, 0.5);
 }
 
-/* Hero section overrides to match the sample layout */
-.hero {
-  background: var(--hero-bg);
-  color: var(--hero-heading);
-}
-.hero .hero-heading,
-.hero h1,
-.hero .hero-heading * {
-  color: var(--hero-heading) !important;
-}
-.hero .hero-subtext,
-.hero p,
-.hero .hero-subtext * {
-  color: var(--hero-subtext) !important;
-}
-.hero .btn-primary {
-  background: var(--hero-cta-bg) !important;
-  color: var(--hero-cta-text) !important;
-  box-shadow: var(--hero-cta-shadow) !important;
-  border: 1px solid color-mix(in srgb, var(--hero-cta-text) 8%, transparent);
-}
-.hero .btn-primary:hover {
-  transform: translateY(-1px);
-  filter: brightness(0.98);
-}
-
 .light {
   /* User palette mapped to roles:
      palette: #0D2B4E (deep navy), #FFFFFF (white), #2C2C2C (dark gray),
