@@ -89,7 +89,7 @@ export function CreativeHome() {
    return (
       <div className="bg-[var(--background)] min-h-screen text-[var(--foreground)] font-body selection:bg-white selection:text-black">
          {/* 1. ENGINEERING HUB HERO (RE-DESIGNED & OPTIMIZED) */}
-         <section className="relative pt-32 pb-24 px-6 border-b border-[var(--border)] overflow-hidden min-h-[85vh] flex flex-col justify-center hero">
+         <section className="relative pt-32 pb-24 px-6 border-b border-[var(--border)] overflow-hidden min-h-[85vh] flex flex-col justify-center">
             {/* Expert Visual: Light Beam/Glow Effect */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-full pointer-events-none opacity-40">
                <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-full h-[120%] bg-[radial-gradient(ellipse_at_top,var(--glow-color)_0%,transparent_70%)]" />
@@ -123,10 +123,10 @@ export function CreativeHome() {
                      </p>
 
                      <div className="flex flex-wrap items-center gap-5">
-                        <a href="#projects" className="btn-hero">
+                        <a href="#projects" className="bg-white text-black px-8 py-4 rounded-md font-bold text-sm hover:bg-neutral-200 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0">
                            View Deployments
                         </a>
-                        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-hero flex items-center gap-2 group">
+                        <a href="/resume.pdf" target="_blank" className="px-8 py-4 rounded-md font-bold text-sm border border-[var(--border)] text-[var(--foreground)] hover:bg-[var(--card-hover)] transition-all duration-300 flex items-center gap-2 group">
                            Resume <ArrowUpRight size={18} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                         </a>
                      </div>
