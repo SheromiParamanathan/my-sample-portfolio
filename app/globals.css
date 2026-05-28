@@ -65,14 +65,6 @@
   --logo-bg: #0D2B4E;
 
   --shadow-soft: 0 6px 28px -8px rgba(44, 44, 44, 0.06);
-
-  /* hero-specific tokens to match sample image */
-  --hero-bg: #0D2B4E; /* deep navy hero background */
-  --hero-heading: #ffffff; /* large heading in white */
-  --hero-subtext: #8897A8; /* subheading / muted copy */
-  --hero-cta-bg: #ffffff; /* CTA button background */
-  --hero-cta-text: #0D2B4E; /* CTA text uses navy */
-  --hero-cta-shadow: 0 20px 50px -20px rgba(13, 43, 78, 0.45);
 }
 
 @layer utilities {
@@ -377,7 +369,6 @@ body::before {
 
   .btn-primary {
     @apply inline-flex items-center justify-center gap-2 font-medium text-sm px-6 py-3 rounded-xl transition-all;
-    /* Use hero CTA tokens when inside hero — components can override with .bg-accent etc. */
     background: linear-gradient(135deg, var(--accent) 0%, color-mix(in srgb, var(--accent) 78%, #1a1040) 100%);
     color: #fff;
     box-shadow: 0 12px 32px -12px color-mix(in srgb, var(--accent) 55%, transparent);
