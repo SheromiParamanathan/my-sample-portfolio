@@ -39,32 +39,29 @@
 }
 
 .light {
-  /* User palette mapped to roles:
-     palette: #0D2B4E (deep navy), #FFFFFF (white), #2C2C2C (dark gray),
-              #9F9F9F (mid gray), #8897A8 (muted steel blue) */
+  /* Corporate Blue - LIGHT */
+  --background: #f6f9fc; /* very light cool blue */
+  --foreground: #0f1724; /* rich dark slate for text */
+  --muted: #4b5970; /* muted slate blue */
 
-  --background: #FFFFFF; /* page background (white) */
-  --foreground: #2C2C2C; /* primary text (dark gray) */
-  --muted: #9F9F9F; /* muted text / secondary */
-
-  --accent: #0D2B4E; /* primary deep navy accent */
-  --accent-secondary: #8897A8; /* secondary muted steel blue */
+  --accent: #0b64d6; /* corporate primary blue */
+  --accent-secondary: #0f7be6; /* lighter blue for accents */
   --accent-emerald: #059669; /* keep emerald for success states */
 
-  --border: color-mix(in srgb, #0D2B4E 8%, #ffffff);
-  --card: #FFFFFF; /* cards remain white */
-  --card-hover: color-mix(in srgb, #8897A8 8%, #ffffff);
+  --border: #dbe8f8; /* light blue border */
+  --card: #ffffff; /* keep white for cards */
+  --card-hover: #f0f6fb; /* subtle blue hover */
 
-  --ring: rgba(13, 43, 78, 0.12);
-  --header-bg: rgba(255, 255, 255, 0.96);
-  --header-border: color-mix(in srgb, #0D2B4E 6%, #ffffff);
-  --surface-glass: rgba(13, 43, 78, 0.03);
-  --grid-line: color-mix(in srgb, #8897A8 8%, #ffffff);
+  --ring: rgba(11, 100, 214, 0.12);
+  --header-bg: rgba(246, 249, 252, 0.95);
+  --header-border: #e2eefb;
+  --surface-glass: rgba(11, 100, 214, 0.03);
+  --grid-line: #eaf3fb;
 
-  --glow-color: rgba(13, 43, 78, 0.06);
-  --logo-bg: #0D2B4E;
+  --glow-color: rgba(11, 100, 214, 0.08);
+  --logo-bg: #0b64d6;
 
-  --shadow-soft: 0 6px 28px -8px rgba(44, 44, 44, 0.06);
+  --shadow-soft: 0 6px 28px -8px rgba(15, 23, 36, 0.06);
 }
 
 @layer utilities {
