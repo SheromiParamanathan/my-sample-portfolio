@@ -69,30 +69,6 @@
   box-shadow: 0 20px 50px -20px rgba(13, 43, 78, 0.45) !important;
   border: 1px solid rgba(13, 43, 78, 0.06) !important;
 }
-
-/* Oversized faded watermark heading behind hero content */
-.hero-watermark {
-  position: absolute;
-  left: 8%;
-  top: 8%;
-  font-size: 6rem;
-  line-height: 0.9;
-  font-weight: 800;
-  color: rgba(255,255,255,0.06);
-  pointer-events: none;
-  z-index: 1;
-  transform: translateY(-10%);
-  display: none;
-}
-
-@media (min-width: 1024px) {
-  .hero-watermark {
-    display: block;
-    font-size: clamp(4rem, 8vw, 12rem);
-    left: 6%;
-    top: 6%;
-  }
-}
 .hero .btn-primary:hover {
   transform: translateY(-1px);
   filter: brightness(0.98);
