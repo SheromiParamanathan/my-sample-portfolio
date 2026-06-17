@@ -103,26 +103,20 @@ export function CreativeHome() {
                      className="lg:col-span-12"
                   >
                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
-                        <div className="space-y-2">
-                           <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[10px] uppercase tracking-[0.28em] text-[var(--muted)]">
-                              <span className="h-2.5 w-2.5 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.35)]" />
-                              Sheromi Paramanathan
-                           </div>
-                           <div className="text-sm font-semibold text-white">Backend systems engineer for AI-driven SaaS teams</div>
+                        <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[10px] uppercase tracking-[0.28em] text-[var(--muted)]">
+                           Sheromi Paramanathan
                         </div>
-                        <div className="text-[10px] font-mono uppercase tracking-[0.26em] text-[var(--muted)]">Trusted by mission-critical product and data platforms</div>
+                        <div className="text-sm font-semibold text-white/70">
+                           Backend systems engineer for AI-first SaaS products
+                        </div>
                      </div>
 
-                     <p className="text-sm uppercase tracking-[0.26em] text-[var(--muted)] mb-4">
-                        I build resilient backend platforms for SaaS products, AI orchestration, and high-scale data operations.
-                     </p>
-
                      <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight">
-                        I’m Sheromi Paramanathan — engineering enterprise backend infrastructure for <span className="text-white/90">AI-first platforms</span>
+                        I build resilient backend platforms that power <span className="text-white/90">AI-first products</span>
                      </h1>
 
                      <p className="text-xl text-slate-300 max-w-2xl mt-6 leading-9">
-                        I design, deploy, and operate resilient production systems with automated AI orchestration, real-time event workflows, and observability built for scale, compliance, and low-latency operations.
+                        I help engineering teams ship scalable server-side systems, automated data pipelines, and observable production workflows for mission-critical SaaS.
                      </p>
 
                      <div className="mt-10 flex flex-wrap items-center gap-4">
