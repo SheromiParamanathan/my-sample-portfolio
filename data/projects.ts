@@ -103,6 +103,41 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "executionos",
+    title: "ExecutionOS – Personal Productivity & Execution Intelligence Platform",
+    description:
+      "A productivity-first SaaS platform built to measure execution performance through structured Morning Check-In and Evening Debrief workflows.",
+    longDescription:
+      "Designed and developed a productivity-focused platform to quantify execution through daily check-ins, automated task synchronization, and performance reporting for future team-based SaaS growth.",
+    tech: ["Laravel", "MySQL", "Tailwind CSS", "Alpine.js"],
+    featured: false,
+    status: "production",
+    overview:
+      "ExecutionOS is a dark-mode-first execution intelligence platform that combines daily workflow orchestration with analytics to help users track commitment, completion, and blockers over time.",
+    features: [
+      "Structured Morning Check-In and Evening Debrief workflows for execution performance measurement",
+      "Automated task-state synchronization between reports and Kanban workflows",
+      "KPI tracking and reporting for consistency, commitment accuracy, completion rates, and blocker frequency",
+      "Role-based access control and organization-aware architecture for multi-tenant readiness",
+      "Glassmorphism-inspired premium UI with dark-mode-first dashboards",
+    ],
+    engineeringDecisions: [
+      "Engineered automated synchronization logic to eliminate duplicate task updates and ensure data consistency across execution reports and Kanban boards.",
+      "Built modular KPI tracking modules to support future analytics enhancements like team leaderboards and manager dashboards.",
+      "Implemented RBAC and organization-aware structures to support a secure, multi-tenant-ready SaaS experience.",
+    ],
+    challenges: [
+      {
+        challenge: "Duplicate task updates and inconsistent status propagation across execution workflows.",
+        solution: "Created a centralized synchronization layer that reconciles task states between daily reports and Kanban boards, removing duplicate updates and preserving data integrity.",
+      },
+      {
+        challenge: "Designing a premium SaaS experience while maintaining clean dark-mode usability.",
+        solution: "Adopted glassmorphism-inspired interfaces and dark-first design patterns to deliver a modern, high-contrast productivity dashboard without visual clutter.",
+      },
+    ],
+  },
+  {
     slug: "yoga-pose-correction",
     title: "Real-Time Yoga Pose Correction System",
     description:
