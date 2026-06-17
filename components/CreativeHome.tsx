@@ -582,7 +582,7 @@ export function CreativeHome() {
                   <div className="col-span-2 md:col-span-1">
                      <div className="font-bold text-xl tracking-tighter mb-4">Sheromi Paramanathan<span className="text-[var(--muted)]">.</span></div>
                      <p className="text-xs text-[var(--muted)] leading-relaxed">
-                        Software Engineer building Laravel SaaS systems, analytics workflows, and scalable backend automation.
+                        Software Engineer building SaaS systems, analytics workflows, and scalable backend automation.
                      </p>
                   </div>
 
