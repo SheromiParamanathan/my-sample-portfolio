@@ -6,9 +6,9 @@ import { CustomCursor } from "@/components/CustomCursor";
 import { PageTransition } from "@/components/PageTransition";
 
 export const metadata: Metadata = {
-  title: "Sheromi Paramanathan — Software Engineer",
+  title: "Sheromi Paramanathan | Backend Systems & AI SaaS Engineer",
   description:
-    "I engineer resilient backend architectures, optimize scaling data pipelines, and deploy high-throughput AI orchestration layers for mission-critical SaaS platforms.",
+    "Backend Software Engineer specializing in resilient Laravel systems, MySQL optimization, and production-grade LLM orchestration layers.",
   keywords: [
     "Backend Architect",
     "AI Orchestration",
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "Sheromi Paramanathan — Backend Systems Engineer",
+    title: "Sheromi Paramanathan | Backend Systems & AI SaaS Engineer",
     description:
-      "I engineer resilient backend architectures, optimize scaling data pipelines, and deploy high-throughput AI orchestration layers for mission-critical SaaS platforms.",
+      "Backend Software Engineer specializing in resilient Laravel systems, MySQL optimization, and production-grade LLM orchestration layers.",
     type: "website",
   },
 };
