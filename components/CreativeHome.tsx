@@ -112,14 +112,13 @@ export function CreativeHome() {
                         <span className="text-[10px] font-mono text-[var(--muted)] uppercase tracking-widest">Colombo Instance / UTC +05:30</span>
                      </div>
 
-                     <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.9] mb-8 text-[var(--foreground)] gradient-text">
-                        Engineering <br />
-                        High-Integrity <br />
-                        Intelligence Systems.
+                     <h1 className="text-5xl font-mono tracking-tight text-white">
+                        Engineering High-Performance Backends &nbsp;
+                        <span className="text-emerald-400">Production AI Orchestration</span>.
                      </h1>
 
-                     <p className="text-[var(--muted)] text-lg md:text-xl leading-relaxed mb-10 max-w-2xl font-light">
-                        Software Engineer specializing in <span className="text-[var(--foreground)] font-medium">Distributed Laravel Ecosystems</span> and <span className="text-[var(--foreground)] font-medium">Production-Grade AI Orchestration</span>. Focused on high-performance infrastructure and automated intelligence.
+                     <p className="text-xl text-slate-400 max-w-2xl mt-4">
+                        I build distributed server-side infrastructures, asynchronous data pipelines, and optimized intelligent automation engines. Specializing in systems that process millions of data points while maintaining 99.9% availability.
                      </p>
 
                      <div className="flex flex-wrap items-center gap-5">
