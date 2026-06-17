@@ -102,22 +102,29 @@ export function CreativeHome() {
                      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                      className="lg:col-span-12"
                   >
-                     <div className="mb-8" />
+                     <div className="mb-8">
+                        <p className="text-[10px] font-mono uppercase tracking-[0.32em] text-[var(--muted)]">
+                           <span className="inline-flex items-center gap-2">
+                              <span className="h-2 w-2 rounded-full bg-white" />
+                              SYSTEM STATUS: PRODUCTION-READY // LOCATION: COLOMBO, SRI LANKA (UTC +05:30)
+                           </span>
+                        </p>
+                     </div>
 
                      <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight">
-                        I build resilient backend platforms that power <span className="text-white/90">AI-first products</span>
+                        I Build Resilient Backend Platforms for <span className="text-white/90">AI-First SaaS Products</span>
                      </h1>
 
-                     <p className="text-xl text-slate-300 max-w-2xl mt-6 leading-9">
-                        I engineer resilient backend architectures, optimize scaling data pipelines, and deploy high-throughput AI orchestration layers for mission-critical SaaS platforms.
+                     <p className="text-xl text-slate-300 max-w-3xl mt-6 leading-9">
+                        I engineer high-throughput server-side architectures, optimize scaling relational data layers, and deploy automated data pipelines for mission-critical applications. Specialized in the Laravel ecosystem, high-performance database tuning, and production-grade LLM orchestration.
                      </p>
 
                      <div className="mt-10 flex flex-wrap items-center gap-4">
-                        <a href="#projects" className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-semibold text-black shadow-[0_24px_80px_-40px_rgba(255,255,255,0.55)] transition duration-300 hover:bg-slate-100 hover:-translate-y-0.5">
-                           Explore Deployments
-                        </a>
-                        <a href="/resume.pdf" target="_blank" className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-8 py-4 text-sm font-semibold text-white transition duration-300 hover:border-white/30 hover:bg-white/10">
+                        <a href="/resume.pdf" target="_blank" className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-semibold text-black shadow-[0_24px_80px_-40px_rgba(255,255,255,0.55)] transition duration-300 hover:bg-slate-100 hover:-translate-y-0.5">
                            Download Resume
+                        </a>
+                        <a href="#projects" className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-8 py-4 text-sm font-semibold text-white transition duration-300 hover:border-white/30 hover:bg-white/10">
+                           Explore Deployments
                         </a>
                      </div>
 
