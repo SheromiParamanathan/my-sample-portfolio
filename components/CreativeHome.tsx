@@ -438,6 +438,7 @@ export function CreativeHome() {
                               <div>
                                  <h4 className="text-lg font-bold tracking-tight mb-1">Advanced Level - Physical Science</h4>
                                  <p className="text-sm text-[var(--muted)]">Vincent Girls High School, Batticaloa</p>
+                                 <p className="text-xs text-[var(--muted)] mt-2">Subjects: Combined Mathematics, Physics</p>
                               </div>
                            </div>
                            <div className="md:text-right">
@@ -581,8 +582,8 @@ export function CreativeHome() {
                   <div className="col-span-2 md:col-span-1">
                      <div className="font-bold text-xl tracking-tighter mb-4">Sheromi Paramanathan<span className="text-[var(--muted)]">.</span></div>
                      <p className="text-xs text-[var(--muted)] leading-relaxed">
-                        Backend & AI Systems Engineer. <br />
-                        Building scalable, high-integrity infrastructure for the next generation of SaaS.
+                        Software Engineer focused on Laravel-based SaaS systems and production-ready backend architecture. <br />
+                        Building dependable data workflows, analytics-driven reporting, and scalable execution automation.
                      </p>
                   </div>
 
