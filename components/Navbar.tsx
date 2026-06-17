@@ -58,7 +58,7 @@ export function Navbar() {
             href="/"
             className="flex items-center gap-3 group"
           >
-            <div className="w-8 h-8 rounded-full bg-[var(--accent)] flex items-center justify-center group-hover:rotate-6 transition-transform duration-300">
+            <div className="w-8 h-8 rounded-lg bg-[var(--accent)] flex items-center justify-center group-hover:rotate-6 transition-transform duration-300">
                <span className="text-[var(--background)] font-black text-xs tracking-tighter">SP</span>
             </div>
             <div className="hidden sm:flex flex-col leading-tight">
