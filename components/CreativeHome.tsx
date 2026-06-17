@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useRef, useState, useEffect, useMemo } from "react";
 import { ArrowUpRight, Mail, Linkedin, Github, Server, Brain, Monitor, Wrench, Award, GraduationCap, Briefcase, Plus, Copy, Check, Hexagon, Cpu, Database, Activity } from "lucide-react";
 import { motion, useReducedMotion, useScroll, useSpring } from "framer-motion";
