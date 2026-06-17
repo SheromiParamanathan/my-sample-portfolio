@@ -54,6 +54,13 @@
   .dash-border {
     border: 1px dashed var(--border);
   }
+  .project-card-glow {
+    background: radial-gradient(
+      620px circle at var(--mx, 50%) var(--my, 0%),
+      color-mix(in srgb, var(--accent) 14%, transparent),
+      transparent 55%
+    );
+  }
   .text-glow {
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
   }

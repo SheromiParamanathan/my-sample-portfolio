@@ -200,10 +200,11 @@ export function CreativeHome() {
                         </div>
                         <Link
                            href={`/projects/${projects[0].slug}`}
-                           className="p-4 border border-[var(--border)] rounded-full hover:bg-white hover:text-black transition-all duration-300"
+                           className="inline-flex items-center gap-2 text-sm font-mono uppercase tracking-[0.2em] text-[var(--accent)] border border-[var(--border)] rounded-full px-5 py-3 hover:bg-[var(--accent)] hover:text-black transition-all duration-300"
                            aria-label={`View case study for ${projects[0].title}`}
                         >
-                           <ArrowUpRight size={22} />
+                           Case study
+                           <ArrowUpRight size={18} />
                         </Link>
                      </div>
 
@@ -232,10 +233,11 @@ export function CreativeHome() {
                            </div>
                            <Link
                               href={`/projects/${projects[1].slug}`}
-                              className="text-[var(--muted)] group-hover:text-white transition-all duration-300 transform group-hover:translate-x-1 group-hover:-translate-y-1"
+                              className="inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-[var(--accent)] group-hover:text-white transition-all duration-300"
                               aria-label={`View case study for ${projects[1].title}`}
                            >
-                              <ArrowUpRight size={18} />
+                              View project
+                              <ArrowUpRight size={14} />
                            </Link>
                         </div>
                         <p className="text-[var(--muted)] text-xs leading-relaxed mb-6 line-clamp-3">{projects[1].description}</p>
@@ -259,10 +261,11 @@ export function CreativeHome() {
                            </div>
                            <Link
                               href={`/projects/${projects[2].slug}`}
-                              className="text-[var(--muted)] group-hover:text-white transition-all duration-300 transform group-hover:translate-x-1 group-hover:-translate-y-1"
+                              className="inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-[var(--accent)] group-hover:text-white transition-all duration-300"
                               aria-label={`View case study for ${projects[2].title}`}
                            >
-                              <ArrowUpRight size={18} />
+                              View project
+                              <ArrowUpRight size={14} />
                            </Link>
                         </div>
                         <p className="text-[var(--muted)] text-xs leading-relaxed mb-6 line-clamp-3">{projects[2].description}</p>
@@ -286,10 +289,11 @@ export function CreativeHome() {
                            </div>
                            <Link
                               href={`/projects/${p.slug}`}
-                              className="text-[var(--muted)] group-hover:text-white transition-all duration-300 transform group-hover:translate-x-1 group-hover:-translate-y-1"
+                              className="inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-[var(--accent)] group-hover:text-white transition-all duration-300"
                               aria-label={`View case study for ${p.title}`}
                            >
-                              <ArrowUpRight size={20} />
+                              View project
+                              <ArrowUpRight size={16} />
                            </Link>
                         </div>
                         <p className="text-[var(--muted)] text-sm leading-relaxed mb-8 line-clamp-2">{p.description}</p>
@@ -566,7 +570,7 @@ export function CreativeHome() {
                      <a href="mailto:sheromi19@gmail.com" className="bg-white text-black px-8 py-4 rounded-md font-bold text-sm hover:bg-neutral-200 transition-colors">
                         Send Message
                      </a>
-                     <a href="https://linkedin.com/in/sheromi" target="_blank" className="px-8 py-4 rounded-md font-bold text-sm border border-[var(--border)] hover:bg-[var(--card-hover)] transition-colors">
+                     <a href="https://linkedin.com/in/sheromi" target="_blank" rel="noopener noreferrer" className="px-8 py-4 rounded-md font-bold text-sm border border-[var(--border)] hover:bg-[var(--card-hover)] transition-colors">
                         Professional Network
                      </a>
                   </div>

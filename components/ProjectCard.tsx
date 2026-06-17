@@ -10,10 +10,16 @@ interface ProjectCardProps {
   index: number;
 }
 
-const statusDot: Record<string, string> = {
-  production: "#4ade80",
-  "in-progress": "#fbbf24",
-  archived: "#94a3b8",
+const statusDotClasses: Record<string, string> = {
+  production: "bg-emerald-400",
+  "in-progress": "bg-amber-300",
+  archived: "bg-slate-400",
+};
+
+const statusBadgeClasses: Record<string, string> = {
+  production: "text-emerald-400 border-emerald-400/20",
+  "in-progress": "text-amber-400 border-amber-400/20",
+  archived: "text-slate-400 border-slate-400/20",
 };
 
 export function ProjectCard({ project, index }: ProjectCardProps) {
@@ -27,7 +33,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       transition={{ duration: 0.45, delay: index * 0.06, ease: [0.22, 1, 0.36, 1] }}
     >
       <div
-        className="group relative flex flex-col rounded-[var(--radius-lg)] surface-card border border-[var(--border)] bg-[var(--card)] overflow-hidden"
+        className="group relative flex flex-col rounded-[var(--radius-lg)] surface-card border border-[var(--border)] bg-[var(--card)] overflow-hidden cursor-pointer"
         onMouseMove={(e) => {
           const el = e.currentTarget;
           const r = el.getBoundingClientRect();
@@ -39,11 +45,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       >
         <div className="relative h-28 sm:h-32 overflow-hidden border-b border-[var(--border)] bg-[color-mix(in_srgb,var(--background)_90%,var(--card))]">
           <div
-            className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-            style={{
-              background:
-                "radial-gradient(620px circle at var(--mx,50%) var(--my,0%), color-mix(in srgb, var(--accent) 14%, transparent), transparent 55%)",
-            }}
+            className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 project-card-glow"
             aria-hidden
           />
 
@@ -73,8 +75,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               <div className="flex items-center justify-between mb-1">
                 <span>Status</span>
                 <span
-                  className="px-1.5 py-0.5 rounded-full border border-[color-mix(in_srgb,var(--accent)_24%,transparent)] text-[8px] capitalize"
-                  style={{ color: statusDot[project.status] }}
+                  className={`px-1.5 py-0.5 rounded-full border border-[color-mix(in_srgb,var(--accent)_24%,transparent)] text-[8px] capitalize ${statusBadgeClasses[project.status]}`}
                 >
                   {project.status}
                 </span>
@@ -105,8 +106,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           <div className="flex items-start justify-between">
             <div className="flex items-center gap-2.5">
               <span
-                className="w-2 h-2 rounded-full ring-2 ring-[color-mix(in_srgb,var(--foreground)_12%,transparent)]"
-                style={{ backgroundColor: statusDot[project.status] }}
+                className={`w-2 h-2 rounded-full ring-2 ring-[color-mix(in_srgb,var(--foreground)_12%,transparent)] ${statusDotClasses[project.status]}`}
               />
               <span className="text-xs font-mono capitalize text-[var(--muted)]">{project.status}</span>
             </div>
@@ -115,7 +115,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           <h3 className="font-display font-semibold text-xl text-[var(--foreground)] group-hover:text-[var(--accent)] transition-colors duration-200">
             <Link
               href={`/projects/${project.slug}`}
-              className="relative inline-block after:absolute after:inset-0"
+              className="relative inline-flex items-center gap-2 after:absolute after:inset-0"
               aria-label={`View case study for ${project.title}`}
             >
               {project.title}
@@ -142,7 +142,15 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             )}
           </div>
 
-          <div className="mt-4 flex gap-4 pt-4 border-t border-[var(--border)] relative z-10">
+          <div className="mt-4 flex flex-wrap items-center gap-4 pt-4 border-t border-[var(--border)] relative z-10">
+            <Link
+              href={`/projects/${project.slug}`}
+              className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] text-[var(--accent)] hover:text-white transition-colors"
+              aria-label={`View full project case study for ${project.title}`}
+            >
+              Case study
+              <ArrowUpRight size={12} />
+            </Link>
             {project.demoUrl && (
               <a
                 href={project.demoUrl}
