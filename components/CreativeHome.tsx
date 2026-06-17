@@ -1,90 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { useRef, useState, useEffect, useMemo } from "react";
-import { ArrowUpRight, Mail, Linkedin, Github, Server, Brain, Monitor, Wrench, Award, GraduationCap, Briefcase, Plus, Copy, Check, Hexagon, Cpu, Database } from "lucide-react";
-import { motion, useReducedMotion, useScroll, useSpring } from "framer-motion";
+import { ArrowUpRight, Database, Server, Brain, Cpu, GraduationCap, Award, Hexagon } from "lucide-react";
+import { motion } from "framer-motion";
 import { projects } from "@/data/projects";
-import { skills, certifications } from "@/data/skills";
-import { Magnetic } from "./Magnetic";
-import { SectionWrapper } from "./SectionWrapper";
-
-const colorBands = [
-   { bg: "#111111", ink: "#ffffff" }, // Dark
-   { bg: "#222222", ink: "#ffffff" }, // Charcoal
-   { bg: "#2f2f2f", ink: "#ffffff" }, // Slate
-   { bg: "#3f3f3f", ink: "#ffffff" }, // Graphite
-   { bg: "#4f4f4f", ink: "#ffffff" }, // Smoke
-];
-
-const iconMap: Record<string, React.ReactNode> = {
-   server: <Server size={22} strokeWidth={1.5} />,
-   brain: <Brain size={22} strokeWidth={1.5} />,
-   monitor: <Monitor size={22} strokeWidth={1.5} />,
-   wrench: <Wrench size={22} strokeWidth={1.5} />,
-};
-
-const categoryStyles: Record<string, { accent: string; bg: string; ring: string }> = {
-   Backend: {
-      accent: "var(--accent)",
-      bg: "color-mix(in srgb, var(--accent) 8%, transparent)",
-      ring: "color-mix(in srgb, var(--accent) 20%, transparent)",
-   },
-   "AI & LLM": {
-      accent: "#c084fc", // Purple
-      bg: "rgba(192, 132, 252, 0.08)",
-      ring: "rgba(192, 132, 252, 0.2)",
-   },
-   Frontend: {
-      accent: "#38bdf8", // Sky
-      bg: "rgba(56, 189, 248, 0.08)",
-      ring: "rgba(56, 189, 248, 0.2)",
-   },
-   "Tools & DevOps": {
-      accent: "#fbbf24", // Amber
-      bg: "rgba(251, 191, 36, 0.08)",
-      ring: "rgba(251, 191, 36, 0.2)",
-   },
-};
-
-const timeline = [
-   {
-      icon: <Briefcase size={16} strokeWidth={1.5} />,
-      period: "Jul 2025 — Present",
-      role: "Associate Software Engineer",
-      org: "Balanita Pvt Ltd",
-      color: "var(--accent)",
-   },
-   {
-      icon: <Briefcase size={16} strokeWidth={1.5} />,
-      period: "Jan 2025 — Jul 2025",
-      role: "Intern Software Engineer",
-      org: "Balanita Pvt Ltd",
-      color: "var(--accent-secondary)",
-   },
-   {
-      icon: <GraduationCap size={16} strokeWidth={1.5} />,
-      period: "Aug 2021 — Dec 2024",
-      role: "BSc in Computer Science",
-      org: "Eastern University of Sri Lanka",
-      color: "#a78bfa",
-   },
-];
+import { certifications } from "@/data/skills";
 
 export function CreativeHome() {
-   const reduceMotion = useReducedMotion();
-   const { scrollYProgress } = useScroll();
-   const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
-
-   const [copied, setCopied] = useState(false);
-   const featured = projects.slice(0, 4);
-
-   const copyEmail = () => {
-      navigator.clipboard.writeText("sheromi19@gmail.com");
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-   };
-
    return (
       <div className="bg-[var(--background)] min-h-screen text-[var(--foreground)] font-body selection:bg-white selection:text-black">
          {/* 1. ENGINEERING HUB HERO (RE-DESIGNED & OPTIMIZED) */}
@@ -106,7 +28,7 @@ export function CreativeHome() {
                         <p className="text-[10px] font-mono uppercase tracking-[0.32em] text-[var(--muted)]">
                            <span className="inline-flex items-center gap-2">
                               <span className="h-2 w-2 rounded-full bg-white" />
-                              SYSTEM STATUS: PRODUCTION-READY // LOCATION: COLOMBO, SRI LANKA (UTC +05:30)
+                              OPEN TO BACKEND & AI SAAS ROLES // COLOMBO, SRI LANKA (UTC +05:30)
                            </span>
                         </p>
                      </div>
@@ -120,12 +42,24 @@ export function CreativeHome() {
                      </p>
 
                      <div className="mt-10 flex flex-wrap items-center gap-4">
-                        <a href="/resume.pdf" target="_blank" className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-semibold text-black shadow-[0_24px_80px_-40px_rgba(255,255,255,0.55)] transition duration-300 hover:bg-slate-100 hover:-translate-y-0.5">
-                           Download Resume
+                        <a href="mailto:sheromi19@gmail.com?subject=Resume%20Request" className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-semibold text-black shadow-[0_24px_80px_-40px_rgba(255,255,255,0.55)] transition duration-300 hover:bg-slate-100 hover:-translate-y-0.5">
+                           Request Resume
                         </a>
                         <a href="#projects" className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-8 py-4 text-sm font-semibold text-white transition duration-300 hover:border-white/30 hover:bg-white/10">
                            Explore Deployments
                         </a>
+                     </div>
+
+                     <div className="mt-8 flex flex-wrap items-center gap-3 text-[11px] text-[var(--muted)]">
+                        {[
+                           "Open to backend / AI SaaS roles",
+                           "Remote-friendly for international teams",
+                           "Production systems with 99.9% uptime",
+                        ].map((label) => (
+                           <span key={label} className="rounded-full border border-white/10 bg-white/5 px-3 py-2">
+                              {label}
+                           </span>
+                        ))}
                      </div>
 
                   </motion.div>

@@ -2,14 +2,14 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Menu, X, ArrowUpRight, Cpu } from "lucide-react";
+import { Menu, X, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import clsx from "clsx";
 
 const navItems = [
-  { label: "Projects", href: "#projects" },
-  { label: "About", href: "#experience" },
-  { label: "Skills", href: "#skills" },
+  { label: "Deployments", href: "#projects" },
+  { label: "Career", href: "#experience" },
+  { label: "Infrastructure", href: "#skills" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -22,7 +22,7 @@ export function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
 
-      const sections = ["projects", "about", "skills", "contact", "education", "experience"];
+      const sections = ["projects", "experience", "skills", "contact"];
       const current = sections.find((id) => {
         const el = document.getElementById(id);
         if (!el) return false;

@@ -8,7 +8,7 @@ import { PageTransition } from "@/components/PageTransition";
 export const metadata: Metadata = {
   title: "Sheromi Paramanathan | Backend Systems & AI SaaS Engineer",
   description:
-    "Backend Software Engineer specializing in resilient Laravel systems, MySQL optimization, and production-grade LLM orchestration layers.",
+    "Senior backend engineer open to backend SaaS roles, specializing in Laravel systems, MySQL optimization, and production-grade AI orchestration.",
   keywords: [
     "Backend Architect",
     "AI Orchestration",
