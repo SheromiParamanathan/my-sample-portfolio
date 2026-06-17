@@ -40,24 +40,6 @@ export function CreativeHome() {
                            Explore Deployments
                         </a>
                      </div>
-
-                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-[13px] text-[var(--muted)]">
-                        <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
-                           <div className="text-[10px] uppercase tracking-[0.32em] mb-3">Impact</div>
-                           <div className="text-3xl font-bold text-white">70%</div>
-                           <div className="mt-2">Reduced manual screening effort</div>
-                        </div>
-                        <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
-                           <div className="text-[10px] uppercase tracking-[0.32em] mb-3">Scale</div>
-                           <div className="text-3xl font-bold text-white">99.9%</div>
-                           <div className="mt-2">Production uptime target</div>
-                        </div>
-                        <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
-                           <div className="text-[10px] uppercase tracking-[0.32em] mb-3">System</div>
-                           <div className="text-3xl font-bold text-white">Laravel</div>
-                           <div className="mt-2">Backend architecture and APIs</div>
-                        </div>
-                     </div>
                   </motion.div>
 
                   <motion.div
