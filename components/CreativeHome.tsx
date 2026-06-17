@@ -586,7 +586,8 @@ export function CreativeHome() {
                   <div className="col-span-2 md:col-span-1">
                      <div className="font-bold text-xl tracking-tighter mb-4">Sheromi Paramanathan<span className="text-[var(--muted)]">.</span></div>
                      <p className="text-xs text-[var(--muted)] leading-relaxed">
-                        Backend Software Engineer | AI-Integrated SaaS Systems | Data Intelligence Platforms
+                        Software Engineer<br />
+                        Backend Systems | AI-Integrated SaaS Systems | Data Intelligence Platforms
                      </p>
                   </div>
 
