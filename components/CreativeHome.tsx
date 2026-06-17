@@ -102,11 +102,7 @@ export function CreativeHome() {
                      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                      className="lg:col-span-12"
                   >
-                     <div className="mb-8">
-                        <div className="text-sm font-semibold text-white/70">
-                           Backend systems engineer for AI-first SaaS products
-                        </div>
-                     </div>
+                     <div className="mb-8" />
 
                      <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight">
                         I build resilient backend platforms that power <span className="text-white/90">AI-first products</span>
