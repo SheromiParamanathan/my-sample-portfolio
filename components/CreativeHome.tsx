@@ -303,38 +303,59 @@ export function CreativeHome() {
                   </div>
 
                   <div className="relative space-y-12 pl-8 border-l border-[var(--border)]">
-                     {/* Role 1: Associate */}
+                     {/* Role 1: Software Engineer */}
                      <div className="relative">
                         <div className="absolute -left-[37px] top-1.5 w-4 h-4 rounded-full border-2 border-[var(--background)] bg-white shadow-[0_0_15px_rgba(255,255,255,0.4)]" />
                         <div className="mb-6">
-                           <span className="text-xs font-mono text-[var(--muted)] mb-2 block">Jul 2025 — Present</span>
-                           <h4 className="text-2xl font-bold tracking-tight mb-1">Associate Software Engineer</h4>
+                           <span className="text-xs font-mono text-[var(--muted)] mb-2 block">Mar 2025 — Present</span>
+                           <h4 className="text-2xl font-bold tracking-tight mb-1">Software Engineer</h4>
                            <div className="text-sm font-medium text-white/60">Balanita Pvt Ltd, Colombo</div>
                         </div>
 
                         <div className="space-y-4">
                            <p className="text-[var(--muted)] text-sm leading-relaxed max-w-lg">
-                              Leading the design and implementation of production-grade AI recruitment ecosystems and LMS analytics platforms from high-level business requirements.
+                              Driving the LMS analytics and reporting project while supporting production-grade AI recruitment ecosystems and scalable Laravel infrastructure.
                            </p>
                            <div className="grid grid-cols-2 gap-4 py-4">
                               <div className="p-4 rounded-lg bg-[var(--card)] border border-[var(--border)]">
-                                 <div className="text-[10px] font-mono text-[var(--muted)] mb-1 uppercase">Operational Impact</div>
-                                 <div className="text-lg font-bold text-emerald-400">-70% Effort</div>
+                                 <div className="text-[10px] font-mono text-[var(--muted)] mb-1 uppercase">Reporting Automation</div>
+                                 <div className="text-lg font-bold text-emerald-400">+55% Insight Velocity</div>
                               </div>
                               <div className="p-4 rounded-lg bg-[var(--card)] border border-[var(--border)]">
-                                 <div className="text-[10px] font-mono text-[var(--muted)] mb-1 uppercase">Performance Gain</div>
-                                 <div className="text-lg font-bold text-blue-400">+40% Speed</div>
+                                 <div className="text-[10px] font-mono text-[var(--muted)] mb-1 uppercase">Data Accuracy</div>
+                                 <div className="text-lg font-bold text-blue-400">+34% Quality</div>
                               </div>
                            </div>
                            <div className="flex flex-wrap gap-2">
-                              {["Laravel", "OpenAI", "System Arch", "MySQL Tuning"].map(tag => (
+                              {["LMS Analytics", "Laravel", "Reporting", "OpenAI"].map(tag => (
                                  <span key={tag} className="text-[10px] font-mono px-2 py-0.5 rounded border border-[var(--border)] text-[var(--muted)]">{tag}</span>
                               ))}
                            </div>
                         </div>
                      </div>
 
-                     {/* Role 2: Intern */}
+                     {/* Role 2: Associate */}
+                     <div className="relative">
+                        <div className="absolute -left-[37px] top-1.5 w-4 h-4 rounded-full border-2 border-[var(--background)] bg-[var(--border)]" />
+                        <div className="mb-6">
+                           <span className="text-xs font-mono text-[var(--muted)] mb-2 block">Jul 2025 — Mar 2025</span>
+                           <h4 className="text-2xl font-bold tracking-tight mb-1">Associate Software Engineer</h4>
+                           <div className="text-sm font-medium text-white/60">Balanita Pvt Ltd, Colombo</div>
+                        </div>
+
+                        <div className="space-y-4">
+                           <p className="text-[var(--muted)] text-sm leading-relaxed max-w-lg">
+                              Led the delivery of production-grade AI recruitment ecosystems, architected new platform modules, and streamlined enterprise workflows for faster feature rollout.
+                           </p>
+                           <div className="flex flex-wrap gap-2">
+                              {["Laravel", "AI Orchestration", "Platform Design", "MySQL Tuning"].map(tag => (
+                                 <span key={tag} className="text-[10px] font-mono px-2 py-0.5 rounded border border-[var(--border)] text-[var(--muted)]">{tag}</span>
+                              ))}
+                           </div>
+                        </div>
+                     </div>
+
+                     {/* Role 3: Intern */}
                      <div className="relative">
                         <div className="absolute -left-[37px] top-1.5 w-4 h-4 rounded-full border-2 border-[var(--background)] bg-[var(--border)]" />
                         <div className="mb-6">

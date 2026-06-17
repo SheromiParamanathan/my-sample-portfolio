@@ -2,8 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { useTheme } from "./ThemeProvider";
-import { Sun, Moon, Menu, X, ArrowUpRight, Cpu } from "lucide-react";
+import { Menu, X, ArrowUpRight, Cpu } from "lucide-react";
 import { motion } from "framer-motion";
 import clsx from "clsx";
 
@@ -15,7 +14,6 @@ const navItems = [
 ];
 
 export function Navbar() {
-  const { theme, toggleTheme } = useTheme();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("");
@@ -99,15 +97,6 @@ export function Navbar() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <button
-              type="button"
-              onClick={toggleTheme}
-              className="p-2 rounded-lg border border-[var(--border)] bg-[var(--surface-glass)] hover:bg-[var(--accent)] hover:text-[var(--background)] transition-all duration-300"
-              aria-label="Toggle theme"
-            >
-              {theme === "dark" ? <Sun size={14} /> : <Moon size={14} />}
-            </button>
-
             <button
               type="button"
               onClick={() => setOpen(!open)}
