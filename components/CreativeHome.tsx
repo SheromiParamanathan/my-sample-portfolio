@@ -20,9 +20,6 @@ export function CreativeHome() {
                      className="space-y-8"
                   >
                      <div className="flex flex-col gap-4">
-                        <span className="text-[10px] font-mono uppercase tracking-[0.28em] text-[var(--muted)]">
-                           Backend Systems Engineer • AI SaaS • Remote-ready
-                        </span>
                         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight">
                            I design resilient backend infrastructure for AI-enabled SaaS teams.
                         </h1>
