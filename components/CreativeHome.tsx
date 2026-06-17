@@ -9,40 +9,31 @@ import { certifications } from "@/data/skills";
 export function CreativeHome() {
    return (
       <div className="bg-[var(--background)] min-h-screen text-[var(--foreground)] font-body selection:bg-white selection:text-black">
-         {/* 1. ENGINEERING HUB HERO (RE-DESIGNED & OPTIMIZED) */}
-         <section className="relative pt-32 pb-24 px-6 border-b border-[var(--border)] overflow-hidden min-h-[90vh] flex flex-col justify-center">
-            <div className="absolute inset-x-0 top-0 h-[420px] pointer-events-none opacity-30">
-               <div className="absolute inset-x-0 top-0 h-full bg-[radial-gradient(circle_at_top,rgba(16,185,129,0.14),transparent_55%)]" />
-            </div>
-            <div className="absolute right-[-12%] top-20 h-[420px] w-[420px] rounded-full bg-gradient-to-br from-white/15 via-transparent to-slate-500/0 blur-3xl" />
-
-            <div className="max-w-7xl mx-auto relative z-10 w-full">
-               <div className="grid lg:grid-cols-12 gap-12 items-center">
+         {/* 1. PORTFOLIO HERO */}
+         <section className="relative pt-24 pb-20 px-6 border-b border-[var(--border)] overflow-hidden min-h-[78vh]">
+            <div className="max-w-6xl mx-auto">
+               <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr] items-start">
                   <motion.div
                      initial={{ opacity: 0, y: 20 }}
                      animate={{ opacity: 1, y: 0 }}
                      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                     className="lg:col-span-12"
+                     className="space-y-8"
                   >
-                     <div className="mb-8">
-                        <p className="text-[10px] font-mono uppercase tracking-[0.32em] text-[var(--muted)]">
-                           <span className="inline-flex items-center gap-2">
-                              <span className="h-2 w-2 rounded-full bg-white" />
-                              OPEN TO BACKEND & AI SAAS ROLES // COLOMBO, SRI LANKA (UTC +05:30)
-                           </span>
-                        </p>
+                     <div className="flex flex-col gap-4">
+                        <span className="text-[10px] font-mono uppercase tracking-[0.28em] text-[var(--muted)]">
+                           Backend Systems Engineer • AI SaaS • Remote-ready
+                        </span>
+                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight">
+                           I design resilient backend infrastructure for AI-enabled SaaS teams.
+                        </h1>
                      </div>
 
-                     <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight">
-                        I Build Resilient Backend Platforms for <span className="text-white/90">AI-First SaaS Products</span>
-                     </h1>
-
-                     <p className="text-xl text-slate-300 max-w-3xl mt-6 leading-9">
-                        I engineer high-throughput server-side architectures, optimize scaling relational data layers, and deploy automated data pipelines for mission-critical applications. Specialized in the Laravel ecosystem, high-performance database tuning, and production-grade LLM orchestration.
+                     <p className="max-w-2xl text-lg text-slate-300 leading-9">
+                        I build scalable Laravel systems, optimize MySQL performance, and automate production-ready intelligence workflows for mission-critical software products.
                      </p>
 
-                     <div className="mt-10 flex flex-wrap items-center gap-4">
-                        <a href="mailto:sheromi19@gmail.com?subject=Resume%20Request" className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-semibold text-black shadow-[0_24px_80px_-40px_rgba(255,255,255,0.55)] transition duration-300 hover:bg-slate-100 hover:-translate-y-0.5">
+                     <div className="flex flex-wrap items-center gap-4">
+                        <a href="mailto:sheromi19@gmail.com?subject=Resume%20Request" className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-semibold text-black transition duration-300 hover:bg-slate-100">
                            Request Resume
                         </a>
                         <a href="#projects" className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-8 py-4 text-sm font-semibold text-white transition duration-300 hover:border-white/30 hover:bg-white/10">
@@ -50,171 +41,89 @@ export function CreativeHome() {
                         </a>
                      </div>
 
-                     <div className="mt-8 flex flex-wrap items-center gap-3 text-[11px] text-[var(--muted)]">
-                        {[
-                           "Open to backend / AI SaaS roles",
-                           "Remote-friendly for international teams",
-                           "Production systems with 99.9% uptime",
-                        ].map((label) => (
-                           <span key={label} className="rounded-full border border-white/10 bg-white/5 px-3 py-2">
-                              {label}
-                           </span>
-                        ))}
+                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-[13px] text-[var(--muted)]">
+                        <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
+                           <div className="text-[10px] uppercase tracking-[0.32em] mb-3">Impact</div>
+                           <div className="text-3xl font-bold text-white">70%</div>
+                           <div className="mt-2">Reduced manual screening effort</div>
+                        </div>
+                        <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
+                           <div className="text-[10px] uppercase tracking-[0.32em] mb-3">Scale</div>
+                           <div className="text-3xl font-bold text-white">99.9%</div>
+                           <div className="mt-2">Production uptime target</div>
+                        </div>
+                        <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
+                           <div className="text-[10px] uppercase tracking-[0.32em] mb-3">System</div>
+                           <div className="text-3xl font-bold text-white">Laravel</div>
+                           <div className="mt-2">Backend architecture and APIs</div>
+                        </div>
                      </div>
-
                   </motion.div>
 
+                  <motion.div
+                     initial={{ opacity: 0, x: 20 }}
+                     animate={{ opacity: 1, x: 0 }}
+                     transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
+                     className="rounded-[32px] border border-white/10 bg-white/5 p-8"
+                  >
+                     <div className="flex items-center justify-between mb-8">
+                        <span className="text-[10px] uppercase tracking-[0.28em] text-[var(--muted)]">Featured Expertise</span>
+                        <span className="text-[10px] uppercase tracking-[0.28em] text-[var(--muted)]">Sri Lanka</span>
+                     </div>
+                     <div className="grid gap-4">
+                        {[
+                           "High-throughput APIs & queue systems",
+                           "MySQL optimization & indexing",
+                           "LLM orchestration for SaaS workflows",
+                           "ETL automation & reporting backends",
+                           "Secure RBAC & multi-tenant design",
+                        ].map((item) => (
+                           <div key={item} className="rounded-3xl border border-white/10 bg-[var(--background)] p-4 text-sm text-[var(--muted)]">
+                              {item}
+                           </div>
+                        ))}
+                     </div>
+                  </motion.div>
                </div>
             </div>
          </section>
 
 
-         {/* 2. STRICT BENTO GRID (Projects) */}
+         {/* 2. FEATURED DEPLOYMENTS */}
          <section id="projects" className="py-24 px-6 border-b border-[var(--border)]">
             <div className="max-w-7xl mx-auto">
-               <div className="flex items-end justify-between mb-12">
+               <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
                   <div>
-                     <h2 className="text-3xl font-bold tracking-tight mb-2">Production Deployments</h2>
-                     <p className="text-[var(--muted)]">High-impact systems engineered for scale.</p>
+                     <h2 className="text-3xl font-bold tracking-tight mb-2">Featured Deployments</h2>
+                     <p className="text-[var(--muted)]">Selected production systems built for scale.</p>
                   </div>
-                  <Link href="/projects" className="text-sm border-b border-transparent hover:border-[var(--muted)] text-[var(--muted)] transition-colors pb-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]">
+                  <Link href="/projects" className="text-sm border-b border-transparent hover:border-[var(--muted)] text-[var(--muted)] transition-colors pb-1">
                      View all deployments →
                   </Link>
                </div>
 
-               <div className="bento-grid">
-                  {/* Main Project (Hero) */}
-                  <div className="col-span-12 lg:col-span-8 lg:row-span-2 bento-card group flex flex-col justify-between min-h-[420px] border border-white/10 bg-[var(--card-hover)] shadow-[0_30px_80px_-40px_rgba(255,255,255,0.25)] hover:border-white transition-all duration-500">
-                     <div className="flex justify-between items-start mb-12">
-                        <div>
-                           <div className="flex items-center gap-4 mb-8">
-                              <div className="flex items-center gap-2 px-2 py-1 rounded border border-[var(--border)] bg-[var(--background)]">
-                                 <Database size={14} className="text-[var(--muted)]" />
-                                 <span className="text-[10px] font-mono text-[var(--muted)] uppercase tracking-widest">Core Infrastructure</span>
-                              </div>
-                              <div className="flex items-center gap-1.5 text-[10px] font-mono text-white/70">
-                                 <div className="w-1 h-1 rounded-full bg-white/70 animate-pulse" />
-                                 System Active
-                              </div>
-                           </div>
-                           <div className="inline-flex items-center gap-2 mb-4 text-[10px] uppercase tracking-[0.3em] font-mono text-[var(--accent-secondary)]">
-                              <span className="inline-flex h-2.5 w-2.5 rounded-full bg-[var(--accent)]" />
-                              Featured work
-                           </div>
-                           <h3 className="text-3xl md:text-4xl font-bold tracking-tighter mb-6 group-hover:text-white transition-colors">{projects[0].title}</h3>
-                           <p className="text-[var(--muted)] max-w-xl leading-relaxed text-sm md:text-base">{projects[0].description}</p>
+               <div className="grid gap-6 lg:grid-cols-3">
+                  {projects.slice(0, 3).map((project) => (
+                     <article key={project.slug} className="rounded-[28px] border border-white/10 bg-[var(--card)] p-8 transition hover:border-white/20">
+                        <div className="flex items-center gap-3 mb-5 text-[10px] uppercase tracking-[0.3em] text-[var(--muted)]">
+                           <span className="inline-flex h-2.5 w-2.5 rounded-full bg-white/30" />
+                           Production
                         </div>
-                        <Link
-                           href={`/projects/${projects[0].slug}`}
-                           className="inline-flex items-center gap-2 text-sm font-mono uppercase tracking-[0.2em] text-[var(--accent)] border border-[var(--border)] rounded-full px-5 py-3 hover:bg-[var(--accent)] hover:text-black transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
-                           aria-label={`View case study for ${projects[0].title}`}
-                        >
-                           Case study
-                           <ArrowUpRight size={18} />
-                        </Link>
-                     </div>
-
-                     <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-[var(--border)] border border-[var(--border)] rounded-xl overflow-hidden mt-auto">
-                        {[
-                           { label: "EFFORT REDUCTION", val: "70%" },
-                           { label: "API PERFORMANCE", val: "+40%" },
-                           { label: "AVAILABILITY", val: "99.9%" },
-                           { label: "ARCHITECTURE", val: "N-Tier" }
-                        ].map(stat => (
-                           <div key={stat.label} className="bg-[var(--background)] p-5">
-                              <div className="text-[9px] font-mono text-[var(--muted)] mb-3 uppercase tracking-widest">{stat.label}</div>
-                              <div className="text-xl font-bold tracking-tight">{stat.val}</div>
-                           </div>
-                        ))}
-                     </div>
-                  </div>
-
-                  {/* Secondary Project (AI News) */}
-                  <div className="col-span-12 lg:col-span-4 bento-card group flex flex-col justify-between hover:border-[var(--muted)] transition-all duration-500">
-                     <div>
-                        <div className="flex justify-between items-start mb-6">
-                           <div className="flex items-center gap-3">
-                              <div className="w-1.5 h-1.5 rounded-full bg-[var(--border)] group-hover:bg-white transition-colors" />
-                              <h3 className="text-lg font-bold tracking-tight group-hover:text-white transition-colors">AI News Aggregation</h3>
-                           </div>
-                           <Link
-                              href={`/projects/${projects[1].slug}`}
-                              className="inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-[var(--accent)] group-hover:text-white transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
-                              aria-label={`View case study for ${projects[1].title}`}
-                           >
-                              View project
-                              <ArrowUpRight size={14} />
-                           </Link>
-                        </div>
-                        <p className="text-[var(--muted)] text-xs leading-relaxed mb-6 line-clamp-3">{projects[1].description}</p>
-                     </div>
-                     <div className="flex flex-wrap gap-2">
-                        {projects[1].tech?.slice(0, 2).map(t => (
-                           <span key={t} className="text-[9px] font-mono text-[var(--muted)] flex items-center gap-1.5 italic">
-                              <span className="text-[var(--border)]">/</span>{t}
-                           </span>
-                        ))}
-                     </div>
-                  </div>
-
-                  {/* LMS Intelligence Project (NEW) */}
-                  <div className="col-span-12 lg:col-span-4 bento-card group flex flex-col justify-between hover:border-[var(--muted)] transition-all duration-500">
-                     <div>
-                        <div className="flex justify-between items-start mb-6">
-                           <div className="flex items-center gap-3">
-                              <div className="w-1.5 h-1.5 rounded-full bg-[var(--border)] group-hover:bg-white transition-colors" />
-                              <h3 className="text-lg font-bold tracking-tight group-hover:text-white transition-colors">LMS Intelligence</h3>
-                           </div>
-                           <Link
-                              href={`/projects/${projects[2].slug}`}
-                              className="inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-[var(--accent)] group-hover:text-white transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
-                              aria-label={`View case study for ${projects[2].title}`}
-                           >
-                              View project
-                              <ArrowUpRight size={14} />
-                           </Link>
-                        </div>
-                        <p className="text-[var(--muted)] text-xs leading-relaxed mb-6 line-clamp-3">{projects[2].description}</p>
-                     </div>
-                     <div className="flex flex-wrap gap-2">
-                        {projects[2].tech?.slice(0, 2).map(t => (
-                           <span key={t} className="text-[9px] font-mono text-[var(--muted)] flex items-center gap-1.5 italic">
-                              <span className="text-[var(--border)]">/</span>{t}
-                           </span>
-                        ))}
-                     </div>
-                  </div>
-
-                  {/* Additional Projects (Yoga & ESS) */}
-                  {projects.slice(3, 5).map((p, i) => (
-                     <div key={p.slug} className="col-span-12 md:col-span-6 bento-card group hover:border-[var(--muted)] transition-all duration-500">
-                        <div className="flex justify-between items-start mb-10">
-                           <div className="flex items-center gap-3">
-                              <div className="w-1.5 h-1.5 rounded-full bg-[var(--border)] group-hover:bg-white transition-colors" />
-                              <h4 className="text-lg font-bold tracking-tight group-hover:text-white transition-colors">{p.title}</h4>
-                           </div>
-                           <Link
-                              href={`/projects/${p.slug}`}
-                              className="inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-[var(--accent)] group-hover:text-white transition-all duration-300"
-                              aria-label={`View case study for ${p.title}`}
-                           >
-                              View project
-                              <ArrowUpRight size={16} />
-                           </Link>
-                        </div>
-                        <p className="text-[var(--muted)] text-sm leading-relaxed mb-8 line-clamp-2">{p.description}</p>
-                        <div className="flex flex-wrap gap-3">
-                           {p.tech?.slice(0, 3).map(t => (
-                              <span key={t} className="text-[10px] font-mono text-[var(--muted)] flex items-center gap-1.5 italic">
-                                 <span className="text-[var(--border)]">/</span>{t}
+                        <h3 className="text-2xl font-bold tracking-tight mb-4 text-white">{project.title}</h3>
+                        <p className="text-sm leading-relaxed text-[var(--muted)] mb-6">{project.description}</p>
+                        <div className="flex flex-wrap gap-2 mb-6">
+                           {project.tech?.slice(0, 3).map((tech) => (
+                              <span key={tech} className="rounded-full border border-white/10 px-3 py-2 text-[10px] uppercase tracking-[0.24em] text-[var(--muted)]">
+                                 {tech}
                               </span>
                            ))}
                         </div>
-                     </div>
+                        <Link href={`/projects/${project.slug}`} className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.2em] text-white/90">
+                           View case study <ArrowUpRight size={14} />
+                        </Link>
+                     </article>
                   ))}
                </div>
-
-
             </div>
          </section>
 
