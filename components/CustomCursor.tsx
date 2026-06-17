@@ -10,8 +10,8 @@ export function CustomCursor() {
 
   useEffect(() => {
     const moveCursor = (e: MouseEvent) => {
-      cursorX.set(e.clientX - 12);
-      cursorY.set(e.clientY - 12);
+      cursorX.set(e.clientX - 6);
+      cursorY.set(e.clientY - 6);
     };
 
     const handleMouseOver = (e: MouseEvent) => {
@@ -39,12 +39,12 @@ export function CustomCursor() {
 
   return (
     <motion.div
-      className="cursor-dot hidden lg:block"
+      className={`cursor-dot hidden lg:block ${isHovered ? "cursor-dot-hover" : ""}`}
       style={{
         translateX: cursorX,
         translateY: cursorY,
-        scale: isHovered ? 2.5 : 1,
-        opacity: isHovered ? 0.5 : 1,
+        scale: isHovered ? 1.2 : 1,
+        opacity: isHovered ? 0.95 : 1,
       }}
     />
   );
