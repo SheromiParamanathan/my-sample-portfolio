@@ -113,7 +113,11 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           </div>
 
           <h3 className="font-display font-semibold text-xl text-[var(--foreground)] group-hover:text-[var(--accent)] transition-colors duration-200">
-            <Link href={`/projects/${project.slug}`} className="after:absolute after:inset-0">
+            <Link
+              href={`/projects/${project.slug}`}
+              className="relative inline-block after:absolute after:inset-0"
+              aria-label={`View case study for ${project.title}`}
+            >
               {project.title}
             </Link>
           </h3>
@@ -146,6 +150,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
                 className="inline-flex items-center gap-1.5 text-xs font-mono transition-opacity hover:opacity-80 text-[var(--accent)]"
+                aria-label={`Open live demo for ${project.title}`}
               >
                 <ExternalLink size={12} strokeWidth={1.75} />
                 Demo
@@ -158,6 +163,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
                 className="inline-flex items-center gap-1.5 text-xs font-mono transition-opacity hover:opacity-80 text-[var(--muted)] hover:text-[var(--foreground)]"
+                aria-label={`Open source code for ${project.title}`}
               >
                 <Github size={12} strokeWidth={1.75} />
                 Code

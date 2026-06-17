@@ -175,9 +175,9 @@ export function CreativeHome() {
                      <h2 className="text-3xl font-bold tracking-tight mb-2">Production Deployments</h2>
                      <p className="text-[var(--muted)]">High-impact systems engineered for scale.</p>
                   </div>
-                  <a href="/projects" className="text-sm border-b border-transparent hover:border-[var(--muted)] text-[var(--muted)] transition-colors pb-1">
+                  <Link href="/projects" className="text-sm border-b border-transparent hover:border-[var(--muted)] text-[var(--muted)] transition-colors pb-1">
                      View all deployments →
-                  </a>
+                  </Link>
                </div>
 
                <div className="bento-grid">
@@ -198,7 +198,11 @@ export function CreativeHome() {
                            <h3 className="text-3xl md:text-4xl font-bold tracking-tighter mb-6 group-hover:text-white transition-colors">{projects[0].title}</h3>
                            <p className="text-[var(--muted)] max-w-xl leading-relaxed text-sm md:text-base">{projects[0].description}</p>
                         </div>
-                        <Link href={`/projects/${projects[0].slug}`} className="p-4 border border-[var(--border)] rounded-full hover:bg-white hover:text-black transition-all duration-300">
+                        <Link
+                           href={`/projects/${projects[0].slug}`}
+                           className="p-4 border border-[var(--border)] rounded-full hover:bg-white hover:text-black transition-all duration-300"
+                           aria-label={`View case study for ${projects[0].title}`}
+                        >
                            <ArrowUpRight size={22} />
                         </Link>
                      </div>
@@ -226,7 +230,11 @@ export function CreativeHome() {
                               <div className="w-1.5 h-1.5 rounded-full bg-[var(--border)] group-hover:bg-white transition-colors" />
                               <h3 className="text-lg font-bold tracking-tight group-hover:text-white transition-colors">AI News Aggregation</h3>
                            </div>
-                           <Link href={`/projects/${projects[1].slug}`} className="text-[var(--muted)] group-hover:text-white transition-all duration-300 transform group-hover:translate-x-1 group-hover:-translate-y-1">
+                           <Link
+                              href={`/projects/${projects[1].slug}`}
+                              className="text-[var(--muted)] group-hover:text-white transition-all duration-300 transform group-hover:translate-x-1 group-hover:-translate-y-1"
+                              aria-label={`View case study for ${projects[1].title}`}
+                           >
                               <ArrowUpRight size={18} />
                            </Link>
                         </div>
@@ -249,7 +257,11 @@ export function CreativeHome() {
                               <div className="w-1.5 h-1.5 rounded-full bg-[var(--border)] group-hover:bg-white transition-colors" />
                               <h3 className="text-lg font-bold tracking-tight group-hover:text-white transition-colors">LMS Intelligence</h3>
                            </div>
-                           <Link href={`/projects/${projects[2].slug}`} className="text-[var(--muted)] group-hover:text-white transition-all duration-300 transform group-hover:translate-x-1 group-hover:-translate-y-1">
+                           <Link
+                              href={`/projects/${projects[2].slug}`}
+                              className="text-[var(--muted)] group-hover:text-white transition-all duration-300 transform group-hover:translate-x-1 group-hover:-translate-y-1"
+                              aria-label={`View case study for ${projects[2].title}`}
+                           >
                               <ArrowUpRight size={18} />
                            </Link>
                         </div>
@@ -272,7 +284,11 @@ export function CreativeHome() {
                               <div className="w-1.5 h-1.5 rounded-full bg-[var(--border)] group-hover:bg-white transition-colors" />
                               <h4 className="text-lg font-bold tracking-tight group-hover:text-white transition-colors">{p.title}</h4>
                            </div>
-                           <Link href={`/projects/${p.slug}`} className="text-[var(--muted)] group-hover:text-white transition-all duration-300 transform group-hover:translate-x-1 group-hover:-translate-y-1">
+                           <Link
+                              href={`/projects/${p.slug}`}
+                              className="text-[var(--muted)] group-hover:text-white transition-all duration-300 transform group-hover:translate-x-1 group-hover:-translate-y-1"
+                              aria-label={`View case study for ${p.title}`}
+                           >
                               <ArrowUpRight size={20} />
                            </Link>
                         </div>
