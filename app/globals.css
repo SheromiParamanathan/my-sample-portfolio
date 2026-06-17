@@ -163,8 +163,8 @@ body::before {
     position: fixed;
     top: 0;
     left: 0;
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     background-color: var(--accent);
     border-radius: 50%;
     border: 1px solid rgba(255, 255, 255, 0.85);
@@ -175,8 +175,8 @@ body::before {
   }
 
   .cursor-dot-hover {
-    background-color: transparent;
-    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.08);
+    background-color: var(--accent);
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.08);
   }
 
   .magnetic-area {

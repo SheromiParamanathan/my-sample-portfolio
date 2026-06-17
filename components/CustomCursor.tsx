@@ -43,8 +43,8 @@ export function CustomCursor() {
       style={{
         translateX: cursorX,
         translateY: cursorY,
-        scale: isHovered ? 1.2 : 1,
-        opacity: isHovered ? 0.95 : 1,
+        scale: isHovered ? 1.1 : 1,
+        opacity: 1,
       }}
     />
   );
