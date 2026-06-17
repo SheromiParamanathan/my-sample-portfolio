@@ -102,10 +102,7 @@ export function CreativeHome() {
                      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                      className="lg:col-span-12"
                   >
-                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
-                        <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[10px] uppercase tracking-[0.28em] text-[var(--muted)]">
-                           Sheromi Paramanathan
-                        </div>
+                     <div className="mb-8">
                         <div className="text-sm font-semibold text-white/70">
                            Backend systems engineer for AI-first SaaS products
                         </div>
