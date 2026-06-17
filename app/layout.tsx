@@ -8,21 +8,25 @@ import { PageTransition } from "@/components/PageTransition";
 export const metadata: Metadata = {
   title: "Sheromi Paramanathan — Software Engineer",
   description:
-    "Associate Software Engineer specialising in Laravel ecosystems, AI/LLM integration, and scalable full-stack web applications. Based in Colombo, Sri Lanka.",
+    "I engineer resilient backend architectures, optimize scaling data pipelines, and deploy high-throughput AI orchestration layers for mission-critical SaaS platforms.",
   keywords: [
-    "Software Engineer",
+    "Backend Architect",
+    "AI Orchestration",
+    "Data Pipelines",
+    "SaaS Engineering",
     "Laravel",
     "MySQL",
     "OpenAI",
-    "Full Stack",
-    "Sri Lanka",
-    "Sheromi Paramanathan",
   ],
   authors: [{ name: "Sheromi Paramanathan" }],
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
-    title: "Sheromi Paramanathan — Software Engineer",
+    title: "Sheromi Paramanathan — Backend Systems Engineer",
     description:
-      "Associate Software Engineer specialising in Laravel, AI/LLM integration, and production-grade web systems.",
+      "I engineer resilient backend architectures, optimize scaling data pipelines, and deploy high-throughput AI orchestration layers for mission-critical SaaS platforms.",
     type: "website",
   },
 };
