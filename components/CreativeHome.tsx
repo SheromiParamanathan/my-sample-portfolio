@@ -113,7 +113,7 @@ export function CreativeHome() {
                      </h1>
 
                      <p className="text-xl text-slate-300 max-w-2xl mt-6 leading-9">
-                        I help engineering teams ship scalable server-side systems, automated data pipelines, and observable production workflows for mission-critical SaaS.
+                        I engineer resilient backend architectures, optimize scaling data pipelines, and deploy high-throughput AI orchestration layers for mission-critical SaaS platforms.
                      </p>
 
                      <div className="mt-10 flex flex-wrap items-center gap-4">
