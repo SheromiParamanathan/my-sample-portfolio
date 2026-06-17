@@ -101,7 +101,7 @@ export function CreativeHome() {
                      initial={{ opacity: 0, y: 20 }}
                      animate={{ opacity: 1, y: 0 }}
                      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                     className="lg:col-span-7"
+                     className="lg:col-span-8"
                   >
                      <div className="flex items-center gap-3 mb-8">
                         <div className="flex items-center gap-1.5 px-3 py-1 rounded-full border border-[var(--border)] bg-[var(--surface-glass)] text-[10px] font-mono uppercase tracking-[0.2em] text-[var(--foreground)]">
@@ -112,21 +112,21 @@ export function CreativeHome() {
                         <span className="text-[10px] font-mono text-[var(--muted)] uppercase tracking-widest">Colombo Instance / UTC +05:30</span>
                      </div>
 
-                     <h1 className="text-5xl md:text-6xl lg:text-7xl font-mono tracking-tight leading-[0.92] text-white max-w-4xl">
-                        Engineering High-Performance
-                        <span className="block">Backends &nbsp;<span className="text-emerald-400">Production AI Orchestration</span>.</span>
+                     <h1 className="text-5xl font-mono tracking-tight text-white">
+                        Engineering High-Performance Backends &nbsp;
+                        <span className="text-emerald-400">Production AI Orchestration</span>.
                      </h1>
 
-                     <p className="text-lg md:text-xl text-slate-400 max-w-3xl mt-6 leading-relaxed">
+                     <p className="text-xl text-slate-400 max-w-2xl mt-4">
                         I build distributed server-side infrastructures, asynchronous data pipelines, and optimized intelligent automation engines. Specializing in systems that process millions of data points while maintaining 99.9% availability.
                      </p>
 
-                     <div className="mt-10 flex flex-wrap items-center gap-4">
-                        <a href="#projects" className="inline-flex items-center justify-center bg-white text-black px-8 py-4 rounded-full font-bold text-sm hover:bg-neutral-200 transition-all duration-300 shadow-[0_20px_60px_-40px_rgba(255,255,255,0.7)]">
+                     <div className="flex flex-wrap items-center gap-5">
+                        <a href="#projects" className="bg-white text-black px-8 py-4 rounded-md font-bold text-sm hover:bg-neutral-200 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0">
                            View Deployments
                         </a>
-                        <a href="/resume.pdf" target="_blank" className="inline-flex items-center gap-2 justify-center px-8 py-4 rounded-full font-bold text-sm border border-[var(--border)] text-[var(--foreground)] hover:bg-[var(--card-hover)] transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]">
-                           Resume <ArrowUpRight size={18} className="transition-transform" />
+                        <a href="/resume.pdf" target="_blank" className="px-8 py-4 rounded-md font-bold text-sm border border-[var(--border)] text-[var(--foreground)] hover:bg-[var(--card-hover)] transition-all duration-300 flex items-center gap-2 group focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]">
+                           Resume <ArrowUpRight size={18} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                         </a>
                      </div>
                   </motion.div>
@@ -136,26 +136,25 @@ export function CreativeHome() {
                      initial={{ opacity: 0, x: 20 }}
                      animate={{ opacity: 1, x: 0 }}
                      transition={{ duration: 0.6, delay: 0.2 }}
-                     className="hidden lg:block lg:col-span-5"
+                     className="hidden lg:block lg:col-span-4"
                   >
-                     <div className="relative overflow-hidden rounded-[32px] border border-[var(--border)] bg-[rgba(10,10,10,0.7)] px-8 py-10 backdrop-blur-2xl shadow-[0_40px_100px_-55px_rgba(0,0,0,0.8)]">
-                        <div className="absolute inset-x-0 top-0 h-2 bg-gradient-to-r from-emerald-400 via-white/10 to-slate-500 opacity-40" />
-                        <div className="absolute top-6 right-6 p-3 rounded-full bg-white/5">
-                           <Activity size={18} className="text-[var(--muted)]" />
+                     <div className="p-8 border border-[var(--border)] rounded-2xl bg-[var(--surface-glass)] backdrop-blur-md relative overflow-hidden group">
+                        <div className="absolute top-0 right-0 p-5">
+                           <Activity size={14} className="text-[var(--muted)] opacity-30 group-hover:opacity-100 transition-opacity" />
                         </div>
                         <div className="space-y-8">
                            <div>
                               <div className="text-[9px] font-mono text-[var(--muted)] uppercase tracking-[0.2em] mb-4">Core Competencies</div>
                               <div className="flex flex-wrap gap-2.5">
                                  {['Distributed PHP', 'AI Orchestration', 'Vector Ops', 'ETL Systems'].map(t => (
-                                    <span key={t} className="text-[10px] font-mono px-3 py-2 border border-[var(--border)] rounded-full bg-white/5 text-white/90">{t}</span>
+                                    <span key={t} className="text-[10px] font-mono px-2.5 py-1 border border-[var(--border)] rounded bg-white/5 text-white/90">{t}</span>
                                  ))}
                               </div>
                            </div>
                            <div>
                               <div className="text-[9px] font-mono text-[var(--muted)] uppercase tracking-[0.2em] mb-3">Operational Status</div>
-                              <div className="flex items-center gap-3">
-                                 <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 shadow-[0_0_12px_rgba(16,185,129,0.35)]" />
+                              <div className="flex items-center gap-2">
+                                 <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]" />
                                  <div className="text-sm font-bold text-[var(--foreground)]">Available for High-Impact Projects</div>
                               </div>
                            </div>
