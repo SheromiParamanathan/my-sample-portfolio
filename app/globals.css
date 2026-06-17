@@ -158,25 +158,25 @@ body::before {
     @apply fixed top-0 left-0 h-1 bg-[var(--accent)] z-[100] transition-all duration-300;
   }
 
-  .cursor-dot {
+  .cursor-ring {
     pointer-events: none;
     position: fixed;
     top: 0;
     left: 0;
-    width: 10px;
-    height: 10px;
-    background-color: var(--accent);
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
     border-radius: 50%;
     border: 1px solid rgba(255, 255, 255, 0.85);
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.12);
     z-index: 9999;
     mix-blend-mode: difference;
-    transition: transform 0.15s ease-out, box-shadow 0.15s ease-out, background-color 0.15s ease-out;
+    transition: transform 0.15s ease-out, box-shadow 0.15s ease-out, border-color 0.15s ease-out;
   }
 
-  .cursor-dot-hover {
-    background-color: var(--accent);
-    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.08);
+  .cursor-ring-hover {
+    border-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.08);
   }
 
   .magnetic-area {
