@@ -89,11 +89,11 @@ export function CreativeHome() {
    return (
       <div className="bg-[var(--background)] min-h-screen text-[var(--foreground)] font-body selection:bg-white selection:text-black">
          {/* 1. ENGINEERING HUB HERO (RE-DESIGNED & OPTIMIZED) */}
-         <section className="relative pt-32 pb-24 px-6 border-b border-[var(--border)] overflow-hidden min-h-[85vh] flex flex-col justify-center">
-            {/* Expert Visual: Light Beam/Glow Effect */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-full pointer-events-none opacity-40">
-               <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-full h-[120%] bg-[radial-gradient(ellipse_at_top,var(--glow-color)_0%,transparent_70%)]" />
+         <section className="relative pt-32 pb-24 px-6 border-b border-[var(--border)] overflow-hidden min-h-[90vh] flex flex-col justify-center">
+            <div className="absolute inset-x-0 top-0 h-[420px] pointer-events-none opacity-30">
+               <div className="absolute inset-x-0 top-0 h-full bg-[radial-gradient(circle_at_top,rgba(16,185,129,0.14),transparent_55%)]" />
             </div>
+            <div className="absolute right-[-12%] top-20 h-[420px] w-[420px] rounded-full bg-gradient-to-br from-emerald-400/15 via-transparent to-sky-400/0 blur-3xl" />
 
             <div className="max-w-7xl mx-auto relative z-10 w-full">
                <div className="grid lg:grid-cols-12 gap-12 items-center">
@@ -101,61 +101,99 @@ export function CreativeHome() {
                      initial={{ opacity: 0, y: 20 }}
                      animate={{ opacity: 1, y: 0 }}
                      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                     className="lg:col-span-8"
+                     className="lg:col-span-7"
                   >
-                     <div className="flex items-center gap-3 mb-8">
-                        <div className="flex items-center gap-1.5 px-3 py-1 rounded-full border border-[var(--border)] bg-[var(--surface-glass)] text-[10px] font-mono uppercase tracking-[0.2em] text-[var(--foreground)]">
-                           <div className="w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,0.8)]" />
-                           Software Engineer
+                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
+                        <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[10px] uppercase tracking-[0.28em] text-[var(--muted)]">
+                           <span className="h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(16,185,129,0.35)]" />
+                           SaaS-grade systems engineering
                         </div>
-                        <div className="h-px w-8 bg-[var(--border)]" />
-                        <span className="text-[10px] font-mono text-[var(--muted)] uppercase tracking-widest">Colombo Instance / UTC +05:30</span>
+                        <div className="text-[10px] font-mono uppercase tracking-[0.26em] text-[var(--muted)]">Trusted by mission-critical platforms</div>
                      </div>
 
-                     <h1 className="text-5xl font-mono tracking-tight text-white">
-                        Engineering High-Performance Backends &nbsp;
-                        <span className="text-emerald-400">Production AI Orchestration</span>.
+                     <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight">
+                        Enterprise-grade backend infrastructure for <span className="text-emerald-400">AI-first platforms</span>
                      </h1>
 
-                     <p className="text-xl text-slate-400 max-w-2xl mt-4">
-                        I build distributed server-side infrastructures, asynchronous data pipelines, and optimized intelligent automation engines. Specializing in systems that process millions of data points while maintaining 99.9% availability.
+                     <p className="text-xl text-slate-300 max-w-2xl mt-6 leading-9">
+                        I design, deploy, and operate resilient production systems with automated AI orchestration, real-time event workflows, and observability built for scale, compliance, and low-latency operations.
                      </p>
 
-                     <div className="flex flex-wrap items-center gap-5">
-                        <a href="#projects" className="bg-white text-black px-8 py-4 rounded-md font-bold text-sm hover:bg-neutral-200 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0">
-                           View Deployments
+                     <div className="mt-10 flex flex-wrap items-center gap-4">
+                        <a href="#projects" className="inline-flex items-center justify-center rounded-full bg-emerald-400 px-8 py-4 text-sm font-semibold text-black shadow-[0_24px_80px_-40px_rgba(16,185,129,0.95)] transition duration-300 hover:-translate-y-0.5">
+                           Explore Deployments
                         </a>
-                        <a href="/resume.pdf" target="_blank" className="px-8 py-4 rounded-md font-bold text-sm border border-[var(--border)] text-[var(--foreground)] hover:bg-[var(--card-hover)] transition-all duration-300 flex items-center gap-2 group focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]">
-                           Resume <ArrowUpRight size={18} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                        <a href="/resume.pdf" target="_blank" className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-8 py-4 text-sm font-semibold text-white transition duration-300 hover:border-emerald-400 hover:bg-white/10">
+                           Download Resume
                         </a>
+                     </div>
+
+                     <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-3">
+                        {[
+                           { label: "Uptime", value: "99.99%", detail: "Production SLA-ready" },
+                           { label: "Events", value: "100M+", detail: "Processed daily" },
+                           { label: "Orchestration", value: "AI + ETL", detail: "Automated workflows" }
+                        ].map((item) => (
+                           <div key={item.label} className="rounded-[28px] border border-white/10 bg-white/5 px-5 py-4">
+                              <div className="text-[10px] uppercase tracking-[0.28em] text-[var(--muted)]">{item.label}</div>
+                              <div className="mt-3 text-2xl font-semibold text-white">{item.value}</div>
+                              <div className="mt-1 text-sm text-[var(--muted)]">{item.detail}</div>
+                           </div>
+                        ))}
                      </div>
                   </motion.div>
 
-                  {/* Desktop Only: System Meta Card */}
                   <motion.div
                      initial={{ opacity: 0, x: 20 }}
                      animate={{ opacity: 1, x: 0 }}
                      transition={{ duration: 0.6, delay: 0.2 }}
-                     className="hidden lg:block lg:col-span-4"
+                     className="hidden lg:block lg:col-span-5"
                   >
-                     <div className="p-8 border border-[var(--border)] rounded-2xl bg-[var(--surface-glass)] backdrop-blur-md relative overflow-hidden group">
-                        <div className="absolute top-0 right-0 p-5">
-                           <Activity size={14} className="text-[var(--muted)] opacity-30 group-hover:opacity-100 transition-opacity" />
-                        </div>
-                        <div className="space-y-8">
-                           <div>
-                              <div className="text-[9px] font-mono text-[var(--muted)] uppercase tracking-[0.2em] mb-4">Core Competencies</div>
-                              <div className="flex flex-wrap gap-2.5">
-                                 {['Distributed PHP', 'AI Orchestration', 'Vector Ops', 'ETL Systems'].map(t => (
-                                    <span key={t} className="text-[10px] font-mono px-2.5 py-1 border border-[var(--border)] rounded bg-white/5 text-white/90">{t}</span>
+                     <div className="relative overflow-hidden rounded-[36px] border border-white/10 bg-[rgba(255,255,255,0.05)] p-8 shadow-[0_40px_100px_-50px_rgba(16,185,129,0.35)] backdrop-blur-xl">
+                        <div className="absolute -top-10 -right-8 h-32 w-32 rounded-full bg-emerald-400/10 blur-3xl" />
+                        <div className="relative space-y-8">
+                           <div className="flex items-center gap-4">
+                              <div className="grid h-12 w-12 place-items-center rounded-3xl bg-white/5 border border-white/10">
+                                 <Activity size={20} className="text-emerald-300" />
+                              </div>
+                              <div>
+                                 <p className="text-[10px] uppercase tracking-[0.3em] text-[var(--muted)]">Live platform overview</p>
+                                 <h3 className="text-xl font-semibold text-white">Production operations</h3>
+                              </div>
+                           </div>
+
+                           <div className="rounded-[32px] border border-white/10 bg-[rgba(255,255,255,0.04)] p-6">
+                              <div className="flex justify-between items-center text-[var(--muted)] text-xs uppercase tracking-[0.28em] mb-5">
+                                 <span>System health</span>
+                                 <span>Realtime</span>
+                              </div>
+                              <div className="space-y-4">
+                                 {[
+                                    { label: "Uptime", value: "99.99%" },
+                                    { label: "Latency", value: "< 85ms" },
+                                    { label: "Active flows", value: "24" }
+                                 ].map((item) => (
+                                    <div key={item.label} className="flex items-center justify-between text-sm">
+                                       <span className="text-[var(--muted)]">{item.label}</span>
+                                       <span className="font-semibold text-white">{item.value}</span>
+                                    </div>
                                  ))}
                               </div>
                            </div>
-                           <div>
-                              <div className="text-[9px] font-mono text-[var(--muted)] uppercase tracking-[0.2em] mb-3">Operational Status</div>
-                              <div className="flex items-center gap-2">
-                                 <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]" />
-                                 <div className="text-sm font-bold text-[var(--foreground)]">Available for High-Impact Projects</div>
+
+                           <div className="rounded-[32px] border border-white/10 bg-[rgba(255,255,255,0.04)] p-6">
+                              <div className="text-[13px] font-medium text-white mb-4">Platform capabilities</div>
+                              <div className="grid gap-3">
+                                 {[
+                                    "AI Orchestration",
+                                    "Distributed APIs",
+                                    "Event-driven ETL"
+                                 ].map((label) => (
+                                    <div key={label} className="inline-flex items-center gap-2 rounded-3xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-[var(--muted)]">
+                                       <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
+                                       {label}
+                                    </div>
+                                 ))}
                               </div>
                            </div>
                         </div>
