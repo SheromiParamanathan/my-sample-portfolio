@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRef, useState, useEffect, useMemo } from "react";
-import { ArrowUpRight, Mail, Linkedin, Github, Server, Brain, Monitor, Wrench, Award, GraduationCap, Briefcase, Plus, Copy, Check, Hexagon, Cpu, Database, Activity } from "lucide-react";
+import { ArrowUpRight, Mail, Linkedin, Github, Server, Brain, Monitor, Wrench, Award, GraduationCap, Briefcase, Plus, Copy, Check, Hexagon, Cpu, Database } from "lucide-react";
 import { motion, useReducedMotion, useScroll, useSpring } from "framer-motion";
 import { projects } from "@/data/projects";
 import { skills, certifications } from "@/data/skills";
@@ -100,7 +100,7 @@ export function CreativeHome() {
                      initial={{ opacity: 0, y: 20 }}
                      animate={{ opacity: 1, y: 0 }}
                      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                     className="lg:col-span-7"
+                     className="lg:col-span-12"
                   >
                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
                         <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[10px] uppercase tracking-[0.28em] text-[var(--muted)]">
@@ -127,77 +127,8 @@ export function CreativeHome() {
                         </a>
                      </div>
 
-                     <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-3">
-                        {[
-                           { label: "Uptime", value: "99.99%", detail: "Production SLA-ready" },
-                           { label: "Events", value: "100M+", detail: "Processed daily" },
-                           { label: "Orchestration", value: "AI + ETL", detail: "Automated workflows" }
-                        ].map((item) => (
-                           <div key={item.label} className="rounded-[28px] border border-white/10 bg-white/5 px-5 py-4">
-                              <div className="text-[10px] uppercase tracking-[0.28em] text-[var(--muted)]">{item.label}</div>
-                              <div className="mt-3 text-2xl font-semibold text-white">{item.value}</div>
-                              <div className="mt-1 text-sm text-[var(--muted)]">{item.detail}</div>
-                           </div>
-                        ))}
-                     </div>
                   </motion.div>
 
-                  <motion.div
-                     initial={{ opacity: 0, x: 20 }}
-                     animate={{ opacity: 1, x: 0 }}
-                     transition={{ duration: 0.6, delay: 0.2 }}
-                     className="hidden lg:block lg:col-span-5"
-                  >
-                     <div className="relative overflow-hidden rounded-[36px] border border-white/10 bg-[rgba(255,255,255,0.05)] p-8 shadow-[0_40px_100px_-50px_rgba(16,185,129,0.35)] backdrop-blur-xl">
-                        <div className="absolute -top-10 -right-8 h-32 w-32 rounded-full bg-white/10 blur-3xl" />
-                        <div className="relative space-y-8">
-                           <div className="flex items-center gap-4">
-                              <div className="grid h-12 w-12 place-items-center rounded-3xl bg-white/5 border border-white/10">
-                                 <Activity size={20} className="text-white/60" />
-                              </div>
-                              <div>
-                                 <p className="text-[10px] uppercase tracking-[0.3em] text-[var(--muted)]">Live platform overview</p>
-                                 <h3 className="text-xl font-semibold text-white">Production operations</h3>
-                              </div>
-                           </div>
-
-                           <div className="rounded-[32px] border border-white/10 bg-[rgba(255,255,255,0.04)] p-6">
-                              <div className="flex justify-between items-center text-[var(--muted)] text-xs uppercase tracking-[0.28em] mb-5">
-                                 <span>System health</span>
-                                 <span>Realtime</span>
-                              </div>
-                              <div className="space-y-4">
-                                 {[
-                                    { label: "Uptime", value: "99.99%" },
-                                    { label: "Latency", value: "< 85ms" },
-                                    { label: "Active flows", value: "24" }
-                                 ].map((item) => (
-                                    <div key={item.label} className="flex items-center justify-between text-sm">
-                                       <span className="text-[var(--muted)]">{item.label}</span>
-                                       <span className="font-semibold text-white">{item.value}</span>
-                                    </div>
-                                 ))}
-                              </div>
-                           </div>
-
-                           <div className="rounded-[32px] border border-white/10 bg-[rgba(255,255,255,0.04)] p-6">
-                              <div className="text-[13px] font-medium text-white mb-4">Platform capabilities</div>
-                              <div className="grid gap-3">
-                                 {[
-                                    "AI Orchestration",
-                                    "Distributed APIs",
-                                    "Event-driven ETL"
-                                 ].map((label) => (
-                                    <div key={label} className="inline-flex items-center gap-2 rounded-3xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-[var(--muted)]">
-                                       <span className="h-2.5 w-2.5 rounded-full bg-white/60" />
-                                       {label}
-                                    </div>
-                                 ))}
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </motion.div>
                </div>
             </div>
          </section>
