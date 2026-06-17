@@ -56,14 +56,14 @@ export function Navbar() {
           {/* Technical Signature Logo */}
           <Link
             href="/"
-            className="flex items-center gap-2 group"
+            className="flex items-center gap-3 group"
           >
-            <div className="w-8 h-8 rounded bg-[var(--accent)] flex items-center justify-center group-hover:rotate-6 transition-transform duration-300">
+            <div className="w-8 h-8 rounded-full bg-[var(--accent)] flex items-center justify-center group-hover:rotate-6 transition-transform duration-300">
                <span className="text-[var(--background)] font-black text-xs tracking-tighter">SP</span>
             </div>
-            <div className="hidden sm:block overflow-hidden">
-               <div className="text-[10px] font-mono font-bold leading-none text-[var(--foreground)] tracking-widest group-hover:translate-y-[-100%] transition-transform duration-300">SHEROMI.SYS</div>
-               <div className="text-[10px] font-mono font-bold leading-none text-[var(--muted)] tracking-widest translate-y-[100%] group-hover:translate-y-[0] transition-transform duration-300 absolute">EST. 2024</div>
+            <div className="hidden sm:flex flex-col leading-tight">
+               <div className="text-[10px] font-mono font-bold text-[var(--foreground)] tracking-widest">Sheromi Paramanathan</div>
+               <div className="text-[8px] uppercase tracking-[0.3em] text-[var(--muted)]">Backend Software Engineer</div>
             </div>
           </Link>
 
