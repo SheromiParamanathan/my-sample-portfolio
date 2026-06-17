@@ -10,7 +10,7 @@ export function CreativeHome() {
    return (
       <div className="bg-[var(--background)] min-h-screen text-[var(--foreground)] font-body selection:bg-white selection:text-black">
          {/* 1. PORTFOLIO HERO */}
-         <section className="relative pt-24 pb-20 px-6 border-b border-[var(--border)] overflow-hidden min-h-[78vh]">
+         <section className="relative pt-32 lg:pt-36 pb-20 px-6 border-b border-[var(--border)] overflow-hidden min-h-[calc(100vh-6rem)] scroll-mt-28">
             <div className="max-w-6xl mx-auto">
                <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr] items-start">
                   <motion.div
@@ -90,7 +90,7 @@ export function CreativeHome() {
 
 
          {/* 2. FEATURED DEPLOYMENTS */}
-         <section id="projects" className="py-24 px-6 border-b border-[var(--border)]">
+         <section id="projects" className="py-24 px-6 border-b border-[var(--border)] scroll-mt-28">
             <div className="max-w-7xl mx-auto">
                <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
                   <div>
@@ -128,7 +128,7 @@ export function CreativeHome() {
          </section>
 
          {/* 3. CAREER LOG (RE-DESIGNED) */}
-         <section id="experience" className="py-24 px-6 border-b border-[var(--border)]">
+         <section id="experience" className="py-24 px-6 border-b border-[var(--border)] scroll-mt-28">
             <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20">
                {/* Experience Log */}
                <div>
@@ -292,7 +292,7 @@ export function CreativeHome() {
          </section>
 
          {/* 4. TECHNICAL INFRASTRUCTURE (RE-DESIGNED) */}
-         <section id="skills" className="py-24 px-6 border-b border-[var(--border)] bg-[var(--card)]">
+         <section id="skills" className="py-24 px-6 border-b border-[var(--border)] bg-[var(--card)] scroll-mt-28">
             <div className="max-w-7xl mx-auto">
                <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
                   <div className="max-w-2xl">
@@ -379,7 +379,7 @@ export function CreativeHome() {
          </section>
 
          {/* 5. FINAL CTA & FOOTER */}
-         <footer id="contact" className="pt-24 pb-12 px-6 border-t border-[var(--border)]">
+         <footer id="contact" className="pt-24 pb-12 px-6 border-t border-[var(--border)] scroll-mt-28">
             <div className="max-w-7xl mx-auto">
                {/* Bold CTA Part */}
                <div className="mb-24">
