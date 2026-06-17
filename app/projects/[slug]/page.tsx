@@ -23,8 +23,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const statusColors: Record<string, string> = {
-  production: "text-emerald-400 bg-emerald-400/10 border-emerald-400/20",
-  "in-progress": "text-amber-400 bg-amber-400/10 border-amber-400/20",
+  production: "text-white border-white/20 bg-white/5",
+  "in-progress": "text-slate-300 border-slate-400/20 bg-slate-500/10",
   archived: "text-slate-400 bg-slate-400/10 border-slate-400/20",
 };
 
@@ -57,7 +57,7 @@ export default function ProjectDetailPage({ params }: Props) {
               style={{
                 color: "var(--accent)",
                 borderColor: "var(--border)",
-                backgroundColor: "rgba(124, 106, 247, 0.08)",
+                backgroundColor: "rgba(255, 255, 255, 0.08)",
               }}
             >
               Featured

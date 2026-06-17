@@ -11,14 +11,14 @@ interface ProjectCardProps {
 }
 
 const statusDotClasses: Record<string, string> = {
-  production: "bg-emerald-400",
-  "in-progress": "bg-amber-300",
-  archived: "bg-slate-400",
+  production: "bg-white/80",
+  "in-progress": "bg-slate-400",
+  archived: "bg-slate-500",
 };
 
 const statusBadgeClasses: Record<string, string> = {
-  production: "text-emerald-400 border-emerald-400/20",
-  "in-progress": "text-amber-400 border-amber-400/20",
+  production: "text-white border-white/20",
+  "in-progress": "text-slate-300 border-slate-400/20",
   archived: "text-slate-400 border-slate-400/20",
 };
 
@@ -82,15 +82,15 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               </div>
               <div className="flex-1 flex flex-col justify-center gap-1">
                 <div className="flex items-center gap-1">
-                  <span className="w-1 h-1 rounded-full bg-emerald-400" />
+                  <span className="w-1 h-1 rounded-full bg-white/80" />
                   <span className="truncate">deploy: ok</span>
                 </div>
                 <div className="flex items-center gap-1">
-                  <span className="w-1 h-1 rounded-full bg-amber-300" />
+                  <span className="w-1 h-1 rounded-full bg-slate-400" />
                   <span className="truncate">tests: ~95%</span>
                 </div>
                 <div className="flex items-center gap-1">
-                  <span className="w-1 h-1 rounded-full bg-sky-400" />
+                  <span className="w-1 h-1 rounded-full bg-slate-500" />
                   <span className="truncate">ai: enabled</span>
                 </div>
               </div>

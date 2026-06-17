@@ -11,11 +11,11 @@ import { Magnetic } from "./Magnetic";
 import { SectionWrapper } from "./SectionWrapper";
 
 const colorBands = [
-   { bg: "#6366f1", ink: "#ffffff" }, // Indigo
-   { bg: "#E8E2D3", ink: "#111111" }, // Parchment
-   { bg: "#10b981", ink: "#ffffff" }, // Emerald 
-   { bg: "#f43f5e", ink: "#ffffff" }, // Rose
-   { bg: "#3b82f6", ink: "#ffffff" }, // Blue
+   { bg: "#111111", ink: "#ffffff" }, // Dark
+   { bg: "#222222", ink: "#ffffff" }, // Charcoal
+   { bg: "#2f2f2f", ink: "#ffffff" }, // Slate
+   { bg: "#3f3f3f", ink: "#ffffff" }, // Graphite
+   { bg: "#4f4f4f", ink: "#ffffff" }, // Smoke
 ];
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -93,7 +93,7 @@ export function CreativeHome() {
             <div className="absolute inset-x-0 top-0 h-[420px] pointer-events-none opacity-30">
                <div className="absolute inset-x-0 top-0 h-full bg-[radial-gradient(circle_at_top,rgba(16,185,129,0.14),transparent_55%)]" />
             </div>
-            <div className="absolute right-[-12%] top-20 h-[420px] w-[420px] rounded-full bg-gradient-to-br from-emerald-400/15 via-transparent to-sky-400/0 blur-3xl" />
+            <div className="absolute right-[-12%] top-20 h-[420px] w-[420px] rounded-full bg-gradient-to-br from-white/15 via-transparent to-slate-500/0 blur-3xl" />
 
             <div className="max-w-7xl mx-auto relative z-10 w-full">
                <div className="grid lg:grid-cols-12 gap-12 items-center">
@@ -105,14 +105,14 @@ export function CreativeHome() {
                   >
                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
                         <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[10px] uppercase tracking-[0.28em] text-[var(--muted)]">
-                           <span className="h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(16,185,129,0.35)]" />
+                           <span className="h-2.5 w-2.5 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.35)]" />
                            SaaS-grade systems engineering
                         </div>
                         <div className="text-[10px] font-mono uppercase tracking-[0.26em] text-[var(--muted)]">Trusted by mission-critical platforms</div>
                      </div>
 
                      <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight">
-                        Enterprise-grade backend infrastructure for <span className="text-emerald-400">AI-first platforms</span>
+                        Enterprise-grade backend infrastructure for <span className="text-white/90">AI-first platforms</span>
                      </h1>
 
                      <p className="text-xl text-slate-300 max-w-2xl mt-6 leading-9">
@@ -120,10 +120,10 @@ export function CreativeHome() {
                      </p>
 
                      <div className="mt-10 flex flex-wrap items-center gap-4">
-                        <a href="#projects" className="inline-flex items-center justify-center rounded-full bg-emerald-400 px-8 py-4 text-sm font-semibold text-black shadow-[0_24px_80px_-40px_rgba(16,185,129,0.95)] transition duration-300 hover:-translate-y-0.5">
+                        <a href="#projects" className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-semibold text-black shadow-[0_24px_80px_-40px_rgba(255,255,255,0.55)] transition duration-300 hover:bg-slate-100 hover:-translate-y-0.5">
                            Explore Deployments
                         </a>
-                        <a href="/resume.pdf" target="_blank" className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-8 py-4 text-sm font-semibold text-white transition duration-300 hover:border-emerald-400 hover:bg-white/10">
+                        <a href="/resume.pdf" target="_blank" className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-8 py-4 text-sm font-semibold text-white transition duration-300 hover:border-white/30 hover:bg-white/10">
                            Download Resume
                         </a>
                      </div>
@@ -150,11 +150,11 @@ export function CreativeHome() {
                      className="hidden lg:block lg:col-span-5"
                   >
                      <div className="relative overflow-hidden rounded-[36px] border border-white/10 bg-[rgba(255,255,255,0.05)] p-8 shadow-[0_40px_100px_-50px_rgba(16,185,129,0.35)] backdrop-blur-xl">
-                        <div className="absolute -top-10 -right-8 h-32 w-32 rounded-full bg-emerald-400/10 blur-3xl" />
+                        <div className="absolute -top-10 -right-8 h-32 w-32 rounded-full bg-white/10 blur-3xl" />
                         <div className="relative space-y-8">
                            <div className="flex items-center gap-4">
                               <div className="grid h-12 w-12 place-items-center rounded-3xl bg-white/5 border border-white/10">
-                                 <Activity size={20} className="text-emerald-300" />
+                                 <Activity size={20} className="text-white/60" />
                               </div>
                               <div>
                                  <p className="text-[10px] uppercase tracking-[0.3em] text-[var(--muted)]">Live platform overview</p>
@@ -190,7 +190,7 @@ export function CreativeHome() {
                                     "Event-driven ETL"
                                  ].map((label) => (
                                     <div key={label} className="inline-flex items-center gap-2 rounded-3xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-[var(--muted)]">
-                                       <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
+                                       <span className="h-2.5 w-2.5 rounded-full bg-white/60" />
                                        {label}
                                     </div>
                                  ))}
@@ -227,8 +227,8 @@ export function CreativeHome() {
                                  <Database size={14} className="text-[var(--muted)]" />
                                  <span className="text-[10px] font-mono text-[var(--muted)] uppercase tracking-widest">Core Infrastructure</span>
                               </div>
-                              <div className="flex items-center gap-1.5 text-[10px] font-mono text-emerald-400">
-                                 <div className="w-1 h-1 rounded-full bg-emerald-400 animate-pulse" />
+                              <div className="flex items-center gap-1.5 text-[10px] font-mono text-white/70">
+                                 <div className="w-1 h-1 rounded-full bg-white/70 animate-pulse" />
                                  System Active
                               </div>
                            </div>
@@ -502,8 +502,8 @@ export function CreativeHome() {
                               <div className="p-2 border border-[var(--border)] rounded-md bg-[var(--card)] group-hover:bg-[var(--background)] transition-colors">
                                  <Award size={16} className="text-[var(--muted)] group-hover:text-white transition-colors" />
                               </div>
-                              <div className="flex items-center gap-1.5 text-[10px] font-mono text-emerald-400">
-                                 <div className="w-1 h-1 rounded-full bg-emerald-400" />
+                              <div className="flex items-center gap-1.5 text-[10px] font-mono text-white/70">
+                                 <div className="w-1 h-1 rounded-full bg-white/70" />
                                  Verified
                               </div>
                            </div>
@@ -529,8 +529,8 @@ export function CreativeHome() {
                   </div>
                   <div className="text-right hidden md:block">
                      <div className="text-[10px] font-mono text-[var(--muted)] uppercase tracking-widest mb-2">System Health</div>
-                     <div className="flex items-center gap-2 text-emerald-400 font-bold">
-                        <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                     <div className="flex items-center gap-2 text-white/70 font-bold">
+                        <div className="w-2 h-2 rounded-full bg-white/70 animate-pulse" />
                         Nominal
                      </div>
                   </div>
@@ -655,7 +655,7 @@ export function CreativeHome() {
                      <div className="text-[10px] font-mono text-[var(--muted)] uppercase tracking-widest mb-6">System Info</div>
                      <ul className="space-y-3 text-sm text-[var(--muted)]">
                         <li className="flex items-center gap-2">
-                           <div className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                           <div className="w-1.5 h-1.5 rounded-full bg-white/70" />
                            Colombo, Sri Lanka
                         </li>
                         <li>UTC +05:30</li>
