@@ -71,5 +71,9 @@ export const certifications = [
     title: "Generative AI & Copilot Series",
     issuer: "Microsoft & LinkedIn Learning",
   },
+  {
+    title: "Fundamentals of Agile Project Management",
+    issuer: "Project Management Institute",
+  },
 ];
 
