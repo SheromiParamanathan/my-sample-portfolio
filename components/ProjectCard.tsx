@@ -115,7 +115,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           <h3 className="font-display font-semibold text-xl text-[var(--foreground)] group-hover:text-[var(--accent)] transition-colors duration-200">
             <Link
               href={`/projects/${project.slug}`}
-              className="relative inline-flex items-center gap-2 after:absolute after:inset-0"
+              className="relative inline-flex items-center gap-2 after:absolute after:inset-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
               aria-label={`View case study for ${project.title}`}
             >
               {project.title}
@@ -145,7 +145,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           <div className="mt-4 flex flex-wrap items-center gap-4 pt-4 border-t border-[var(--border)] relative z-10">
             <Link
               href={`/projects/${project.slug}`}
-              className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] text-[var(--accent)] hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] text-[var(--accent)] hover:text-white transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
               aria-label={`View full project case study for ${project.title}`}
             >
               Case study
@@ -157,7 +157,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
-                className="inline-flex items-center gap-1.5 text-xs font-mono transition-opacity hover:opacity-80 text-[var(--accent)]"
+                className="inline-flex items-center gap-1.5 text-xs font-mono transition-opacity hover:opacity-80 text-[var(--accent)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
                 aria-label={`Open live demo for ${project.title}`}
               >
                 <ExternalLink size={12} strokeWidth={1.75} />
@@ -170,7 +170,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
-                className="inline-flex items-center gap-1.5 text-xs font-mono transition-opacity hover:opacity-80 text-[var(--muted)] hover:text-[var(--foreground)]"
+                className="inline-flex items-center gap-1.5 text-xs font-mono transition-opacity hover:opacity-80 text-[var(--muted)] hover:text-[var(--foreground)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
                 aria-label={`Open source code for ${project.title}`}
               >
                 <Github size={12} strokeWidth={1.75} />

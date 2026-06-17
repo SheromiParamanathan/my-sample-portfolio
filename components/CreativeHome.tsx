@@ -126,7 +126,7 @@ export function CreativeHome() {
                         <a href="#projects" className="bg-white text-black px-8 py-4 rounded-md font-bold text-sm hover:bg-neutral-200 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0">
                            View Deployments
                         </a>
-                        <a href="/resume.pdf" target="_blank" className="px-8 py-4 rounded-md font-bold text-sm border border-[var(--border)] text-[var(--foreground)] hover:bg-[var(--card-hover)] transition-all duration-300 flex items-center gap-2 group">
+                        <a href="/resume.pdf" target="_blank" className="px-8 py-4 rounded-md font-bold text-sm border border-[var(--border)] text-[var(--foreground)] hover:bg-[var(--card-hover)] transition-all duration-300 flex items-center gap-2 group focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]">
                            Resume <ArrowUpRight size={18} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                         </a>
                      </div>
@@ -175,14 +175,14 @@ export function CreativeHome() {
                      <h2 className="text-3xl font-bold tracking-tight mb-2">Production Deployments</h2>
                      <p className="text-[var(--muted)]">High-impact systems engineered for scale.</p>
                   </div>
-                  <Link href="/projects" className="text-sm border-b border-transparent hover:border-[var(--muted)] text-[var(--muted)] transition-colors pb-1">
+                  <Link href="/projects" className="text-sm border-b border-transparent hover:border-[var(--muted)] text-[var(--muted)] transition-colors pb-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]">
                      View all deployments →
                   </Link>
                </div>
 
                <div className="bento-grid">
                   {/* Main Project (Hero) */}
-                  <div className="col-span-12 lg:col-span-8 lg:row-span-2 bento-card group flex flex-col justify-between min-h-[420px] hover:border-white transition-all duration-500">
+                  <div className="col-span-12 lg:col-span-8 lg:row-span-2 bento-card group flex flex-col justify-between min-h-[420px] border border-white/10 bg-[var(--card-hover)] shadow-[0_30px_80px_-40px_rgba(255,255,255,0.25)] hover:border-white transition-all duration-500">
                      <div className="flex justify-between items-start mb-12">
                         <div>
                            <div className="flex items-center gap-4 mb-8">
@@ -195,12 +195,16 @@ export function CreativeHome() {
                                  System Active
                               </div>
                            </div>
+                           <div className="inline-flex items-center gap-2 mb-4 text-[10px] uppercase tracking-[0.3em] font-mono text-[var(--accent-secondary)]">
+                              <span className="inline-flex h-2.5 w-2.5 rounded-full bg-[var(--accent)]" />
+                              Featured work
+                           </div>
                            <h3 className="text-3xl md:text-4xl font-bold tracking-tighter mb-6 group-hover:text-white transition-colors">{projects[0].title}</h3>
                            <p className="text-[var(--muted)] max-w-xl leading-relaxed text-sm md:text-base">{projects[0].description}</p>
                         </div>
                         <Link
                            href={`/projects/${projects[0].slug}`}
-                           className="inline-flex items-center gap-2 text-sm font-mono uppercase tracking-[0.2em] text-[var(--accent)] border border-[var(--border)] rounded-full px-5 py-3 hover:bg-[var(--accent)] hover:text-black transition-all duration-300"
+                           className="inline-flex items-center gap-2 text-sm font-mono uppercase tracking-[0.2em] text-[var(--accent)] border border-[var(--border)] rounded-full px-5 py-3 hover:bg-[var(--accent)] hover:text-black transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
                            aria-label={`View case study for ${projects[0].title}`}
                         >
                            Case study
@@ -233,7 +237,7 @@ export function CreativeHome() {
                            </div>
                            <Link
                               href={`/projects/${projects[1].slug}`}
-                              className="inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-[var(--accent)] group-hover:text-white transition-all duration-300"
+                              className="inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-[var(--accent)] group-hover:text-white transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
                               aria-label={`View case study for ${projects[1].title}`}
                            >
                               View project
@@ -261,7 +265,7 @@ export function CreativeHome() {
                            </div>
                            <Link
                               href={`/projects/${projects[2].slug}`}
-                              className="inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-[var(--accent)] group-hover:text-white transition-all duration-300"
+                              className="inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-[var(--accent)] group-hover:text-white transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
                               aria-label={`View case study for ${projects[2].title}`}
                            >
                               View project
@@ -568,10 +572,10 @@ export function CreativeHome() {
                      next production system?
                   </h2>
                   <div className="flex flex-wrap gap-4">
-                     <a href="mailto:sheromi19@gmail.com" className="bg-white text-black px-8 py-4 rounded-md font-bold text-sm hover:bg-neutral-200 transition-colors">
+                     <a href="mailto:sheromi19@gmail.com" className="bg-white text-black px-8 py-4 rounded-md font-bold text-sm hover:bg-neutral-200 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]">
                         Send Message
                      </a>
-                     <a href="https://linkedin.com/in/sheromi" target="_blank" rel="noopener noreferrer" className="px-8 py-4 rounded-md font-bold text-sm border border-[var(--border)] hover:bg-[var(--card-hover)] transition-colors">
+                     <a href="https://linkedin.com/in/sheromi" target="_blank" rel="noopener noreferrer" className="px-8 py-4 rounded-md font-bold text-sm border border-[var(--border)] hover:bg-[var(--card-hover)] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]">
                         Professional Network
                      </a>
                   </div>
