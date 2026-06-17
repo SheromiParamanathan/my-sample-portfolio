@@ -418,7 +418,7 @@ export function CreativeHome() {
                                  <p className="text-sm text-[var(--muted)] mb-4">Eastern University of Sri Lanka</p>
                                  <div className="flex flex-wrap gap-3">
                                     <span className="text-[10px] font-mono px-2 py-1 bg-[var(--background)] border border-[var(--border)] rounded text-[var(--muted)]">Aug 2021 — Dec 2024</span>
-                                    <span className="text-[10px] font-mono px-2 py-1 bg-white text-black rounded font-bold">GPA: 3.6 / 4.00</span>
+                                    <span className="text-[10px] font-mono px-2 py-1 bg-white text-black rounded font-bold">GPA: 3.60 / 4.00</span>
                                  </div>
                               </div>
                            </div>
@@ -438,7 +438,7 @@ export function CreativeHome() {
                               <div>
                                  <h4 className="text-lg font-bold tracking-tight mb-1">Advanced Level - Physical Science</h4>
                                  <p className="text-sm text-[var(--muted)]">Vincent Girls High School, Batticaloa</p>
-                                 <p className="text-xs text-[var(--muted)] mt-2">Subjects: Combined Mathematics, Physics</p>
+                                 <p className="text-xs text-[var(--muted)] mt-2">Combined Mathematics . Physics</p>
                               </div>
                            </div>
                            <div className="md:text-right">
@@ -582,8 +582,7 @@ export function CreativeHome() {
                   <div className="col-span-2 md:col-span-1">
                      <div className="font-bold text-xl tracking-tighter mb-4">Sheromi Paramanathan<span className="text-[var(--muted)]">.</span></div>
                      <p className="text-xs text-[var(--muted)] leading-relaxed">
-                        Software Engineer focused on Laravel-based SaaS systems and production-ready backend architecture. <br />
-                        Building dependable data workflows, analytics-driven reporting, and scalable execution automation.
+                        Software Engineer building Laravel SaaS systems, analytics workflows, and scalable backend automation.
                      </p>
                   </div>
 
