@@ -236,22 +236,27 @@ export function CreativeHome() {
 
                         <div className="space-y-4">
                            <div className="text-sm text-[var(--muted)] leading-relaxed max-w-lg">
-                              <p className="mb-3 font-semibold">Core Mandate: Spearheaded feature delivery modules for enterprise AI-assisted recruitment ecosystems and handled automated data ingestion layers as an Associate Software Engineer.</p>
+                              <p className="mb-3 font-semibold">Core Mandate: Led backend architecture for AI-driven recruitment and LMS intelligence systems, owning multi-tenant ETL pipelines, RBAC workflows, and data normalization for reliable analytics.</p>
                               <ul className="list-disc list-inside space-y-2">
-                                 <li>Scaled core API backend handling to improve response throughput by <strong>40%</strong> during peak application surges.</li>
-                                 <li>Directed platform refactoring to isolate asynchronous tasks, preserving an aggregate <strong>99.9% uptime metric</strong>.</li>
+                                 <li>Led the multi-tenant LMS data intelligence and reporting system integrating WordPress-based LMS platforms through ETL and REST ingestion, normalizing data for consistent analytics and real-time organization-scoped dashboards.</li>
+                                 <li>Built a three-tier RBAC system with secure authentication for an AI-powered recruitment workflow platform featuring dynamic forms and ATS scoring.</li>
+                                 <li>Owned backend architecture for a 500+ active user AI ATS Intelligence System, shipping an LLM-based resume evaluation pipeline with deterministic scoring fallbacks and reducing manual screening effort by 70%.</li>
+                                 <li>Built an AI News Aggregation & Content Intelligence System using embedding deduplication and multi-LLM orchestration across Perplexity, GPT, Gemini, and Claude.</li>
+                                 <li>Delivered an LMS Pricing Calculator for service cost estimation and engineered a compliance monitoring system that identifies at-risk learners and tracks completion trends.</li>
+                                 <li>Re-architected core RESTful APIs with indexing, query optimization, and caching, cutting average response time from 800ms to 480ms.</li>
+                                 <li>Partnered with product and design in Agile sprints to architect and ship production features on recurring release cycles.</li>
                               </ul>
                            </div>
 
                            <div className="flex flex-wrap gap-2">
-                              {['Distributed PHP', 'AI Orchestration', 'Vector Ops', 'Database Tuning'].map(tag => (
+                              {['Laravel', 'MySQL', 'ETL Pipelines', 'RBAC', 'LLM Orchestration'].map(tag => (
                                  <span key={tag} className="text-[10px] font-mono px-2 py-1 rounded border border-[var(--border)] bg-[var(--card)] text-[var(--muted)]">{tag}</span>
                               ))}
                            </div>
                         </div>
                      </div>
 
-                     {/* Role 3: Intern */
+                     {/* Role 2: Intern */}
                      <div className="relative">
                         <div className="absolute -left-[37px] top-1.5 w-4 h-4 rounded-full border-2 border-[var(--background)] bg-[var(--border)]" />
                         <div className="mb-6">
