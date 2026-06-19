@@ -251,33 +251,7 @@ export function CreativeHome() {
                         </div>
                      </div>
 
-                     {/* Role 2: Intern */}
-                     <div className="relative">
-                        <div className="absolute -left-[37px] top-1.5 w-4 h-4 rounded-full border-2 border-[var(--background)] bg-[var(--border)]" />
-                        <div className="mb-6">
-                           <span className="text-xs font-mono text-[var(--muted)] mb-2 block">Jul 2025 — Mar 2026</span>
-                           <h4 className="text-2xl font-bold tracking-tight mb-1">Associate Software Engineer</h4>
-                           <div className="text-sm font-medium text-white/60">Balanita Pvt Ltd, Colombo</div>
-                        </div>
-
-                        <div className="space-y-4">
-                           <div className="text-sm text-[var(--muted)] leading-relaxed max-w-lg">
-                              <p className="mb-3 font-semibold">Core Mandate: Spearheaded feature delivery modules for enterprise AI-assisted recruitment ecosystems and handled automated data ingestion layers.</p>
-                              <ul className="list-disc list-inside space-y-2">
-                                 <li>Scaled core API backend handling to improve response throughput by <strong>40%</strong> during peak application surges.</li>
-                                 <li>Directed platform refactoring to isolate asynchronous tasks, preserving an aggregate <strong>99.9% uptime metric</strong>.</li>
-                              </ul>
-                           </div>
-
-                           <div className="flex flex-wrap gap-2">
-                              {['Distributed PHP', 'AI Orchestration', 'Vector Ops', 'Database Tuning'].map(tag => (
-                                 <span key={tag} className="text-[10px] font-mono px-2 py-1 rounded border border-[var(--border)] bg-[var(--card)] text-[var(--muted)]">{tag}</span>
-                              ))}
-                           </div>
-                        </div>
-                     </div>
-
-                     {/* Role 3: Intern */}
+                     {/* Role 3: Intern */
                      <div className="relative">
                         <div className="absolute -left-[37px] top-1.5 w-4 h-4 rounded-full border-2 border-[var(--background)] bg-[var(--border)]" />
                         <div className="mb-6">
