@@ -409,9 +409,9 @@ export function CreativeHome() {
                      <div className="w-10 h-10 rounded-lg border border-[var(--border)] bg-[var(--card)] flex items-center justify-center mb-8 group-hover:border-white transition-colors">
                         <Server size={20} className="text-[var(--muted)] group-hover:text-white transition-colors" />
                      </div>
-                     <h4 className="font-bold mb-6 text-lg tracking-tight">Systems & Infra</h4>
+                     <h4 className="font-bold mb-6 text-lg tracking-tight">Backend & Systems</h4>
                      <div className="space-y-3">
-                        {["Distributed PHP (Laravel)", "RESTful Architecture", "Scalable System Design", "Asynchronous Queues", "RBAC & Security"].map(skill => (
+                        {['PHP', 'Laravel', 'Flask', 'Node.js', 'RESTful API Development', 'Authentication & Authorization (RBAC)', 'MVC Architecture', 'Service-Oriented Architecture (SOA)', 'Repository Pattern', 'Laravel Queue Workers', 'SOLID Principles', 'Scalable Backend Systems'].map(skill => (
                            <div key={skill} className="flex items-center gap-3 text-sm text-[var(--muted)]">
                               <div className="w-1 h-1 rounded-full bg-[var(--border)] group-hover:bg-white transition-colors" />
                               {skill}
@@ -425,9 +425,9 @@ export function CreativeHome() {
                      <div className="w-10 h-10 rounded-lg border border-[var(--border)] bg-[var(--card)] flex items-center justify-center mb-8 group-hover:border-white transition-colors">
                         <Database size={20} className="text-[var(--muted)] group-hover:text-white transition-colors" />
                      </div>
-                     <h4 className="font-bold mb-6 text-lg tracking-tight">Data Persistence</h4>
+                     <h4 className="font-bold mb-6 text-lg tracking-tight">Data & Databases</h4>
                      <div className="space-y-3">
-                        {["MySQL Optimization", "Schema Engineering", "Database Indexing", "ETL Pipelines", "Data Normalization"].map(skill => (
+                        {['MySQL', 'Schema Design', 'Query Optimization', 'Indexing', 'Relational & Multi-tenant Schema Design', 'ETL Pipelines', 'Data Normalization', 'Caching Strategies', 'Workflow Orchestration'].map(skill => (
                            <div key={skill} className="flex items-center gap-3 text-sm text-[var(--muted)]">
                               <div className="w-1 h-1 rounded-full bg-[var(--border)] group-hover:bg-white transition-colors" />
                               {skill}
@@ -441,9 +441,9 @@ export function CreativeHome() {
                      <div className="w-10 h-10 rounded-lg border border-[var(--border)] bg-[var(--card)] flex items-center justify-center mb-8 group-hover:border-white transition-colors">
                         <Brain size={20} className="text-[var(--muted)] group-hover:text-white transition-colors" />
                      </div>
-                     <h4 className="font-bold mb-6 text-lg tracking-tight">Intelligence</h4>
+                     <h4 className="font-bold mb-6 text-lg tracking-tight">AI & ML</h4>
                      <div className="space-y-3">
-                        {["LLM Orchestration", "Vector Embeddings", "Semantic Similarity", "Pose Estimation", "TensorFlow/Keras"].map(skill => (
+                        {['LLM Integration', 'OpenAI API', 'Embeddings', 'Vector Search', 'Semantic Similarity', 'Multi-LLM Orchestration', 'Prompt Engineering', 'OCR Processing'].map(skill => (
                            <div key={skill} className="flex items-center gap-3 text-sm text-[var(--muted)]">
                               <div className="w-1 h-1 rounded-full bg-[var(--border)] group-hover:bg-white transition-colors" />
                               {skill}
@@ -457,9 +457,9 @@ export function CreativeHome() {
                      <div className="w-10 h-10 rounded-lg border border-[var(--border)] bg-[var(--card)] flex items-center justify-center mb-8 group-hover:border-white transition-colors">
                         <Cpu size={20} className="text-[var(--muted)] group-hover:text-white transition-colors" />
                      </div>
-                     <h4 className="font-bold mb-6 text-lg tracking-tight">Interface & Ops</h4>
+                     <h4 className="font-bold mb-6 text-lg tracking-tight">Frontend, Tools & Delivery</h4>
                      <div className="space-y-3">
-                        {["React / Next.js", "Tailwind Design Sys", "Containerization (Docker)", "CI/CD Implementation", "JMeter Performance"].map(skill => (
+                        {['JavaScript', 'TypeScript', 'React.js', 'Next.js', 'HTML/CSS/JS (Strong)', 'Vue.js (Foundational)', 'Git/GitHub', 'Postman', 'Apache JMeter', 'API Testing', 'Unit Testing', 'Integration Testing', 'Agile/Scrum', 'Code Reviews', 'cPanel', 'xCloud'].map(skill => (
                            <div key={skill} className="flex items-center gap-3 text-sm text-[var(--muted)]">
                               <div className="w-1 h-1 rounded-full bg-[var(--border)] group-hover:bg-white transition-colors" />
                               {skill}
