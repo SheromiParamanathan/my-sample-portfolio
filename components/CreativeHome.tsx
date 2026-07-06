@@ -225,57 +225,84 @@ export function CreativeHome() {
                   </div>
 
                   <div className="relative space-y-12 pl-8 border-l border-[var(--border)]">
-                     {/* Role 1: Associate */}
+                     {/* Role 1: Software Engineer */}
                      <div className="relative">
                         <div className="absolute -left-[37px] top-1.5 w-4 h-4 rounded-full border-2 border-[var(--background)] bg-[var(--border)]" />
                         <div className="mb-6">
-                           <span className="text-xs font-mono text-[var(--muted)] mb-2 block">Jul 2025 — May 2026</span>
-                           <h4 className="text-2xl font-bold tracking-tight mb-1">Associate Software Engineer</h4>
+                           <span className="text-xs font-mono text-[var(--muted)] mb-2 block">Mar 2026 — May 2026</span>
+                           <h4 className="text-2xl font-bold tracking-tight mb-1">Software Engineer</h4>
                            <div className="text-sm font-medium text-white/60">Balanita Pvt Ltd, Colombo</div>
                         </div>
 
                         <div className="space-y-4">
                            <div className="text-sm text-[var(--muted)] leading-relaxed max-w-lg">
-                              <p className="mb-3 font-semibold">Core Mandate: Led backend architecture for AI-driven recruitment and LMS intelligence systems, owning multi-tenant ETL pipelines, RBAC workflows, and data normalization for reliable analytics.</p>
+                              <p className="mb-3 font-semibold">Core Mandate: Led the design and development of a multi-tenant LMS Intelligence Platform, unifying multiple WordPress LMS environments through custom ETL pipelines and REST APIs to enable centralized cross-organization analytics.</p>
                               <ul className="list-disc list-inside space-y-2">
-                                 <li>Led the multi-tenant LMS data intelligence and reporting system integrating WordPress-based LMS platforms through ETL and REST ingestion, normalizing data for consistent analytics and real-time organization-scoped dashboards.</li>
-                                 <li>Built a three-tier RBAC system with secure authentication for an AI-powered recruitment workflow platform featuring dynamic forms and ATS scoring.</li>
-                                 <li>Owned backend architecture for a 500+ active user AI ATS Intelligence System, shipping an LLM-based resume evaluation pipeline with deterministic scoring fallbacks and reducing manual screening effort by 70%.</li>
-                                 <li>Built an AI News Aggregation & Content Intelligence System using embedding deduplication and multi-LLM orchestration across Perplexity, GPT, Gemini, and Claude.</li>
-                                 <li>Delivered an LMS Pricing Calculator for service cost estimation and engineered a compliance monitoring system that identifies at-risk learners and tracks completion trends.</li>
-                                 <li>Re-architected core RESTful APIs with indexing, query optimization, and caching, cutting average response time from 800ms to 480ms.</li>
-                                 <li>Partnered with product and design in Agile sprints to architect and ship production features on recurring release cycles.</li>
+                                 <li>Led design and development of a multi-tenant LMS Intelligence Platform, unifying multiple WordPress LMS environments through custom ETL pipelines and REST APIs to enable centralized cross-organization analytics.</li>
+                                 <li>Built a compliance monitoring engine that flagged at-risk learners and surfaced completion trends via real-time dashboards, giving stakeholders organization-wide visibility into performance for the first time.</li>
+                                 <li>Engineered the ETL pipeline architecture (extract, transform, load) for ingesting data from multiple external LMS platforms, enforcing data consistency checks that made downstream analytics reliable.</li>
                               </ul>
                            </div>
 
                            <div className="flex flex-wrap gap-2">
-                              {['Laravel', 'MySQL', 'ETL Pipelines', 'RBAC', 'LLM Orchestration'].map(tag => (
+                              {['Laravel', 'ETL Pipelines', 'REST APIs', 'Dashboards', 'Data Engineering'].map(tag => (
                                  <span key={tag} className="text-[10px] font-mono px-2 py-1 rounded border border-[var(--border)] bg-[var(--card)] text-[var(--muted)]">{tag}</span>
                               ))}
                            </div>
                         </div>
                      </div>
 
-                     {/* Role 2: Intern */}
+                     {/* Role 2: Associate Software Engineer */}
                      <div className="relative">
                         <div className="absolute -left-[37px] top-1.5 w-4 h-4 rounded-full border-2 border-[var(--background)] bg-[var(--border)]" />
                         <div className="mb-6">
-                           <span className="text-xs font-mono text-[var(--muted)] mb-2 block">Jan 2025 — Jul 2025</span>
-                           <h4 className="text-2xl font-bold tracking-tight mb-1">Intern Software Engineer</h4>
+                           <span className="text-xs font-mono text-[var(--muted)] mb-2 block">Jul 2025 — Mar 2026</span>
+                           <h4 className="text-2xl font-bold tracking-tight mb-1">Associate Software Engineer</h4>
                            <div className="text-sm font-medium text-white/60">Balanita Pvt Ltd, Colombo</div>
                         </div>
 
                         <div className="space-y-4">
                            <div className="text-sm text-[var(--muted)] leading-relaxed max-w-lg">
-                              <p className="mb-3 font-semibold">Core Mandate: Implemented isolated multi-tenant architecture logic and Role-Based Access Control (RBAC) layers for corporate applicant tracking engines.</p>
+                              <p className="mb-3 font-semibold">Core Mandate: Owned backend architecture for an AI-powered Applicant Tracking System serving 500+ users, designing the LLM-based resume evaluation pipeline and re-architecting core APIs for performance and reliability.</p>
                               <ul className="list-disc list-inside space-y-2">
-                                 <li>Shipped functional backend validation code and security protocols with minimal senior engineering overhead.</li>
-                                 <li>Formulated baseline normalized database schemas to handle multi-client separation logic natively.</li>
+                                 <li>Owned backend architecture for an AI-powered Applicant Tracking System serving 500+ users; designed the LLM-based resume evaluation pipeline that cut manual screening effort by 70%.</li>
+                                 <li>Re-architected core REST APIs applying SOLID principles, targeted database indexing, query optimization, Laravel Queue Workers, and caching - reducing average response time 40% (800ms → 480ms).</li>
+                                 <li>Built a news aggregation and content-intelligence system that turned raw web data into structured feeds, using embedding-based semantic deduplication and a multi-LLM orchestration pipeline spanning Perplexity, GPT, Gemini, and Claude.</li>
+                                 <li>Developed an LMS pricing calculator that cut quotation preparation time from 30 minutes to 2 minutes, letting Business Analysts and Sales generate accurate cost estimates on demand.</li>
+                                 <li>Designed a three-tier RBAC and secure authentication layer underpinning an MVP AI-powered recruitment platform, including a dynamic form engine and automated candidate-ranking model.</li>
+                                 <li>Partnered with product and design to compress the feature-delivery cycle from 4 weeks to 2 weeks, shipping production features on a recurring release schedule.</li>
                               </ul>
                            </div>
 
                            <div className="flex flex-wrap gap-2">
-                              {['PHP Core', 'Laravel Blade', 'RBAC Mechanics', 'Relational Database Design'].map(tag => (
+                              {['Laravel', 'MySQL', 'Queue Workers', 'Caching', 'LLM Orchestration'].map(tag => (
+                                 <span key={tag} className="text-[10px] font-mono px-2 py-1 rounded border border-[var(--border)] bg-[var(--card)] text-[var(--muted)]">{tag}</span>
+                              ))}
+                           </div>
+                        </div>
+                     </div>
+
+                     {/* Role 3: Software Engineer Intern */}
+                     <div className="relative">
+                        <div className="absolute -left-[37px] top-1.5 w-4 h-4 rounded-full border-2 border-[var(--background)] bg-[var(--border)]" />
+                        <div className="mb-6">
+                           <span className="text-xs font-mono text-[var(--muted)] mb-2 block">Jan 2025 — Jul 2025</span>
+                           <h4 className="text-2xl font-bold tracking-tight mb-1">Software Engineer Intern</h4>
+                           <div className="text-sm font-medium text-white/60">Balanita Pvt Ltd, Colombo</div>
+                        </div>
+
+                        <div className="space-y-4">
+                           <div className="text-sm text-[var(--muted)] leading-relaxed max-w-lg">
+                              <p className="mb-3 font-semibold">Core Mandate: Built the MVP of an AI-powered ATS Intelligence System from scratch, covering resume scoring, CV generation, and order workflow, later adopted as the foundation for a platform now serving 500+ users.</p>
+                              <ul className="list-disc list-inside space-y-2">
+                                 <li>Built the MVP of an AI-powered ATS Intelligence System from scratch - resume scoring, CV generator, and order workflow - later adopted as the foundation for a platform now serving 500+ users.</li>
+                                 <li>Diagnosed and fixed critical data-integrity and UI-responsiveness defects in a survey platform, preventing loss of 10,000+ responses and cutting page load time from 8s to 2s.</li>
+                                 <li>Triaged and resolved 15+ production issues, improving system stability and reducing user-reported errors.</li>
+                              </ul>
+                           </div>
+
+                           <div className="flex flex-wrap gap-2">
+                              {['PHP', 'Laravel', 'ATS', 'UI Responsiveness', 'Production Support'].map(tag => (
                                  <span key={tag} className="text-[10px] font-mono px-2 py-1 rounded border border-[var(--border)] bg-[var(--card)] text-[var(--muted)]">{tag}</span>
                               ))}
                            </div>
