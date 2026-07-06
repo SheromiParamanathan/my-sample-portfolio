@@ -2,10 +2,9 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Menu, X, ArrowUpRight, Moon, Sun } from "lucide-react";
+import { Menu, X, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import clsx from "clsx";
-import { useTheme } from "@/components/ThemeProvider";
 
 const navItems = [
   { label: "Deployments", href: "#projects" },
@@ -18,7 +17,6 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("");
-  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -99,15 +97,6 @@ export function Navbar() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <button
-              type="button"
-              onClick={toggleTheme}
-              aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--border)] bg-white/5 text-[var(--foreground)] transition-all duration-300 hover:border-[var(--accent)] hover:text-[var(--accent)]"
-            >
-              {theme === "light" ? <Moon size={16} /> : <Sun size={16} />}
-            </button>
-
             <button
               type="button"
               onClick={() => setOpen(!open)}
