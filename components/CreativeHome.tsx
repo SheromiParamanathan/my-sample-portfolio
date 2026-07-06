@@ -21,12 +21,29 @@ export function CreativeHome() {
                   >
                      <div className="flex flex-col gap-4">
                         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight">
-                           I design resilient backend infrastructure for AI-enabled SaaS teams.
+                           Sheromi Paramanathan
                         </h1>
+                        <p className="text-xl md:text-2xl font-medium text-slate-300">
+                           Software Engineer | Full-Stack and AI-Integrated Systems | Laravel • Python • React
+                        </p>
+                     </div>
+
+                     <div className="flex flex-wrap gap-2 text-sm text-slate-400">
+                        <span>Colombo, Sri Lanka</span>
+                        <span>•</span>
+                        <span>+94 760 578 980</span>
+                        <span>•</span>
+                        <a href="mailto:sheromi19@gmail.com" className="text-white/80 hover:text-white transition-colors">sheromi19@gmail.com</a>
+                        <span>•</span>
+                        <a href="https://linkedin.com/in/sheromi" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors">LinkedIn</a>
+                        <span>•</span>
+                        <a href="https://github.com/SheromiParamanathan" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors">GitHub</a>
+                        <span>•</span>
+                        <a href="#projects" className="text-white/80 hover:text-white transition-colors">Portfolio</a>
                      </div>
 
                      <p className="max-w-2xl text-lg text-slate-300 leading-9">
-                        I build scalable Laravel systems, optimize MySQL performance, and automate production-ready intelligence workflows for mission-critical software products.
+                        Software Engineer with 1.5 years of experience shipping production SaaS platforms and LLM-integrated backend systems. Built and led multi-tenant systems serving 500+ users, delivering 70% reduction in manual screening through LLM-based automation and 40% API performance improvement. Strong experience designing backend architectures and integrating OpenAI-powered workflows into production SaaS platforms.
                      </p>
 
                      <div className="flex flex-wrap items-center gap-4">
