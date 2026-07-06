@@ -5,27 +5,27 @@
 @tailwind utilities;
 
 :root {
-  /* Ultra-Premium SaaS (Vercel/Linear Style) - DARK (Default) */
-  --background: #000000;
-  --foreground: #ededed;
-  --muted: #888888;
+  /* Premium dark system inspired by modern product teams */
+  --background: #060816;
+  --foreground: #f4f7ff;
+  --muted: #8c95b3;
   
-  --accent: #ffffff;
-  --accent-secondary: #a1a1aa;
-  --accent-emerald: #ffffff;
+  --accent: #6ea8ff;
+  --accent-secondary: #8b8fe8;
+  --accent-emerald: #5eead4;
   
-  --border: #222222;
-  --card: #0a0a0a;
-  --card-hover: #141414;
+  --border: #18213a;
+  --card: #0d1427;
+  --card-hover: #121a32;
   
-  --ring: rgba(255, 255, 255, 0.2);
-  --header-bg: rgba(0, 0, 0, 0.8);
-  --header-border: #222222;
-  --surface-glass: rgba(255, 255, 255, 0.02);
-  --grid-line: #111111;
+  --ring: rgba(110, 168, 255, 0.24);
+  --header-bg: rgba(6, 8, 22, 0.8);
+  --header-border: rgba(255, 255, 255, 0.08);
+  --surface-glass: rgba(255, 255, 255, 0.03);
+  --grid-line: #121b2e;
   
-  --glow-color: rgba(255, 255, 255, 0.06);
-  --logo-bg: #ffffff;
+  --glow-color: rgba(110, 168, 255, 0.12);
+  --logo-bg: #6ea8ff;
   
   --font-display: "Inter", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
@@ -278,6 +278,7 @@ body::before {
     linear-gradient(var(--grid-line) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
   background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 20%, black 10%, transparent 72%);
   mask-image: radial-gradient(ellipse 80% 60% at 50% 20%, black 10%, transparent 72%);
   opacity: 0.55;
 }
@@ -347,8 +348,8 @@ body::before {
     border: 1px solid var(--border);
     background: var(--card);
     box-shadow: var(--shadow-soft);
-    backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
     transition:
       border-color 0.25s ease,
       box-shadow 0.25s ease,
@@ -357,7 +358,7 @@ body::before {
   }
 
   .surface-card:hover {
-    border-color: color-mix(in srgb, var(--accent) 28%, var(--border));
+    border-color: rgba(110, 168, 255, 0.28);
     box-shadow: var(--shadow-glow);
   }
 
@@ -383,11 +384,12 @@ body::before {
     color: var(--foreground);
     border-color: var(--border);
     background: color-mix(in srgb, var(--card) 88%, transparent);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
   }
 
   .btn-secondary:hover {
-    border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+    border-color: rgba(110, 168, 255, 0.35);
     background: color-mix(in srgb, var(--accent) 8%, var(--card));
   }
 
@@ -410,6 +412,7 @@ body::before {
 }
 
 .mask-fade-out {
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
   mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }
 

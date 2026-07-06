@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight, Database, Server, Brain, Cpu, GraduationCap, Award, Hexagon } from "lucide-react";
 import { motion } from "framer-motion";
 import { projects } from "@/data/projects";
@@ -10,74 +11,91 @@ export function CreativeHome() {
    return (
       <div className="bg-[var(--background)] min-h-screen text-[var(--foreground)] font-body selection:bg-white selection:text-black">
          {/* 1. PORTFOLIO HERO */}
-         <section className="relative pt-32 lg:pt-36 pb-20 px-6 border-b border-[var(--border)] overflow-hidden min-h-[calc(100vh-6rem)] scroll-mt-28">
-            <div className="max-w-6xl mx-auto">
-               <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr] items-start">
+         <section className="relative overflow-hidden border-b border-[var(--border)] px-6 pb-24 pt-32 md:pt-36 lg:pt-40 scroll-mt-28">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(110,168,255,0.18),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(94,234,212,0.10),transparent_32%)]" />
+            <div className="relative mx-auto max-w-6xl">
+               <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
                   <motion.div
-                     initial={{ opacity: 0, y: 20 }}
+                     initial={{ opacity: 0, y: 24 }}
                      animate={{ opacity: 1, y: 0 }}
                      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                     className="space-y-8"
+                     className="max-w-2xl"
                   >
-                     <div className="flex flex-col gap-4">
-                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight">
-                           Sheromi Paramanathan
-                        </h1>
-                        <p className="text-xl md:text-2xl font-medium text-slate-300">
-                           Software Engineer | Full-Stack and AI-Integrated Systems | Laravel • Python • React
-                        </p>
+                     <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--card)]/80 px-3 py-2 text-[11px] font-medium uppercase tracking-[0.32em] text-[var(--muted)] backdrop-blur">
+                        <span className="h-2 w-2 rounded-full bg-[var(--accent)]" />
+                        Available for select product engineering roles
                      </div>
 
-                     <div className="flex flex-wrap gap-2 text-sm text-slate-400">
-                        <span>Colombo, Sri Lanka</span>
-                        <span>•</span>
-                        <span>+94 760 578 980</span>
-                        <span>•</span>
-                        <a href="mailto:sheromi19@gmail.com" className="text-white/80 hover:text-white transition-colors">sheromi19@gmail.com</a>
-                        <span>•</span>
-                        <a href="https://linkedin.com/in/sheromi" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors">LinkedIn</a>
-                        <span>•</span>
-                        <a href="https://github.com/SheromiParamanathan" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors">GitHub</a>
-                        <span>•</span>
-                        <a href="#projects" className="text-white/80 hover:text-white transition-colors">Portfolio</a>
-                     </div>
+                     <h1 className="text-4xl font-semibold tracking-[-0.03em] text-white sm:text-5xl lg:text-7xl">
+                        Building resilient backend systems and AI-native products that ship.
+                     </h1>
 
-                     <p className="max-w-2xl text-lg text-slate-300 leading-9">
-                        Software Engineer with 1.5 years of experience shipping production SaaS platforms and LLM-integrated backend systems. Built and led multi-tenant systems serving 500+ users, delivering 70% reduction in manual screening through LLM-based automation and 40% API performance improvement. Strong experience designing backend architectures and integrating OpenAI-powered workflows into production SaaS platforms.
+                     <p className="mt-6 max-w-xl text-lg leading-8 text-slate-300 sm:text-xl">
+                        I’m a software engineer focused on production SaaS, backend architecture, and LLM-integrated systems that turn complex requirements into reliable products.
                      </p>
 
-                     <div className="flex flex-wrap items-center gap-4">
-                        <a href="mailto:sheromi19@gmail.com?subject=Resume%20Request" className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-semibold text-black transition duration-300 hover:bg-slate-100">
-                           Request Resume
+                     <div className="mt-8 flex flex-wrap items-center gap-3">
+                        <a href="mailto:sheromi19@gmail.com?subject=Resume%20Request" className="inline-flex items-center justify-center rounded-full bg-[var(--accent)] px-6 py-3.5 text-sm font-semibold text-[var(--background)] shadow-[0_10px_30px_-10px_rgba(110,168,255,0.65)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_36px_-10px_rgba(110,168,255,0.75)]">
+                           Download Resume
                         </a>
-                        <a href="#projects" className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-8 py-4 text-sm font-semibold text-white transition duration-300 hover:border-white/30 hover:bg-white/10">
-                           Explore Deployments
+                        <a href="https://github.com/SheromiParamanathan" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full border border-[var(--border)] bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:border-white/20 hover:bg-white/10">
+                           GitHub
                         </a>
+                        <a href="https://linkedin.com/in/sheromi" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full border border-[var(--border)] bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:border-white/20 hover:bg-white/10">
+                           LinkedIn
+                        </a>
+                     </div>
+
+                     <div className="mt-8 flex flex-wrap gap-2">
+                        {['Laravel', 'Python', 'React', 'Next.js', 'OpenAI', 'REST APIs', 'RBAC', 'MySQL'].map((tag) => (
+                           <span key={tag} className="rounded-full border border-[var(--border)] bg-[var(--card)]/70 px-3 py-2 text-[11px] font-medium tracking-[0.2em] text-[var(--muted)] uppercase">
+                              {tag}
+                           </span>
+                        ))}
+                     </div>
+
+                     <div className="mt-10 grid gap-4 sm:grid-cols-3">
+                        {[
+                           { label: 'Users Served', value: '500+' },
+                           { label: 'Manual Effort Reduced', value: '70%' },
+                           { label: 'API Improvement', value: '40%' },
+                        ].map((stat) => (
+                           <div key={stat.label} className="rounded-2xl border border-[var(--border)] bg-[var(--card)]/70 p-4 backdrop-blur">
+                              <div className="text-2xl font-semibold tracking-tight text-white">{stat.value}</div>
+                              <div className="mt-1 text-sm text-[var(--muted)]">{stat.label}</div>
+                           </div>
+                        ))}
                      </div>
                   </motion.div>
 
                   <motion.div
-                     initial={{ opacity: 0, x: 20 }}
+                     initial={{ opacity: 0, x: 24 }}
                      animate={{ opacity: 1, x: 0 }}
                      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-                     className="rounded-[32px] border border-white/10 bg-white/5 p-8"
+                     className="relative"
                   >
-                     <div className="flex items-center justify-between mb-8">
-                        <span className="text-[10px] uppercase tracking-[0.28em] text-[var(--muted)]">Featured Expertise</span>
-                        <span className="text-[10px] uppercase tracking-[0.28em] text-[var(--muted)]">Sri Lanka</span>
-                     </div>
-                     <div className="grid gap-4">
-                        {[
-                           "High-throughput APIs & queue systems",
-                           "MySQL optimization & indexing",
-                           "LLM orchestration for SaaS workflows",
-                           "ETL automation & reporting backends",
-                           "Secure RBAC & multi-tenant design",
-                        ].map((item) => (
-                           <div key={item} className="rounded-3xl border border-white/10 bg-[var(--background)] p-4 text-sm text-[var(--muted)]">
-                              {item}
+                     <div className="rounded-[32px] border border-[var(--border)] bg-[var(--card)]/80 p-4 shadow-[0_24px_80px_-30px_rgba(0,0,0,0.8)] backdrop-blur-xl sm:p-6">
+                        <div className="relative aspect-square overflow-hidden rounded-[24px] border border-[var(--border)] bg-[radial-gradient(circle_at_top,rgba(110,168,255,0.14),transparent_55%)]">
+                           <Image
+                              src="/images/profile-avatar.svg"
+                              alt="Portrait illustration of Sheromi Paramanathan"
+                              fill
+                              priority
+                              sizes="(max-width: 768px) 100vw, 40vw"
+                              className="object-cover"
+                           />
+                        </div>
+
+                        <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                           <div className="rounded-2xl border border-[var(--border)] bg-[var(--background)]/90 p-4">
+                              <div className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[var(--muted)]">Focus</div>
+                              <div className="mt-2 text-sm font-medium text-white">Production SaaS • AI systems • Backend architecture</div>
                            </div>
-                        ))}
+                           <div className="rounded-2xl border border-[var(--border)] bg-[var(--background)]/90 p-4">
+                              <div className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[var(--muted)]">Location</div>
+                              <div className="mt-2 text-sm font-medium text-white">Colombo, Sri Lanka</div>
+                           </div>
+                        </div>
                      </div>
                   </motion.div>
                </div>
