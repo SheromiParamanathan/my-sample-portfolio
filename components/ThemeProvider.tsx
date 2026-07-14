@@ -18,13 +18,23 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     const storedTheme = window.localStorage.getItem("theme") as Theme | null;
     const initialTheme = storedTheme === "light" ? "light" : "dark";
     setTheme(initialTheme);
-    document.documentElement.classList.toggle("light", initialTheme === "light");
-    document.documentElement.classList.toggle("dark", initialTheme === "dark");
+    if (initialTheme === "light") {
+      document.documentElement.classList.add("light");
+      document.documentElement.classList.remove("dark");
+    } else {
+      document.documentElement.classList.add("dark");
+      document.documentElement.classList.remove("light");
+    }
   }, []);
 
   useEffect(() => {
-    document.documentElement.classList.toggle("light", theme === "light");
-    document.documentElement.classList.toggle("dark", theme === "dark");
+    if (theme === "light") {
+      document.documentElement.classList.add("light");
+      document.documentElement.classList.remove("dark");
+    } else {
+      document.documentElement.classList.add("dark");
+      document.documentElement.classList.remove("light");
+    }
     window.localStorage.setItem("theme", theme);
   }, [theme]);
 
