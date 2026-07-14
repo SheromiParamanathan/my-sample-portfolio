@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
-import { ThemeProvider } from "@/components/ThemeProvider";
+// ThemeProvider removed — site uses a fixed dark theme
 import { CustomCursor } from "@/components/CustomCursor";
 import { PageTransition } from "@/components/PageTransition";
 
@@ -37,14 +37,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="light" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body className="relative">
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){try{var s=localStorage.getItem('theme');var migrated=localStorage.getItem('theme_migrated');if(s && !migrated){var newTheme=(s==='dark'?'light':'dark');localStorage.setItem('theme',newTheme);localStorage.setItem('theme_migrated','1');s=newTheme;}if(!s){document.documentElement.classList.add('light');document.documentElement.classList.remove('dark');}else{if(s==='light'){document.documentElement.classList.add('light');document.documentElement.classList.remove('dark');}else{document.documentElement.classList.add('dark');document.documentElement.classList.remove('light');}}}catch(e){}})();`,
-          }}
-        />
-        <ThemeProvider>
           <CustomCursor />
           <div className="grain-overlay" aria-hidden="true" />
           <div className="mesh-bg" aria-hidden="true">
@@ -57,7 +51,6 @@ export default function RootLayout({
                {children}
              </PageTransition>
           </main>
-        </ThemeProvider>
       </body>
     </html>
   );

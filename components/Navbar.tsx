@@ -2,11 +2,9 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Menu, X, ArrowUpRight, Moon, Sun } from "lucide-react";
+import { Menu, X, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import clsx from "clsx";
-import { useTheme } from "@/components/ThemeProvider";
-
 const navItems = [
   { label: "Deployments", href: "#projects" },
   { label: "Career", href: "#experience" },
@@ -14,21 +12,7 @@ const navItems = [
   { label: "Contact", href: "#contact" },
 ];
 
-function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
-  const isLight = theme === "light";
-
-  return (
-    <button
-      type="button"
-      onClick={() => setTheme(isLight ? "dark" : "light")}
-      className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--card)] px-4 py-2 text-[10px] font-mono font-black uppercase tracking-widest text-[var(--foreground)] hover:bg-[var(--card-hover)] transition-all duration-300"
-    >
-      {isLight ? <Moon size={14} /> : <Sun size={14} />}
-      {isLight ? "Black" : "Light"}
-    </button>
-  );
-}
+// Theme toggle removed — site is permanently dark.
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -113,7 +97,7 @@ export function Navbar() {
             })}
           </nav>
 
-          <ThemeToggle />
+          {/* theme toggle removed */}
           <div className="flex items-center gap-3">
             <button
               type="button"
