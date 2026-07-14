@@ -12,7 +12,7 @@ export function CreativeHome() {
       <div className="bg-[var(--background)] min-h-screen text-[var(--foreground)] font-body selection:bg-white selection:text-black">
          {/* 1. PORTFOLIO HERO */}
          <section className="relative overflow-hidden border-b border-[var(--border)] px-6 pb-24 pt-32 md:pt-36 lg:pt-40 scroll-mt-28">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(110,168,255,0.18),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(94,234,212,0.10),transparent_32%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(244,244,244,0.18),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(158,161,170,0.10),transparent_32%)]" />
             <div className="relative mx-auto max-w-6xl">
                <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
                   <motion.div
@@ -35,7 +35,7 @@ export function CreativeHome() {
                      </p>
 
                      <div className="mt-8 flex flex-wrap items-center gap-3">
-                        <a href="mailto:sheromi19@gmail.com?subject=Resume%20Request" className="inline-flex items-center justify-center rounded-full bg-[var(--accent)] px-6 py-3.5 text-sm font-semibold text-[var(--background)] shadow-[0_10px_30px_-10px_rgba(110,168,255,0.65)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_36px_-10px_rgba(110,168,255,0.75)]">
+                        <a href="mailto:sheromi19@gmail.com?subject=Resume%20Request" className="inline-flex items-center justify-center rounded-full bg-[var(--accent)] px-6 py-3.5 text-sm font-semibold text-[var(--background)] shadow-[0_10px_30px_-10px_rgba(244,244,244,0.65)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_36px_-10px_rgba(244,244,244,0.75)]">
                            Download Resume
                         </a>
                         <a href="https://github.com/SheromiParamanathan" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full border border-[var(--border)] bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:border-white/20 hover:bg-white/10">
@@ -75,7 +75,7 @@ export function CreativeHome() {
                      className="relative"
                   >
                      <div className="rounded-[32px] border border-[var(--border)] bg-[var(--card)]/80 p-4 shadow-[0_24px_80px_-30px_rgba(0,0,0,0.8)] backdrop-blur-xl sm:p-6">
-                        <div className="relative aspect-square overflow-hidden rounded-[24px] border border-[var(--border)] bg-[radial-gradient(circle_at_top,rgba(110,168,255,0.14),transparent_55%)]">
+                        <div className="relative aspect-square overflow-hidden rounded-[24px] border border-[var(--border)] bg-[radial-gradient(circle_at_top,rgba(244,244,244,0.14),transparent_55%)]">
                            <Image
                               src="/images/profile-avatar.svg"
                               alt="Portrait illustration of Sheromi Paramanathan"

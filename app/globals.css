@@ -358,7 +358,7 @@ body::before {
   }
 
   .surface-card:hover {
-    border-color: rgba(110, 168, 255, 0.28);
+    border-color: rgba(244, 244, 244, 0.18);
     box-shadow: var(--shadow-glow);
   }
 
@@ -389,7 +389,7 @@ body::before {
   }
 
   .btn-secondary:hover {
-    border-color: rgba(110, 168, 255, 0.35);
+    border-color: rgba(244, 244, 244, 0.18);
     background: color-mix(in srgb, var(--accent) 8%, var(--card));
   }
 
