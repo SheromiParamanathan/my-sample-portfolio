@@ -39,6 +39,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="light" suppressHydrationWarning>
       <body className="relative">
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var s=localStorage.getItem('theme');var migrated=localStorage.getItem('theme_migrated');if(s && !migrated){var newTheme=(s==='dark'?'light':'dark');localStorage.setItem('theme',newTheme);localStorage.setItem('theme_migrated','1');s=newTheme;}if(!s){document.documentElement.classList.add('light');document.documentElement.classList.remove('dark');}else{if(s==='light'){document.documentElement.classList.add('light');document.documentElement.classList.remove('dark');}else{document.documentElement.classList.add('dark');document.documentElement.classList.remove('light');}}}catch(e){}})();`,
+          }}
+        />
         <ThemeProvider>
           <CustomCursor />
           <div className="grain-overlay" aria-hidden="true" />
