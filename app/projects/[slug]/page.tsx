@@ -23,9 +23,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const statusColors: Record<string, string> = {
-  production: "text-white border-white/20 bg-white/5",
-  "in-progress": "text-slate-300 border-slate-400/20 bg-slate-500/10",
-  archived: "text-slate-400 bg-slate-400/10 border-slate-400/20",
+  production: "text-[var(--background)] border-[color-mix(in_srgb,var(--accent)_0.2,transparent)] bg-[color-mix(in_srgb,var(--accent)_0.08,var(--background))]",
+  "in-progress": "text-[var(--foreground)]/90 border-[color-mix(in_srgb,var(--foreground)_0.18,transparent)] bg-[color-mix(in_srgb,var(--foreground)_0.08,var(--background))]",
+  archived: "text-[var(--muted)] bg-[color-mix(in_srgb,var(--foreground)_0.16,transparent)] border-[color-mix(in_srgb,var(--foreground)_0.12,transparent)]",
 };
 
 export default function ProjectDetailPage({ params }: Props) {

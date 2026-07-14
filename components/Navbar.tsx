@@ -118,7 +118,7 @@ export function Navbar() {
             <button
               type="button"
               onClick={() => setOpen(!open)}
-              className="md:hidden p-2 rounded-lg border border-[var(--border)] bg-white/5"
+              className="md:hidden p-2 rounded-lg border border-[var(--border)] bg-[color-mix(in_srgb,var(--foreground)_0.08,transparent)]"
             >
               {open ? <X size={16} /> : <Menu size={16} />}
             </button>

@@ -9,7 +9,7 @@ import { certifications } from "@/data/skills";
 
 export function CreativeHome() {
    return (
-      <div className="bg-[var(--background)] min-h-screen text-[var(--foreground)] font-body selection:bg-white selection:text-black">
+      <div className="bg-[var(--background)] min-h-screen text-[var(--foreground)] font-body selection:bg-[var(--accent)] selection:text-[var(--background)]">
          {/* 1. PORTFOLIO HERO */}
          <section className="relative overflow-hidden border-b border-[var(--border)] px-6 pb-24 pt-32 md:pt-36 lg:pt-40 scroll-mt-28">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(244,244,244,0.18),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(158,161,170,0.10),transparent_32%)]" />
@@ -26,11 +26,11 @@ export function CreativeHome() {
                         Available for select product engineering roles
                      </div>
 
-                     <h1 className="text-4xl font-semibold tracking-[-0.03em] text-white sm:text-5xl lg:text-7xl">
+                     <h1 className="text-4xl font-semibold tracking-[-0.03em] text-[var(--foreground)] sm:text-5xl lg:text-7xl">
                         Building resilient backend systems and AI-native products that ship.
                      </h1>
 
-                     <p className="mt-6 max-w-xl text-lg leading-8 text-slate-300 sm:text-xl">
+                     <p className="mt-6 max-w-xl text-lg leading-8 text-[var(--muted)] sm:text-xl">
                         I’m a software engineer focused on production SaaS, backend architecture, and LLM-integrated systems that turn complex requirements into reliable products.
                      </p>
 
@@ -38,10 +38,10 @@ export function CreativeHome() {
                         <a href="mailto:sheromi19@gmail.com?subject=Resume%20Request" className="inline-flex items-center justify-center rounded-full bg-[var(--accent)] px-6 py-3.5 text-sm font-semibold text-[var(--background)] shadow-[0_10px_30px_-10px_rgba(244,244,244,0.65)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_36px_-10px_rgba(244,244,244,0.75)]">
                            Download Resume
                         </a>
-                        <a href="https://github.com/SheromiParamanathan" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full border border-[var(--border)] bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:border-white/20 hover:bg-white/10">
+                        <a href="https://github.com/SheromiParamanathan" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full border border-[var(--border)] bg-[color-mix(in_srgb,var(--foreground)_0.10,transparent)] px-6 py-3.5 text-sm font-semibold text-[var(--foreground)] transition-all duration-300 hover:border-[color-mix(in_srgb,var(--foreground)_0.26,transparent)] hover:bg-[color-mix(in_srgb,var(--foreground)_0.18,transparent)]">
                            GitHub
                         </a>
-                        <a href="https://linkedin.com/in/sheromi" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full border border-[var(--border)] bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:border-white/20 hover:bg-white/10">
+                        <a href="https://linkedin.com/in/sheromi" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full border border-[var(--border)] bg-[color-mix(in_srgb,var(--foreground)_0.10,transparent)] px-6 py-3.5 text-sm font-semibold text-[var(--foreground)] transition-all duration-300 hover:border-[color-mix(in_srgb,var(--foreground)_0.26,transparent)] hover:bg-[color-mix(in_srgb,var(--foreground)_0.18,transparent)]">
                            LinkedIn
                         </a>
                      </div>
@@ -61,7 +61,7 @@ export function CreativeHome() {
                            { label: 'API Improvement', value: '40%' },
                         ].map((stat) => (
                            <div key={stat.label} className="rounded-2xl border border-[var(--border)] bg-[var(--card)]/70 p-4 backdrop-blur">
-                              <div className="text-2xl font-semibold tracking-tight text-white">{stat.value}</div>
+                              <div className="text-2xl font-semibold tracking-tight text-[var(--foreground)]">{stat.value}</div>
                               <div className="mt-1 text-sm text-[var(--muted)]">{stat.label}</div>
                            </div>
                         ))}
@@ -89,11 +89,11 @@ export function CreativeHome() {
                         <div className="mt-6 grid gap-3 sm:grid-cols-2">
                            <div className="rounded-2xl border border-[var(--border)] bg-[var(--background)]/90 p-4">
                               <div className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[var(--muted)]">Focus</div>
-                              <div className="mt-2 text-sm font-medium text-white">Production SaaS • AI systems • Backend architecture</div>
+                              <div className="mt-2 text-sm font-medium text-[var(--foreground)]">Production SaaS • AI systems • Backend architecture</div>
                            </div>
                            <div className="rounded-2xl border border-[var(--border)] bg-[var(--background)]/90 p-4">
                               <div className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[var(--muted)]">Location</div>
-                              <div className="mt-2 text-sm font-medium text-white">Colombo, Sri Lanka</div>
+                              <div className="mt-2 text-sm font-medium text-[var(--foreground)]">Colombo, Sri Lanka</div>
                            </div>
                         </div>
                      </div>
@@ -118,7 +118,7 @@ export function CreativeHome() {
 
                <div className="bento-grid">
                   {/* Main Project (Hero) */}
-                  <div className="col-span-12 lg:col-span-8 lg:row-span-2 bento-card group flex flex-col justify-between min-h-[420px] border border-white/10 bg-[var(--card-hover)] shadow-[0_30px_80px_-40px_rgba(255,255,255,0.25)] hover:border-white transition-all duration-500">
+                  <div className="col-span-12 lg:col-span-8 lg:row-span-2 bento-card group flex flex-col justify-between min-h-[420px] border border-[color-mix(in_srgb,var(--foreground)_0.12,transparent)] bg-[var(--card-hover)] shadow-[0_30px_80px_-40px_rgba(255,255,255,0.18)] hover:border-[color-mix(in_srgb,var(--foreground)_0.24,transparent)] transition-all duration-500">
                      <div className="flex justify-between items-start mb-12">
                         <div>
                            <div className="flex items-center gap-4 mb-8">
@@ -126,8 +126,8 @@ export function CreativeHome() {
                                  <Database size={14} className="text-[var(--muted)]" />
                                  <span className="text-[10px] font-mono text-[var(--muted)] uppercase tracking-widest">Core Infrastructure</span>
                               </div>
-                              <div className="flex items-center gap-1.5 text-[10px] font-mono text-white/70">
-                                 <div className="w-1 h-1 rounded-full bg-white/70 animate-pulse" />
+                              <div className="flex items-center gap-1.5 text-[10px] font-mono text-[var(--foreground)]/70">
+                                 <div className="w-1 h-1 rounded-full bg-[var(--foreground)]/70 animate-pulse" />
                                  System Active
                               </div>
                            </div>
@@ -135,12 +135,12 @@ export function CreativeHome() {
                               <span className="inline-flex h-2.5 w-2.5 rounded-full bg-[var(--accent)]" />
                               Featured work
                            </div>
-                           <h3 className="text-3xl md:text-4xl font-bold tracking-tighter mb-6 group-hover:text-white transition-colors">{projects[0].title}</h3>
+                           <h3 className="text-3xl md:text-4xl font-bold tracking-tighter mb-6 group-hover:text-[var(--foreground)] transition-colors">{projects[0].title}</h3>
                            <p className="text-[var(--muted)] max-w-xl leading-relaxed text-sm md:text-base">{projects[0].description}</p>
                         </div>
                         <Link
                            href={`/projects/${projects[0].slug}`}
-                           className="inline-flex items-center gap-2 text-sm font-mono uppercase tracking-[0.2em] text-[var(--accent)] border border-[var(--border)] rounded-full px-5 py-3 hover:bg-[var(--accent)] hover:text-black transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
+                           className="inline-flex items-center gap-2 text-sm font-mono uppercase tracking-[0.2em] text-[var(--accent)] border border-[var(--border)] rounded-full px-5 py-3 hover:bg-[var(--accent)] hover:text-[var(--background)] transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
                            aria-label={`View case study for ${projects[0].title}`}
                         >
                            Case study
@@ -168,12 +168,12 @@ export function CreativeHome() {
                      <div>
                         <div className="flex justify-between items-start mb-6">
                            <div className="flex items-center gap-3">
-                              <div className="w-1.5 h-1.5 rounded-full bg-[var(--border)] group-hover:bg-white transition-colors" />
-                              <h3 className="text-lg font-bold tracking-tight group-hover:text-white transition-colors">AI News Aggregation</h3>
+                              <div className="w-1.5 h-1.5 rounded-full bg-[var(--border)] group-hover:bg-[var(--foreground)] transition-colors" />
+                              <h3 className="text-lg font-bold tracking-tight group-hover:text-[var(--foreground)] transition-colors">AI News Aggregation</h3>
                            </div>
                            <Link
                               href={`/projects/${projects[1].slug}`}
-                              className="inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-[var(--accent)] group-hover:text-white transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
+                              className="inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-[var(--accent)] group-hover:text-[var(--foreground)] transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
                               aria-label={`View case study for ${projects[1].title}`}
                            >
                               View project
@@ -196,12 +196,12 @@ export function CreativeHome() {
                      <div>
                         <div className="flex justify-between items-start mb-6">
                            <div className="flex items-center gap-3">
-                              <div className="w-1.5 h-1.5 rounded-full bg-[var(--border)] group-hover:bg-white transition-colors" />
-                              <h3 className="text-lg font-bold tracking-tight group-hover:text-white transition-colors">LMS Intelligence</h3>
+                              <div className="w-1.5 h-1.5 rounded-full bg-[var(--border)] group-hover:bg-[var(--foreground)] transition-colors" />
+                              <h3 className="text-lg font-bold tracking-tight group-hover:text-[var(--foreground)] transition-colors">LMS Intelligence</h3>
                            </div>
                            <Link
                               href={`/projects/${projects[2].slug}`}
-                              className="inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-[var(--accent)] group-hover:text-white transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
+                              className="inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-[var(--accent)] group-hover:text-[var(--foreground)] transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
                               aria-label={`View case study for ${projects[2].title}`}
                            >
                               View project
@@ -223,12 +223,12 @@ export function CreativeHome() {
                      <div key={p.slug} className="col-span-12 md:col-span-6 bento-card group hover:border-[var(--muted)] transition-all duration-500">
                         <div className="flex justify-between items-start mb-10">
                            <div className="flex items-center gap-3">
-                              <div className="w-1.5 h-1.5 rounded-full bg-[var(--border)] group-hover:bg-white transition-colors" />
-                              <h4 className="text-lg font-bold tracking-tight group-hover:text-white transition-colors">{p.title}</h4>
+                              <div className="w-1.5 h-1.5 rounded-full bg-[var(--border)] group-hover:bg-[var(--foreground)] transition-colors" />
+                              <h4 className="text-lg font-bold tracking-tight group-hover:text-[var(--foreground)] transition-colors">{p.title}</h4>
                            </div>
                            <Link
                               href={`/projects/${p.slug}`}
-                              className="inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-[var(--accent)] group-hover:text-white transition-all duration-300"
+                              className="inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-[var(--accent)] group-hover:text-[var(--foreground)] transition-all duration-300"
                               aria-label={`View case study for ${p.title}`}
                            >
                               View project
@@ -255,8 +255,8 @@ export function CreativeHome() {
                {/* Experience Log */}
                <div>
                   <div className="flex items-center gap-3 mb-12">
-                     <div className="w-12 h-px bg-white/20" />
-                     <h3 className="text-sm font-mono text-white/80 uppercase tracking-[0.3em]">Engineering Tenure & Impact</h3>
+                     <div className="w-12 h-px bg-[color-mix(in_srgb,var(--foreground)_0.18,transparent)]" />
+                     <h3 className="text-sm font-mono text-[var(--muted)] uppercase tracking-[0.3em]">Engineering Tenure & Impact</h3>
                   </div>
 
                   <div className="relative space-y-12 pl-8 border-l border-[var(--border)]">
@@ -266,7 +266,7 @@ export function CreativeHome() {
                         <div className="mb-6">
                            <span className="text-xs font-mono text-[var(--muted)] mb-2 block">Mar 2026 — May 2026</span>
                            <h4 className="text-2xl font-bold tracking-tight mb-1">Software Engineer</h4>
-                           <div className="text-sm font-medium text-white/60">Balanita Pvt Ltd, Colombo</div>
+                           <div className="text-sm font-medium text-[var(--foreground)]/60">Balanita Pvt Ltd, Colombo</div>
                         </div>
 
                         <div className="space-y-4">
@@ -293,7 +293,7 @@ export function CreativeHome() {
                         <div className="mb-6">
                            <span className="text-xs font-mono text-[var(--muted)] mb-2 block">Jul 2025 — Mar 2026</span>
                            <h4 className="text-2xl font-bold tracking-tight mb-1">Associate Software Engineer</h4>
-                           <div className="text-sm font-medium text-white/60">Balanita Pvt Ltd, Colombo</div>
+                           <div className="text-sm font-medium text-[var(--foreground)]/60">Balanita Pvt Ltd, Colombo</div>
                         </div>
 
                         <div className="space-y-4">
@@ -323,7 +323,7 @@ export function CreativeHome() {
                         <div className="mb-6">
                            <span className="text-xs font-mono text-[var(--muted)] mb-2 block">Jan 2025 — Jul 2025</span>
                            <h4 className="text-2xl font-bold tracking-tight mb-1">Software Engineer Intern</h4>
-                           <div className="text-sm font-medium text-white/60">Balanita Pvt Ltd, Colombo</div>
+                           <div className="text-sm font-medium text-[var(--foreground)]/60">Balanita Pvt Ltd, Colombo</div>
                         </div>
 
                         <div className="space-y-4">
@@ -349,30 +349,30 @@ export function CreativeHome() {
                {/* Validated Credentials Log */}
                <div className="lg:pt-0 pt-20">
                   <div className="flex items-center gap-3 mb-12">
-                     <div className="w-10 h-px bg-[var(--border)]" />
+                     <div className="w-10 h-px bg-[color-mix(in_srgb,var(--foreground)_0.16,transparent)]" />
                      <h3 className="text-sm font-mono text-[var(--muted)] uppercase tracking-[0.2em]">Validated Credentials</h3>
                   </div>
 
                   {/* Education: Degree Transcript Style */}
                   <div className="space-y-6 mb-16">
-                     <div className="group relative bg-[var(--card)] border border-[var(--border)] rounded-xl p-8 hover:border-white transition-colors">
+                     <div className="group relative bg-[var(--card)] border border-[var(--border)] rounded-xl p-8 hover:border-[var(--foreground)] transition-colors">
                         <div className="flex flex-col md:flex-row justify-between md:items-start gap-6">
                            <div className="flex gap-5">
                               <div className="w-12 h-12 rounded-lg border border-[var(--border)] bg-[var(--background)] flex items-center justify-center shrink-0">
-                                 <GraduationCap size={24} className="text-[var(--muted)] group-hover:text-white transition-colors" />
+                                 <GraduationCap size={24} className="text-[var(--muted)] group-hover:text-[var(--foreground)] transition-colors" />
                               </div>
                               <div>
                                  <h4 className="text-xl font-bold tracking-tight mb-1">BSc in Computer Science</h4>
                                  <p className="text-sm text-[var(--muted)] mb-4">Eastern University of Sri Lanka</p>
                                  <div className="flex flex-wrap gap-3">
                                     <span className="text-[10px] font-mono px-2 py-1 bg-[var(--background)] border border-[var(--border)] rounded text-[var(--muted)]">Aug 2021 — Dec 2024</span>
-                                    <span className="text-[10px] font-mono px-2 py-1 bg-white text-black rounded font-bold">GPA: 3.60 / 4.00</span>
+                                    <span className="text-[10px] font-mono px-2 py-1 bg-[var(--card)] text-[var(--foreground)] rounded font-bold">GPA: 3.60 / 4.00</span>
                                  </div>
                               </div>
                            </div>
                            <div className="md:text-right">
                               <div className="text-xs font-mono text-[var(--muted)] uppercase tracking-wider mb-1"></div>
-                              <div className="text-sm font-bold text-white">Second Class Upper</div>
+                              <div className="text-sm font-bold text-[var(--foreground)]">Second Class Upper</div>
                            </div>
                         </div>
                      </div>
@@ -402,14 +402,14 @@ export function CreativeHome() {
                         <div key={cert.title} className="p-5 rounded-xl border border-[var(--border)] bg-[var(--background)] hover:bg-[var(--card)] transition-colors group">
                            <div className="flex items-start justify-between mb-4">
                               <div className="p-2 border border-[var(--border)] rounded-md bg-[var(--card)] group-hover:bg-[var(--background)] transition-colors">
-                                 <Award size={16} className="text-[var(--muted)] group-hover:text-white transition-colors" />
+                                 <Award size={16} className="text-[var(--muted)] group-hover:text-[var(--foreground)] transition-colors" />
                               </div>
-                              <div className="flex items-center gap-1.5 text-[10px] font-mono text-white/70">
-                                 <div className="w-1 h-1 rounded-full bg-white/70" />
+                              <div className="flex items-center gap-1.5 text-[10px] font-mono text-[var(--foreground)]/70">
+                                 <div className="w-1 h-1 rounded-full bg-[var(--foreground)]/70" />
                                  Verified
                               </div>
                            </div>
-                           <h5 className="text-sm font-bold leading-snug mb-2 group-hover:text-white transition-colors">{cert.title}</h5>
+                           <h5 className="text-sm font-bold leading-snug mb-2 group-hover:text-[var(--foreground)] transition-colors">{cert.title}</h5>
                            <p className="text-[10px] font-mono text-[var(--muted)] uppercase tracking-wider">{cert.issuer}</p>
                         </div>
                      ))}
@@ -431,8 +431,8 @@ export function CreativeHome() {
                   </div>
                   <div className="text-right hidden md:block">
                      <div className="text-[10px] font-mono text-[var(--muted)] uppercase tracking-widest mb-2">System Health</div>
-                     <div className="flex items-center gap-2 text-white/70 font-bold">
-                        <div className="w-2 h-2 rounded-full bg-white/70 animate-pulse" />
+                     <div className="flex items-center gap-2 text-[var(--foreground)]/70 font-bold">
+                        <div className="w-2 h-2 rounded-full bg-[var(--foreground)]/70 animate-pulse" />
                         Nominal
                      </div>
                   </div>
@@ -441,14 +441,14 @@ export function CreativeHome() {
                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-[var(--border)] border border-[var(--border)] rounded-xl overflow-hidden">
                   {/* Systems Infrastructure */}
                   <div className="bg-[var(--background)] p-8 group">
-                     <div className="w-10 h-10 rounded-lg border border-[var(--border)] bg-[var(--card)] flex items-center justify-center mb-8 group-hover:border-white transition-colors">
-                        <Server size={20} className="text-[var(--muted)] group-hover:text-white transition-colors" />
+                     <div className="w-10 h-10 rounded-lg border border-[var(--border)] bg-[var(--card)] flex items-center justify-center mb-8 group-hover:border-[var(--foreground)] transition-colors">
+                        <Server size={20} className="text-[var(--muted)] group-hover:text-[var(--foreground)] transition-colors" />
                      </div>
                      <h4 className="font-bold mb-6 text-lg tracking-tight">Backend & Systems</h4>
                      <div className="space-y-3">
                         {['PHP', 'Laravel', 'Flask', 'Node.js', 'RESTful API Development', 'Authentication & Authorization (RBAC)', 'MVC Architecture', 'Service-Oriented Architecture (SOA)', 'Repository Pattern', 'Laravel Queue Workers', 'SOLID Principles', 'Scalable Backend Systems'].map(skill => (
                            <div key={skill} className="flex items-center gap-3 text-sm text-[var(--muted)]">
-                              <div className="w-1 h-1 rounded-full bg-[var(--border)] group-hover:bg-white transition-colors" />
+                              <div className="w-1 h-1 rounded-full bg-[var(--border)] group-hover:bg-[var(--foreground)] transition-colors" />
                               {skill}
                            </div>
                         ))}
@@ -457,14 +457,14 @@ export function CreativeHome() {
 
                   {/* Data Layer */}
                   <div className="bg-[var(--background)] p-8 group">
-                     <div className="w-10 h-10 rounded-lg border border-[var(--border)] bg-[var(--card)] flex items-center justify-center mb-8 group-hover:border-white transition-colors">
-                        <Database size={20} className="text-[var(--muted)] group-hover:text-white transition-colors" />
+                     <div className="w-10 h-10 rounded-lg border border-[var(--border)] bg-[var(--card)] flex items-center justify-center mb-8 group-hover:border-[var(--foreground)] transition-colors">
+                        <Database size={20} className="text-[var(--muted)] group-hover:text-[var(--foreground)] transition-colors" />
                      </div>
                      <h4 className="font-bold mb-6 text-lg tracking-tight">Data & Databases</h4>
                      <div className="space-y-3">
                         {['MySQL', 'Schema Design', 'Query Optimization', 'Indexing', 'Relational & Multi-tenant Schema Design', 'ETL Pipelines', 'Data Normalization', 'Caching Strategies', 'Workflow Orchestration'].map(skill => (
                            <div key={skill} className="flex items-center gap-3 text-sm text-[var(--muted)]">
-                              <div className="w-1 h-1 rounded-full bg-[var(--border)] group-hover:bg-white transition-colors" />
+                              <div className="w-1 h-1 rounded-full bg-[var(--border)] group-hover:bg-[var(--foreground)] transition-colors" />
                               {skill}
                            </div>
                         ))}
@@ -473,14 +473,14 @@ export function CreativeHome() {
 
                   {/* Intelligence */}
                   <div className="bg-[var(--background)] p-8 group">
-                     <div className="w-10 h-10 rounded-lg border border-[var(--border)] bg-[var(--card)] flex items-center justify-center mb-8 group-hover:border-white transition-colors">
-                        <Brain size={20} className="text-[var(--muted)] group-hover:text-white transition-colors" />
+                     <div className="w-10 h-10 rounded-lg border border-[var(--border)] bg-[var(--card)] flex items-center justify-center mb-8 group-hover:border-[var(--foreground)] transition-colors">
+                        <Brain size={20} className="text-[var(--muted)] group-hover:text-[var(--foreground)] transition-colors" />
                      </div>
                      <h4 className="font-bold mb-6 text-lg tracking-tight">AI & ML</h4>
                      <div className="space-y-3">
                         {['LLM Integration', 'OpenAI API', 'Embeddings', 'Vector Search', 'Semantic Similarity', 'Multi-LLM Orchestration', 'Prompt Engineering', 'OCR Processing'].map(skill => (
                            <div key={skill} className="flex items-center gap-3 text-sm text-[var(--muted)]">
-                              <div className="w-1 h-1 rounded-full bg-[var(--border)] group-hover:bg-white transition-colors" />
+                              <div className="w-1 h-1 rounded-full bg-[var(--border)] group-hover:bg-[var(--foreground)] transition-colors" />
                               {skill}
                            </div>
                         ))}
@@ -489,14 +489,14 @@ export function CreativeHome() {
 
                   {/* Frontend & Ops */}
                   <div className="bg-[var(--background)] p-8 group">
-                     <div className="w-10 h-10 rounded-lg border border-[var(--border)] bg-[var(--card)] flex items-center justify-center mb-8 group-hover:border-white transition-colors">
-                        <Cpu size={20} className="text-[var(--muted)] group-hover:text-white transition-colors" />
+                     <div className="w-10 h-10 rounded-lg border border-[var(--border)] bg-[var(--card)] flex items-center justify-center mb-8 group-hover:border-[var(--foreground)] transition-colors">
+                        <Cpu size={20} className="text-[var(--muted)] group-hover:text-[var(--foreground)] transition-colors" />
                      </div>
                      <h4 className="font-bold mb-6 text-lg tracking-tight">Frontend, Tools & Delivery</h4>
                      <div className="space-y-3">
                         {['JavaScript', 'TypeScript', 'React.js', 'Next.js', 'HTML/CSS/JS (Strong)', 'Vue.js (Foundational)', 'Git/GitHub', 'Postman', 'Apache JMeter', 'API Testing', 'Unit Testing', 'Integration Testing', 'Agile/Scrum', 'Code Reviews', 'cPanel', 'xCloud'].map(skill => (
                            <div key={skill} className="flex items-center gap-3 text-sm text-[var(--muted)]">
-                              <div className="w-1 h-1 rounded-full bg-[var(--border)] group-hover:bg-white transition-colors" />
+                              <div className="w-1 h-1 rounded-full bg-[var(--border)] group-hover:bg-[var(--foreground)] transition-colors" />
                               {skill}
                            </div>
                         ))}
@@ -516,7 +516,7 @@ export function CreativeHome() {
                      next production system?
                   </h2>
                   <div className="flex flex-wrap gap-4">
-                     <a href="mailto:sheromi19@gmail.com" className="bg-white text-black px-8 py-4 rounded-md font-bold text-sm hover:bg-neutral-200 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]">
+                     <a href="mailto:sheromi19@gmail.com" className="bg-[var(--card)] text-[var(--foreground)] px-8 py-4 rounded-md font-bold text-sm hover:bg-[var(--card-hover)] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]">
                         Send Message
                      </a>
                      <a href="https://linkedin.com/in/sheromi" target="_blank" rel="noopener noreferrer" className="px-8 py-4 rounded-md font-bold text-sm border border-[var(--border)] hover:bg-[var(--card-hover)] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]">
@@ -538,18 +538,18 @@ export function CreativeHome() {
                   <div>
                      <div className="text-[10px] font-mono text-[var(--muted)] uppercase tracking-widest mb-6">Navigation</div>
                      <ul className="space-y-3 text-sm">
-                        <li><a href="#projects" className="text-[var(--muted)] hover:text-white transition-colors">Deployments</a></li>
-                        <li><a href="#experience" className="text-[var(--muted)] hover:text-white transition-colors">Career Log</a></li>
-                        <li><a href="#skills" className="text-[var(--muted)] hover:text-white transition-colors">Infrastructure</a></li>
+                        <li><a href="#projects" className="text-[var(--muted)] hover:text-[var(--foreground)] transition-colors">Deployments</a></li>
+                        <li><a href="#experience" className="text-[var(--muted)] hover:text-[var(--foreground)] transition-colors">Career Log</a></li>
+                        <li><a href="#skills" className="text-[var(--muted)] hover:text-[var(--foreground)] transition-colors">Infrastructure</a></li>
                      </ul>
                   </div>
 
                   <div>
                      <div className="text-[10px] font-mono text-[var(--muted)] uppercase tracking-widest mb-6">Social Nodes</div>
                      <ul className="space-y-3 text-sm">
-                        <li><a href="https://github.com/SheromiParamanathan" className="text-[var(--muted)] hover:text-white transition-colors">GitHub Repository</a></li>
-                        <li><a href="https://linkedin.com/in/sheromi" className="text-[var(--muted)] hover:text-white transition-colors">LinkedIn Profile</a></li>
-                        <li><a href="mailto:sheromi19@gmail.com" className="text-[var(--muted)] hover:text-white transition-colors">Email</a></li>
+                        <li><a href="https://github.com/SheromiParamanathan" className="text-[var(--muted)] hover:text-[var(--foreground)] transition-colors">GitHub Repository</a></li>
+                        <li><a href="https://linkedin.com/in/sheromi" className="text-[var(--muted)] hover:text-[var(--foreground)] transition-colors">LinkedIn Profile</a></li>
+                        <li><a href="mailto:sheromi19@gmail.com" className="text-[var(--muted)] hover:text-[var(--foreground)] transition-colors">Email</a></li>
                      </ul>
                   </div>
 
@@ -557,7 +557,7 @@ export function CreativeHome() {
                      <div className="text-[10px] font-mono text-[var(--muted)] uppercase tracking-widest mb-6">System Info</div>
                      <ul className="space-y-3 text-sm text-[var(--muted)]">
                         <li className="flex items-center gap-2">
-                           <div className="w-1.5 h-1.5 rounded-full bg-white/70" />
+                           <div className="w-1.5 h-1.5 rounded-full bg-[var(--foreground)]/70" />
                            Colombo, Sri Lanka
                         </li>
                         <li>UTC +05:30</li>

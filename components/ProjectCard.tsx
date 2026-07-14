@@ -11,15 +11,15 @@ interface ProjectCardProps {
 }
 
 const statusDotClasses: Record<string, string> = {
-  production: "bg-white/80",
-  "in-progress": "bg-slate-400",
-  archived: "bg-slate-500",
+  production: "bg-[color-mix(in_srgb,var(--accent)_90%,var(--background))]",
+  "in-progress": "bg-[color-mix(in_srgb,var(--foreground)_0.72,transparent)]",
+  archived: "bg-[color-mix(in_srgb,var(--foreground)_0.54,transparent)]",
 };
 
 const statusBadgeClasses: Record<string, string> = {
-  production: "text-white border-white/20",
-  "in-progress": "text-slate-300 border-slate-400/20",
-  archived: "text-slate-400 border-slate-400/20",
+  production: "text-[var(--background)] border-[color-mix(in_srgb,var(--accent)_0.2,transparent)]",
+  "in-progress": "text-[var(--muted)] border-[color-mix(in_srgb,var(--foreground)_0.18,transparent)]",
+  archived: "text-[var(--muted)] border-[color-mix(in_srgb,var(--foreground)_0.18,transparent)]",
 };
 
 export function ProjectCard({ project, index }: ProjectCardProps) {
@@ -82,16 +82,16 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               </div>
               <div className="flex-1 flex flex-col justify-center gap-1">
                 <div className="flex items-center gap-1">
-                  <span className="w-1 h-1 rounded-full bg-white/80" />
-                  <span className="truncate">deploy: ok</span>
+                  <span className="w-1 h-1 rounded-full bg-[color-mix(in_srgb,var(--accent)_0.7,transparent)]" />
+                  <span className="truncate text-[var(--muted)]">deploy: ok</span>
                 </div>
                 <div className="flex items-center gap-1">
-                  <span className="w-1 h-1 rounded-full bg-slate-400" />
-                  <span className="truncate">tests: ~95%</span>
+                  <span className="w-1 h-1 rounded-full bg-[color-mix(in_srgb,var(--foreground)_0.48,transparent)]" />
+                  <span className="truncate text-[var(--muted)]">tests: ~95%</span>
                 </div>
                 <div className="flex items-center gap-1">
-                  <span className="w-1 h-1 rounded-full bg-slate-500" />
-                  <span className="truncate">ai: enabled</span>
+                  <span className="w-1 h-1 rounded-full bg-[color-mix(in_srgb,var(--foreground)_0.36,transparent)]" />
+                  <span className="truncate text-[var(--muted)]">ai: enabled</span>
                 </div>
               </div>
               <div className="flex items-center justify-between text-[8px] mt-1">
@@ -145,7 +145,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           <div className="mt-4 flex flex-wrap items-center gap-4 pt-4 border-t border-[var(--border)] relative z-10">
             <Link
               href={`/projects/${project.slug}`}
-              className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] text-[var(--accent)] hover:text-white transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
+              className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] text-[var(--accent)] hover:text-[var(--foreground)] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
               aria-label={`View full project case study for ${project.title}`}
             >
               Case study
