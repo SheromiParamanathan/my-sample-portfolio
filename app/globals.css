@@ -10,22 +10,22 @@
   --foreground: #f4f7ff;
   --muted: #8c95b3;
   
-  --accent: #6ea8ff;
-  --accent-secondary: #8b8fe8;
-  --accent-emerald: #5eead4;
+  --accent: #f4f4f4;
+  --accent-secondary: #9ea1aa;
+  --accent-emerald: #8e8e8e;
   
   --border: #18213a;
   --card: #0d1427;
   --card-hover: #121a32;
   
-  --ring: rgba(110, 168, 255, 0.24);
+  --ring: rgba(244, 244, 244, 0.18);
   --header-bg: rgba(6, 8, 22, 0.8);
   --header-border: rgba(255, 255, 255, 0.08);
   --surface-glass: rgba(255, 255, 255, 0.03);
   --grid-line: #121b2e;
   
-  --glow-color: rgba(110, 168, 255, 0.12);
-  --logo-bg: #6ea8ff;
+  --glow-color: rgba(244, 244, 244, 0.12);
+  --logo-bg: #f4f4f4;
   
   --font-display: "Inter", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
