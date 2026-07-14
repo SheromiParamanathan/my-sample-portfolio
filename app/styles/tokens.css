@@ -1,6 +1,6 @@
 /* Design tokens: color and spacing variables for the project */
 :root {
-  /* Swapped: default now uses previous light palette */
+  /* Default (semantic): light palette fallback */
   --background: #f8f8fb;
   --foreground: #111827;
   --muted: #6b7280;
@@ -34,31 +34,7 @@
 }
 
 html.dark {
-  /* dark class now applies the previous light palette */
-  --background: #f8f8fb;
-  --foreground: #111827;
-  --muted: #6b7280;
-
-  --accent: #111827;
-  --accent-secondary: #4b5563;
-  --accent-emerald: #10b981;
-
-  --border: #e5e7eb;
-  --card: #ffffff;
-  --card-hover: #f3f4f6;
-
-  --ring: rgba(17, 24, 39, 0.12);
-  --header-bg: rgba(255, 255, 255, 0.8);
-  --header-border: rgba(17, 24, 39, 0.08);
-  --surface-glass: rgba(255, 255, 255, 0.7);
-  --grid-line: #e5e7eb;
-
-  --glow-color: rgba(17, 24, 39, 0.08);
-  --logo-bg: #111827;
-}
-
-html.light {
-  /* light class now applies the previous dark palette */
+  /* dark class applies the dark palette */
   --background: #060816;
   --foreground: #f4f7ff;
   --muted: #8c95b3;
@@ -79,4 +55,28 @@ html.light {
 
   --glow-color: rgba(244, 244, 244, 0.12);
   --logo-bg: #f4f4f4;
+}
+
+html.light {
+  /* light class applies the light palette */
+  --background: #f8f8fb;
+  --foreground: #111827;
+  --muted: #6b7280;
+
+  --accent: #111827;
+  --accent-secondary: #4b5563;
+  --accent-emerald: #10b981;
+
+  --border: #e5e7eb;
+  --card: #ffffff;
+  --card-hover: #f3f4f6;
+
+  --ring: rgba(17, 24, 39, 0.12);
+  --header-bg: rgba(255, 255, 255, 0.8);
+  --header-border: rgba(17, 24, 39, 0.08);
+  --surface-glass: rgba(255, 255, 255, 0.7);
+  --grid-line: #e5e7eb;
+
+  --glow-color: rgba(17, 24, 39, 0.08);
+  --logo-bg: #111827;
 }
