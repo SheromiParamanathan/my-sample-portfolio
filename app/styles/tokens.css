@@ -59,24 +59,24 @@ html.dark {
 
 html.light {
   /* light class now applies the dark (black) palette */
-  --background: #060816;
-  --foreground: #f4f7ff;
-  --muted: #8c95b3;
+  --background: #060816 !important;
+  --foreground: #f4f7ff !important;
+  --muted: #8c95b3 !important;
 
-  --accent: #f4f4f4;
-  --accent-secondary: #9ea1aa;
-  --accent-emerald: #8e8e8e;
+  --accent: #f4f4f4 !important;
+  --accent-secondary: #9ea1aa !important;
+  --accent-emerald: #8e8e8e !important;
 
-  --border: #18213a;
-  --card: #0d1427;
-  --card-hover: #121a32;
+  --border: #18213a !important;
+  --card: #0d1427 !important;
+  --card-hover: #121a32 !important;
 
-  --ring: rgba(244, 244, 244, 0.18);
-  --header-bg: rgba(6, 8, 22, 0.8);
-  --header-border: rgba(255, 255, 255, 0.08);
-  --surface-glass: rgba(255, 255, 255, 0.03);
-  --grid-line: #121b2e;
+  --ring: rgba(244, 244, 244, 0.18) !important;
+  --header-bg: rgba(6, 8, 22, 0.8) !important;
+  --header-border: rgba(255, 255, 255, 0.08) !important;
+  --surface-glass: rgba(255, 255, 255, 0.03) !important;
+  --grid-line: #121b2e !important;
 
-  --glow-color: rgba(244, 244, 244, 0.12);
-  --logo-bg: #f4f4f4;
+  --glow-color: rgba(244, 244, 244, 0.12) !important;
+  --logo-bg: #f4f4f4 !important;
 }

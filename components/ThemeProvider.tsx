@@ -16,6 +16,26 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const storedTheme = window.localStorage.getItem("theme") as Theme | null;
+    const migrated = window.localStorage.getItem("theme_migrated");
+
+    // If the user has an existing theme value from before a mapping change,
+    // flip it once so their visual preference (dark vs light appearance)
+    // is preserved after we swapped which class maps to which palette.
+    if (storedTheme && !migrated) {
+      const migratedTheme: Theme = storedTheme === "dark" ? "light" : "dark";
+      window.localStorage.setItem("theme", migratedTheme);
+      window.localStorage.setItem("theme_migrated", "1");
+      setTheme(migratedTheme);
+      if (migratedTheme === "light") {
+        document.documentElement.classList.add("light");
+        document.documentElement.classList.remove("dark");
+      } else {
+        document.documentElement.classList.add("dark");
+        document.documentElement.classList.remove("light");
+      }
+      return;
+    }
+
     const initialTheme = storedTheme === "light" ? "light" : "dark";
     setTheme(initialTheme);
     if (initialTheme === "light") {
