@@ -5,54 +5,7 @@
 @tailwind utilities;
 
 :root {
-  /* Light theme */
-  --background: #f8f8fb;
-  --foreground: #111827;
-  --muted: #6b7280;
-
-  --accent: #111827;
-  --accent-secondary: #4b5563;
-  --accent-emerald: #10b981;
-
-  --border: #e5e7eb;
-  --card: #ffffff;
-  --card-hover: #f3f4f6;
-
-  --ring: rgba(17, 24, 39, 0.12);
-  --header-bg: rgba(255, 255, 255, 0.8);
-  --header-border: rgba(17, 24, 39, 0.08);
-  --surface-glass: rgba(255, 255, 255, 0.7);
-  --grid-line: #e5e7eb;
-
-  --glow-color: rgba(17, 24, 39, 0.08);
-  --logo-bg: #111827;
-}
-
-.light {
-  --background: #f8f8fb;
-  --foreground: #111827;
-  --muted: #6b7280;
-
-  --accent: #111827;
-  --accent-secondary: #4b5563;
-  --accent-emerald: #10b981;
-
-  --border: #e5e7eb;
-  --card: #ffffff;
-  --card-hover: #f3f4f6;
-
-  --ring: rgba(17, 24, 39, 0.12);
-  --header-bg: rgba(255, 255, 255, 0.8);
-  --header-border: rgba(17, 24, 39, 0.08);
-  --surface-glass: rgba(255, 255, 255, 0.7);
-  --grid-line: #e5e7eb;
-
-  --glow-color: rgba(17, 24, 39, 0.08);
-  --logo-bg: #111827;
-}
-
-.dark {
-  /* Favorite black theme */
+  /* Favorite black theme as default */
   --background: #060816;
   --foreground: #f4f7ff;
   --muted: #8c95b3;
@@ -73,17 +26,40 @@
 
   --glow-color: rgba(244, 244, 244, 0.12);
   --logo-bg: #f4f4f4;
-}
-  
+
   --font-display: "Inter", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", monospace;
-  
+
   --radius-sm: 4px;
   --radius: 8px;
   --radius-lg: 12px;
-  
+
   --shadow-soft: 0 4px 24px -1px rgba(0, 0, 0, 0.5);
+}
+
+.light {
+  /* Light theme override */
+  --background: #f8f8fb;
+  --foreground: #111827;
+  --muted: #6b7280;
+
+  --accent: #111827;
+  --accent-secondary: #4b5563;
+  --accent-emerald: #10b981;
+
+  --border: #e5e7eb;
+  --card: #ffffff;
+  --card-hover: #f3f4f6;
+
+  --ring: rgba(17, 24, 39, 0.12);
+  --header-bg: rgba(255, 255, 255, 0.8);
+  --header-border: rgba(17, 24, 39, 0.08);
+  --surface-glass: rgba(255, 255, 255, 0.7);
+  --grid-line: #e5e7eb;
+
+  --glow-color: rgba(17, 24, 39, 0.08);
+  --logo-bg: #111827;
 }
 
 @layer utilities {
