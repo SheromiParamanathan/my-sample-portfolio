@@ -55,10 +55,10 @@ export default function ProjectDetailPage({ params }: Props) {
             <span
               className="text-xs font-mono px-3 py-1 rounded-full border"
               style={{
-                color: "var(--accent)",
-                borderColor: "var(--border)",
-                backgroundColor: "rgba(255, 255, 255, 0.08)",
-              }}
+                  color: "var(--accent)",
+                  borderColor: "var(--border)",
+                  backgroundColor: "color-mix(in srgb, var(--foreground) 0.08, transparent)",
+                }}
             >
               Featured
             </span>
