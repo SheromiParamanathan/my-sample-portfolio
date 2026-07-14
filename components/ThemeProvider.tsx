@@ -18,19 +18,13 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     const storedTheme = window.localStorage.getItem("theme") as Theme | null;
     const initialTheme = storedTheme === "light" ? "light" : "dark";
     setTheme(initialTheme);
-    if (initialTheme === "light") {
-      document.documentElement.classList.add("light");
-    } else {
-      document.documentElement.classList.remove("light");
-    }
+    document.documentElement.classList.toggle("light", initialTheme === "light");
+    document.documentElement.classList.toggle("dark", initialTheme === "dark");
   }, []);
 
   useEffect(() => {
-    if (theme === "light") {
-      document.documentElement.classList.add("light");
-    } else {
-      document.documentElement.classList.remove("light");
-    }
+    document.documentElement.classList.toggle("light", theme === "light");
+    document.documentElement.classList.toggle("dark", theme === "dark");
     window.localStorage.setItem("theme", theme);
   }, [theme]);
 

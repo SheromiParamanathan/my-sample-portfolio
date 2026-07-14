@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 :root {
-  /* Favorite black theme as default */
+  /* Favorite black theme fallback */
   --background: #060816;
   --foreground: #f4f7ff;
   --muted: #8c95b3;
@@ -38,8 +38,30 @@
   --shadow-soft: 0 4px 24px -1px rgba(0, 0, 0, 0.5);
 }
 
-.light {
-  /* Light theme override */
+html.dark {
+  --background: #060816;
+  --foreground: #f4f7ff;
+  --muted: #8c95b3;
+
+  --accent: #f4f4f4;
+  --accent-secondary: #9ea1aa;
+  --accent-emerald: #8e8e8e;
+
+  --border: #18213a;
+  --card: #0d1427;
+  --card-hover: #121a32;
+
+  --ring: rgba(244, 244, 244, 0.18);
+  --header-bg: rgba(6, 8, 22, 0.8);
+  --header-border: rgba(255, 255, 255, 0.08);
+  --surface-glass: rgba(255, 255, 255, 0.03);
+  --grid-line: #121b2e;
+
+  --glow-color: rgba(244, 244, 244, 0.12);
+  --logo-bg: #f4f4f4;
+}
+
+html.light {
   --background: #f8f8fb;
   --foreground: #111827;
   --muted: #6b7280;

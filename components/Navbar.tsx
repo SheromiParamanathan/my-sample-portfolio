@@ -25,7 +25,7 @@ function ThemeToggle() {
       className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--card)] px-4 py-2 text-[10px] font-mono font-black uppercase tracking-widest text-[var(--foreground)] hover:bg-[var(--card-hover)] transition-all duration-300"
     >
       {isLight ? <Moon size={14} /> : <Sun size={14} />}
-      {isLight ? "Dark" : "Light"}
+      {isLight ? "Black" : "Light"}
     </button>
   );
 }
