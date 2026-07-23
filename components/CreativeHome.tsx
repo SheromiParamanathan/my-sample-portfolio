@@ -291,7 +291,7 @@ export function CreativeHome() {
                      <div className="relative">
                         <div className="absolute -left-[37px] top-1.5 w-4 h-4 rounded-full border-2 border-[var(--background)] bg-[var(--border)]" />
                         <div className="mb-6">
-                           <span className="text-xs font-mono text-[var(--muted)] mb-2 block">Jul 2025 — Mar 2026</span>
+                           <span className="text-xs font-mono text-[var(--muted)] mb-2 block">Jul 2025 — May 2026</span>
                            <h4 className="text-2xl font-bold tracking-tight mb-1">Associate Software Engineer</h4>
                            <div className="text-sm font-medium text-[var(--foreground)]/60">Balanita Pvt Ltd, Colombo</div>
                         </div>
