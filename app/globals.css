@@ -8,20 +8,29 @@
 @import "./styles/utilities.css";
 
 
-* {
+/* ==========================================================
+   Base Reset
+========================================================== */
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
+
 html {
   scroll-behavior: smooth;
 }
+
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
+
   *,
   *::before,
   *::after {
@@ -31,272 +40,550 @@ html {
   }
 }
 
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-body);
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
 }
 
+
+/* ==========================================================
+   Selection
+========================================================== */
+
 ::selection {
   background: var(--accent);
-  color: #fff;
+  color: white;
 }
+
+
+/* ==========================================================
+   Accessibility Focus
+========================================================== */
 
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-  outline: 2px solid rgba(255, 255, 255, 0.85);
+  outline: 2px solid rgba(255,255,255,0.85);
   outline-offset: 3px;
 }
 
-/* Scrollbar */
+
+/* ==========================================================
+   Scrollbar
+========================================================== */
+
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--background);
 }
+
 ::-webkit-scrollbar-thumb {
-  background: color-mix(in srgb, var(--muted) 55%, transparent);
+  background: color-mix(
+    in srgb,
+    var(--muted) 55%,
+    transparent
+  );
+
   border-radius: 999px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent);
 }
 
-/* Noise overlay */
+
+/* ==========================================================
+   Noise Overlay
+========================================================== */
+
 body::before {
+
   content: "";
+
   position: fixed;
   inset: 0;
+
   pointer-events: none;
   z-index: 0;
+
   opacity: 0.03;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
 }
 
-/* utilities are centralized in app/styles/utilities.css */
+
+
+/* ==========================================================
+   Text Effects
+========================================================== */
 
 .text-shimmer {
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.6) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  background-size: 200% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,0.6),
+      transparent
+    );
+
+  background-size:200% 100%;
+
+  -webkit-background-clip:text;
+  background-clip:text;
+
   animation: shimmer 3s infinite linear;
 }
 
+
 @keyframes shimmer {
-  0% {
-    background-position: -200% 0;
+
+  from {
+    background-position:-200% 0;
   }
-  100% {
-    background-position: 200% 0;
+
+  to {
+    background-position:200% 0;
   }
+
 }
 
-/* Gradient mesh + grid */
-.mesh-bg {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  overflow: hidden;
-}
 
-.mesh-bg::before {
-  content: "";
-  position: absolute;
-  top: -25%;
-  right: -15%;
-  width: 65vw;
-  height: 65vw;
-  border-radius: 50%;
-  background: radial-gradient(circle, color-mix(in srgb, var(--foreground) 12%, transparent) 0%, transparent 68%);
-  filter: blur(72px);
-  animation: drift 14s ease-in-out infinite alternate;
-}
-
-.mesh-bg::after {
-  content: "";
-  position: absolute;
-  bottom: -15%;
-  left: -12%;
-  width: 55vw;
-  height: 55vw;
-  border-radius: 50%;
-  background: radial-gradient(circle, color-mix(in srgb, var(--foreground) 8%, transparent) 0%, transparent 70%);
-  filter: blur(88px);
-  animation: drift 18s ease-in-out infinite alternate-reverse;
-}
-
-.mesh-bg .mesh-orb {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  width: min(40vw, 420px);
-  height: min(40vw, 420px);
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: radial-gradient(circle, color-mix(in srgb, var(--foreground) 6%, transparent) 0%, transparent 65%);
-  filter: blur(48px);
-  animation: pulse-soft 10s ease-in-out infinite;
-}
-
-.mesh-bg .mesh-grid {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(var(--grid-line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
-  background-size: 56px 56px;
-  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 20%, black 10%, transparent 72%);
-  mask-image: radial-gradient(ellipse 80% 60% at 50% 20%, black 10%, transparent 72%);
-  opacity: 0.55;
-}
-
-@keyframes drift {
-  0% {
-    transform: translate(0, 0) scale(1);
-  }
-  100% {
-    transform: translate(3%, 5%) scale(1.06);
-  }
-}
-
-@keyframes pulse-soft {
-  0%,
-  100% {
-    opacity: 0.6;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1.08);
-  }
-}
 
 .gradient-text {
-  background: linear-gradient(
-    125deg,
-    var(--foreground) 0%,
-    color-mix(in srgb, var(--foreground) 82%, var(--muted)) 55%,
-    var(--muted) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+
+  background:
+    linear-gradient(
+      125deg,
+      var(--foreground),
+      color-mix(
+        in srgb,
+        var(--foreground) 82%,
+        var(--muted)
+      ),
+      var(--muted)
+    );
+
+
+  -webkit-background-clip:text;
+  background-clip:text;
+
+  -webkit-text-fill-color:transparent;
 }
 
-/* Editorial utilities moved to app/styles/utilities.css */
 
-.glow-line {
-  height: 1px;
-  width: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    color-mix(in srgb, var(--accent) 55%, transparent),
-    color-mix(in srgb, var(--accent-secondary) 45%, transparent),
-    transparent
-  );
-  opacity: 0.55;
+
+/* ==========================================================
+   Background Mesh
+========================================================== */
+
+.mesh-bg {
+
+  position:fixed;
+  inset:0;
+
+  pointer-events:none;
+
+  z-index:0;
+
+  overflow:hidden;
 }
 
-/* Surfaces & buttons */
+
+.mesh-bg::before {
+
+  content:"";
+
+  position:absolute;
+
+  top:-25%;
+  right:-15%;
+
+
+  width:65vw;
+  height:65vw;
+
+
+  border-radius:50%;
+
+
+  background:
+    radial-gradient(
+      circle,
+      color-mix(
+        in srgb,
+        var(--foreground) 12%,
+        transparent
+      ),
+      transparent 68%
+    );
+
+
+  filter:blur(72px);
+
+
+  animation:
+    drift 14s ease-in-out infinite alternate;
+}
+
+
+
+.mesh-bg::after {
+
+  content:"";
+
+  position:absolute;
+
+
+  bottom:-15%;
+  left:-12%;
+
+
+  width:55vw;
+  height:55vw;
+
+
+  border-radius:50%;
+
+
+  background:
+    radial-gradient(
+      circle,
+      color-mix(
+        in srgb,
+        var(--foreground) 8%,
+        transparent
+      ),
+      transparent 70%
+    );
+
+
+  filter:blur(88px);
+
+
+  animation:
+    drift 18s ease-in-out infinite alternate-reverse;
+}
+
+
+
+.mesh-grid {
+
+  position:absolute;
+  inset:0;
+
+
+  background-image:
+
+    linear-gradient(
+      var(--grid-line) 1px,
+      transparent 1px
+    ),
+
+    linear-gradient(
+      90deg,
+      var(--grid-line) 1px,
+      transparent 1px
+    );
+
+
+  background-size:56px 56px;
+
+
+  mask-image:
+    radial-gradient(
+      ellipse 80% 60% at 50% 20%,
+      black 10%,
+      transparent 72%
+    );
+
+
+  opacity:.55;
+}
+
+
+
+@keyframes drift {
+
+  from {
+    transform:translate(0,0) scale(1);
+  }
+
+  to {
+    transform:translate(3%,5%) scale(1.06);
+  }
+
+}
+
+
+
+/* ==========================================================
+   Components
+========================================================== */
+
 @layer components {
-  .surface-card {
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--border);
-    background: var(--card);
-    box-shadow: var(--shadow-soft);
-    -webkit-backdrop-filter: blur(14px);
-    backdrop-filter: blur(14px);
-    transition:
-      border-color 0.25s ease,
-      box-shadow 0.25s ease,
-      transform 0.25s ease,
-      background 0.25s ease;
-  }
 
-  .surface-card:hover {
-    border-color: rgba(244, 244, 244, 0.18);
-    box-shadow: var(--shadow-glow);
-  }
 
-  .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 font-medium text-sm px-6 py-3 rounded-xl transition-all;
-    background: linear-gradient(135deg, var(--accent) 0%, color-mix(in srgb, var(--accent) 78%, #1a1040) 100%);
-    color: #fff;
-    box-shadow: 0 12px 32px -12px color-mix(in srgb, var(--accent) 55%, transparent);
-  }
+.surface-card {
 
-  .btn-primary:hover {
-    filter: brightness(1.06);
-    transform: translateY(-1px);
-    box-shadow: 0 16px 40px -14px color-mix(in srgb, var(--accent) 60%, transparent);
-  }
+  border-radius:var(--radius-lg);
 
-  .btn-primary:active {
-    transform: translateY(0);
-  }
+  border:1px solid var(--border);
 
-  .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 font-medium text-sm px-6 py-3 rounded-xl transition-all border;
-    color: var(--foreground);
-    border-color: var(--border);
-    background: color-mix(in srgb, var(--card) 88%, transparent);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-  }
+  background:var(--card);
 
-  .btn-secondary:hover {
-    border-color: rgba(244, 244, 244, 0.18);
-    background: color-mix(in srgb, var(--accent) 8%, var(--card));
-  }
+  box-shadow:var(--shadow-soft);
 
-  .reveal-text {
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 2px solid var(--accent);
-    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-  }
+
+  backdrop-filter:blur(14px);
+
+
+  transition:
+    border-color .25s ease,
+    box-shadow .25s ease,
+    transform .25s ease;
 }
+
+
+
+.surface-card:hover {
+
+  border-color:
+    rgba(244,244,244,.18);
+
+
+  box-shadow:
+    var(--shadow-glow);
+}
+
+
+
+.btn-primary {
+
+  @apply inline-flex items-center justify-center gap-2
+  px-6 py-3 rounded-xl text-sm font-medium
+  transition-all;
+
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--accent),
+      color-mix(
+        in srgb,
+        var(--accent) 78%,
+        #1a1040
+      )
+    );
+
+
+  color:white;
+
+
+  box-shadow:
+    0 12px 32px -12px
+    color-mix(
+      in srgb,
+      var(--accent) 55%,
+      transparent
+    );
+
+}
+
+
+
+.btn-primary:hover {
+
+  transform:translateY(-1px);
+
+  filter:brightness(1.06);
+}
+
+
+
+.btn-primary:active {
+
+  transform:translateY(0);
+
+}
+
+
+
+.btn-secondary {
+
+  @apply inline-flex items-center justify-center gap-2
+  px-6 py-3 rounded-xl text-sm font-medium
+  transition-all border;
+
+
+  color:var(--foreground);
+
+  border-color:var(--border);
+
+  background:
+    color-mix(
+      in srgb,
+      var(--card) 88%,
+      transparent
+    );
+
+
+  backdrop-filter:blur(10px);
+}
+
+
+
+.btn-secondary:hover {
+
+  border-color:
+    rgba(244,244,244,.18);
+
+
+  background:
+    color-mix(
+      in srgb,
+      var(--accent) 8%,
+      var(--card)
+    );
+
+}
+
+
+.reveal-text {
+
+  overflow:hidden;
+
+  white-space:nowrap;
+
+  border-right:
+    2px solid var(--accent);
+
+
+  animation:
+    typing 3.5s steps(40,end),
+    blink-caret .75s step-end infinite;
+
+}
+
+}
+
+
+
+/* ==========================================================
+   Animations
+========================================================== */
+
 
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+
+  from {
+    width:0;
+  }
+
+  to {
+    width:100%;
+  }
+
 }
+
+
 
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: var(--accent); }
+
+  from,
+  to {
+    border-color:transparent;
+  }
+
+  50% {
+    border-color:var(--accent);
+  }
+
 }
+
+
+
+/* ==========================================================
+   Utilities
+========================================================== */
+
+
+.glow-line {
+
+  height:1px;
+
+  width:100%;
+
+
+  background:
+
+    linear-gradient(
+      90deg,
+      transparent,
+      color-mix(
+        in srgb,
+        var(--accent) 55%,
+        transparent
+      ),
+      color-mix(
+        in srgb,
+        var(--accent-secondary) 45%,
+        transparent
+      ),
+      transparent
+    );
+
+
+  opacity:.55;
+
+}
+
+
 
 .mask-fade-out {
-  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      black 80%,
+      transparent
+    );
+
 }
 
+
+
 .grain-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 99;
-  opacity: 0.04;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+
+  position:fixed;
+
+  inset:0;
+
+
+  pointer-events:none;
+
+  z-index:99;
+
+
+  opacity:.04;
+
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+
 }
