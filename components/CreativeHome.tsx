@@ -304,6 +304,7 @@ export function CreativeHome() {
                                  <li>Built a compliance monitoring engine that flagged at-risk learners and surfaced completion trends via real-time dashboards, giving stakeholders organization-wide visibility into performance for the first time.</li>
                                  <li>Engineered the ETL pipeline architecture (extract, transform, load) for ingesting data from multiple external LMS platforms, enforcing data consistency checks that made downstream analytics reliable.</li>
                               </ul>
+                              
                               <p className="mb-3 font-semibold">Core Mandate: Owned backend architecture for an AI-powered Applicant Tracking System serving 500+ users, designing the LLM-based resume evaluation pipeline and re-architecting core APIs for performance and reliability.</p>
                               <ul className="list-disc list-inside space-y-2">
                                  <li>Owned backend architecture for an AI-powered Applicant Tracking System serving 500+ users; designed the LLM-based resume evaluation pipeline that cut manual screening effort by 70%.</li>
