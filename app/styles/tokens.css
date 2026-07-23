@@ -38,4 +38,4 @@ html.dark {
   --background: #f8f8fb;
   --foreground: #111827;
   /* Theme is fixed to dark — no html.light/html.dark overrides */
-
+}
