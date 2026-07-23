@@ -261,7 +261,7 @@ export function CreativeHome() {
 
                   <div className="relative space-y-12 pl-8 border-l border-[var(--border)]">
                      {/* Role 1: Software Engineer */}
-                     <div className="relative">
+                     {/* <div className="relative">
                         <div className="absolute -left-[37px] top-1.5 w-4 h-4 rounded-full border-2 border-[var(--background)] bg-[var(--border)]" />
                         <div className="mb-6">
                            <span className="text-xs font-mono text-[var(--muted)] mb-2 block">Mar 2026 — May 2026</span>
@@ -285,7 +285,7 @@ export function CreativeHome() {
                               ))}
                            </div>
                         </div>
-                     </div>
+                     </div> */}
 
                      {/* Role 2: Associate Software Engineer */}
                      <div className="relative">
@@ -298,6 +298,12 @@ export function CreativeHome() {
 
                         <div className="space-y-4">
                            <div className="text-sm text-[var(--muted)] leading-relaxed max-w-lg">
+                              <p className="mb-3 font-semibold">Core Mandate: Led the design and development of a multi-tenant LMS Intelligence Platform, unifying multiple WordPress LMS environments through custom ETL pipelines and REST APIs to enable centralized cross-organization analytics.</p>
+                              <ul className="list-disc list-inside space-y-2">
+                                 <li>Led design and development of a multi-tenant LMS Intelligence Platform, unifying multiple WordPress LMS environments through custom ETL pipelines and REST APIs to enable centralized cross-organization analytics.</li>
+                                 <li>Built a compliance monitoring engine that flagged at-risk learners and surfaced completion trends via real-time dashboards, giving stakeholders organization-wide visibility into performance for the first time.</li>
+                                 <li>Engineered the ETL pipeline architecture (extract, transform, load) for ingesting data from multiple external LMS platforms, enforcing data consistency checks that made downstream analytics reliable.</li>
+                              </ul>
                               <p className="mb-3 font-semibold">Core Mandate: Owned backend architecture for an AI-powered Applicant Tracking System serving 500+ users, designing the LLM-based resume evaluation pipeline and re-architecting core APIs for performance and reliability.</p>
                               <ul className="list-disc list-inside space-y-2">
                                  <li>Owned backend architecture for an AI-powered Applicant Tracking System serving 500+ users; designed the LLM-based resume evaluation pipeline that cut manual screening effort by 70%.</li>
